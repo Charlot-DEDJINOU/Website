@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
+    "typewriter-effect": "^2.21.0",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },
