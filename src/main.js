@@ -9,13 +9,13 @@ import router from './router'
 import store from './store'
 import { createI18n } from 'vue-i18n'
 
-// Importez vos fichiers de messages pour chaque langue
 import frMessages from './translate/fr.json'
 import enMessages from './translate/en.json'
 
 const i18n = createI18n({
+  legacy: false,
   locale: 'fr',
-  fallbackLocale: 'en', 
+  fallbackLocale: 'en',
   messages: {
     fr: frMessages,
     en: enMessages
