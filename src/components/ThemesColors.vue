@@ -46,7 +46,11 @@ export default {
 
 <template>
   <div class="color">
-    <select v-model="$i18n.locale" :style="{ backgroundColor: theme.background.forced, color: theme.textColor }" class="form-select m-2 w-100">
+    <select
+      v-model="$i18n.locale"
+      :style="{ backgroundColor: theme.background.forced, color: theme.textColor }"
+      class="form-select m-2 w-100"
+    >
       <option value="en">{{ $t('en') }}</option>
       <option value="fr">{{ $t('fr') }}</option>
     </select>
@@ -105,6 +109,6 @@ export default {
   background-color: #ffc0cb;
 }
 .color .color7 {
-  background-color: #905B16;
+  background-color: #905b16;
 }
 </style>
