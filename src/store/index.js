@@ -5,9 +5,10 @@ const dark = {
     primary: 'rgba(0,0,0,0.61)',
     secondary: 'rgba(0,0,0,0.39)',
     tertiaire: 'rgba(0,0,0,0.25)',
-    forced: 'white'
+    drawer: '#3e3e3e'
   },
-  textColor: 'black'
+  colorprimary: 'white',
+  colorsecondary: 'black'
 }
 
 const light = {
@@ -15,9 +16,10 @@ const light = {
     primary: 'rgba(255,255,255,0.61)',
     secondary: 'white',
     tertiaire: 'rgba(255,255,255,0.20)',
-    forced: 'black'
+    drawer: '#f5f5f5'
   },
-  textColor: 'white'
+  colorprimary: 'black',
+  colorsecondary: 'white'
 }
 
 export default createStore({
