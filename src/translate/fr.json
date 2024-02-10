@@ -1,5 +1,14 @@
 {
   "hello": "Bonjour, monde!",
   "fr": "Français",
-  "en": "Anglais"
+  "en": "Anglais",
+  "home": "Accueil",
+  "about": "À propos",
+  "services": "Services",
+  "projects": "Projects",
+  "awards": "Distinctions",
+  "certifications": "Certifications",
+  "contact": "Contact",
+  "preferences": "Preferences",
+  "download": "Telecharger"
 }

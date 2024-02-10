@@ -1,5 +1,14 @@
 {
   "hello": "Hello, world!",
   "fr": "French",
-  "en": "English"
+  "en": "English",
+  "home": "Home",
+  "about": "About me",
+  "services": "Services",
+  "projects": "Projects",
+  "awards": "Awards",
+  "certifications": "Certifications",
+  "contact": "Contact",
+  "preferences": "Preferences",
+  "download": "Download"
 }
