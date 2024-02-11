@@ -1,9 +1,11 @@
 <script setup>
-import HomeSection from '../components/HomeSection.vue'
+import CustomHeader from '../components/CustomHeader.vue'
+import AboutSection from '../components/AboutSection.vue'
 </script>
 
 <template>
   <main>
-    <HomeSection />
+    <CustomHeader />
+    <AboutSection />
   </main>
 </template>
