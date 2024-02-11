@@ -1,11 +1,14 @@
 import { createStore } from 'vuex'
+import backgroundBlack from '../assets/backgroundBack.png'
+import backgroundWhite from '../assets/backgroundWhite.png'
 
 const dark = {
   background: {
     primary: 'rgba(0,0,0,0.61)',
     secondary: 'rgba(0,0,0,0.39)',
     tertiaire: 'rgba(0,0,0,0.25)',
-    drawer: '#3e3e3e'
+    drawer: '#3e3e3e',
+    image: backgroundBlack
   },
   colorprimary: 'white',
   colorsecondary: 'black'
@@ -16,7 +19,8 @@ const light = {
     primary: 'rgba(255,255,255,0.61)',
     secondary: 'white',
     tertiaire: 'rgba(255,255,255,0.20)',
-    drawer: '#f5f5f5'
+    drawer: '#f5f5f5',
+    image: backgroundWhite
   },
   colorprimary: 'black',
   colorsecondary: 'white'
