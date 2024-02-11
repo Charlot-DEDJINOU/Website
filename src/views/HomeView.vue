@@ -1,9 +1,9 @@
 <script setup>
-import PopoversPreferences from '../components/PopoversPreferences.vue'
+import HomeSection from '../components/HomeSection.vue'
 </script>
 
 <template>
   <main>
-    <PopoversPreferences />
+    <HomeSection />
   </main>
 </template>

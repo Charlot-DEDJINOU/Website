@@ -6,6 +6,7 @@ import { computed, ref } from 'vue'
 import { useDark, useToggle } from '@vueuse/core'
 
 export default {
+  name: 'ThemesColors',
   components: {
     Lune,
     Solar
@@ -21,7 +22,6 @@ export default {
     })
     const toggleDark = useToggle(isDark)
 
-    const uniColor = ref(computed(() => store.state.uniColor))
     const theme = ref(computed(() => store.state.theme))
 
     const toggleColor = (color) => {
@@ -34,7 +34,6 @@ export default {
     }
 
     return {
-      uniColor,
       theme,
       toggleColor,
       toggleTheme,
@@ -48,7 +47,7 @@ export default {
   <div class="color">
     <select
       v-model="$i18n.locale"
-      :style="{ backgroundColor: theme.background.forced, color: theme.textColor }"
+      :style="{ backgroundColor: theme.colorprimary, color: theme.colorsecondary }"
       class="form-select m-2 w-100"
     >
       <option value="en">{{ $t('en') }}</option>
@@ -61,7 +60,7 @@ export default {
     <span class="color5 m-2" @click="toggleColor('#084EFF')"></span>
     <span class="color6 m-2" @click="toggleColor('#FFC0CB')"></span>
     <span class="color7 m-2" @click="toggleColor('#905B16')"></span>
-    <span @click="toggleTheme()" class="m-2">
+    <span @click="toggleTheme()" class="m-2" :style="{ color: theme.colorprimary }">
       <Lune v-if="isDark" />
       <Solar v-else />
     </span>

@@ -15,6 +15,9 @@ export default {
     IconGithub,
     IconLinkdln
   },
+  props: {
+    size: String
+  },
   setup() {
     const store = useStore()
 
@@ -29,30 +32,33 @@ export default {
 }
 </script>
 <template>
-  <div class="social-media d-flex">
+  <div
+    class="social-media d-flex justify-content-around"
+    :style="{ width: size == null ? 'auto' : size }"
+  >
     <span
       class="d-inline-block d-flex align-items-center justify-content-center"
-      :style="{ backgroundColor: uniColor, color: 'white' }"
+      :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
       ><IconFacebook
     /></span>
     <span
       class="d-inline-block d-flex align-items-center justify-content-center"
-      :style="{ backgroundColor: uniColor, color: 'white' }"
+      :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
       ><IconEmail
     /></span>
     <span
       class="d-inline-block d-flex align-items-center justify-content-center"
-      :style="{ backgroundColor: uniColor, color: 'white' }"
+      :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
       ><IconGithub
     /></span>
     <span
       class="d-inline-block d-flex align-items-center justify-content-center"
-      :style="{ backgroundColor: uniColor, color: 'white' }"
+      :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
       ><IconWhatsapp
     /></span>
     <span
       class="d-inline-block d-flex align-items-center justify-content-center"
-      :style="{ backgroundColor: uniColor, color: 'white' }"
+      :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
       ><IconLinkdln
     /></span>
   </div>
