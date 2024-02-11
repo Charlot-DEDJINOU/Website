@@ -20,7 +20,7 @@ export default {
 </script>
 <template>
   <nav
-    class="navbar navbar-expand-lg header w-100"
+    class="navbar navbar-expand-lg header w-100 fixed-top"
     :style="{ backgroundColor: theme.background.primary }"
   >
     <div class="container-fluid">
