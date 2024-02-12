@@ -18,7 +18,7 @@ const light = {
   background: {
     primary: 'rgba(255,255,255,0.61)',
     secondary: 'white',
-    tertiaire: 'rgba(255,255,255,0.20)',
+    tertiaire: 'rgba(0,0,0,0.10)',
     drawer: '#f5f5f5',
     image: backgroundWhite
   },
