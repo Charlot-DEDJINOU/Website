@@ -1,15 +1,11 @@
 <script setup>
-import HomeSection from '../components/HomeSection.vue'
-import AboutSection from '../components/AboutSection.vue'
-import EducationExperienceSection from '../components/EducationExperienceSection.vue'
-import SkillsSection from '../components/SkillsSection.vue'
+import CustomHeader from '../components/CustomHeader.vue'
+import ServicesSection from '../components/ServicesSection.vue'
 </script>
 
 <template>
   <main>
-    <HomeSection />
-    <AboutSection />
-    <EducationExperienceSection />
-    <SkillsSection />
+    <CustomHeader />
+    <ServicesSection />
   </main>
 </template>
