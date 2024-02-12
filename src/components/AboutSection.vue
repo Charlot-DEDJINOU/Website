@@ -86,14 +86,14 @@ export default {
   text-align: justify;
 }
 @media screen and (max-width: 500px) {
-    .about .profil-cv .cv-view button {
-        margin-bottom: 20px;
-    }
+  .about .profil-cv .cv-view button {
+    margin-bottom: 20px;
+  }
 }
 @media screen and (min-width: 501px) and (max-width: 768px) {
-    .about .profil-cv .cv-view button {
-        margin-bottom: 20px;
-    }
+  .about .profil-cv .cv-view button {
+    margin-bottom: 20px;
+  }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 }
