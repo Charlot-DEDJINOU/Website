@@ -1,13 +1,15 @@
 <script>
 export default {
   props: {
-    title: String
+    title: String,
+    service : String
   }
 }
 </script>
 <template>
   <div class="section-title d-flex flex-column align-items-center">
-    <h2>{{ title }}</h2>
+    <b v-if="service === 'service' " class="d-inline-block fs-5">{{ title }}</b>
+    <h2 v-else>{{ title }}</h2>
     <span class="d-inline-block"></span>
   </div>
 </template>
