@@ -29,7 +29,7 @@ export default {
     <SectionTitle title="About" />
     <div
       class="mt-5 d-flex flex-wrap justify-content-evenly align-items-center py-5 about"
-      :style="{ backgroundColor: theme.background.primary }"
+      :style="{ backgroundColor: theme.background.secondary }"
     >
       <div class="profil-cv my-3">
         <p class="profil text-justify px-3">
