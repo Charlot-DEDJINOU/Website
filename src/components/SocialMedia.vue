@@ -49,7 +49,7 @@ export default {
     <span
       class="d-inline-block d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
-      ><IconGithub
+      ><IconGithub size="30"
     /></span>
     <span
       class="d-inline-block d-flex align-items-center justify-content-center"
