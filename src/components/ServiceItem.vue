@@ -22,11 +22,11 @@ export default {
 }
 </script>
 <template>
-  <div className="objectif p-2 m-3" :style="{backgroundColor : theme.background.secondary}">
+  <div className="objectif p-2 m-3" :style="{ backgroundColor: theme.background.secondary }">
     <div className="objectif-title d-flex align-items-center justify-content-around my-3">
-      <IconEye className="icon mx-3 d-inline-block" :style="{color : uniColor}"/>
+      <IconEye className="icon mx-3 d-inline-block" :style="{ color: uniColor }" />
       <div className="objectif-name">
-        <SectionTitle title="Web development" service="service"/>
+        <SectionTitle title="Web development" service="service" />
       </div>
     </div>
     <p className="text-justify px-2">
@@ -49,6 +49,6 @@ export default {
   height: 40px;
 }
 .text-justify {
-    text-align: justify;
+  text-align: justify;
 }
 </style>
