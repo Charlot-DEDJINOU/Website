@@ -66,7 +66,7 @@ export default {
   padding-bottom: 15px;
 }
 .presentation .home-preference {
-  position: absolute;
+  position: fixed;
   top: 30%;
   cursor: pointer;
   height: 150px;
