@@ -22,7 +22,7 @@ export default {
           <div class="row">
             <div class="col-lg-6">
               <span class="resume-title my-3 d-inline-block" :style="{color : uniColor}">Education</span>
-              <div class="resume-item d-flex py-4" :style="{'--before' : theme.colorsecondary, borderLeft : '5px solid' + uniColor}">
+              <div class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
                 <span :style="{backgroundColor : uniColor}"></span>
                 <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
                     <h4 :style="{color : uniColor}">
@@ -31,7 +31,7 @@ export default {
                     <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
                 </div>
               </div>
-              <div class="resume-item  d-flex py-4" :style="{'--before' : theme.colorsecondary, borderLeft : '5px solid' + uniColor}">
+              <div class="resume-item  d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
                 <span :style="{backgroundColor : uniColor}"></span>
                 <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
                     <h4 :style="{color : uniColor}">
@@ -40,7 +40,7 @@ export default {
                     <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
                 </div>
               </div>
-              <div class="resume-item  d-flex py-4" :style="{'--before' : theme.colorsecondary, borderLeft : '5px solid' + uniColor}">
+              <div class="resume-item  d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
                 <span :style="{backgroundColor : uniColor}"></span>
                 <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
                     <h4 :style="{color : uniColor}">
@@ -52,7 +52,7 @@ export default {
             </div>
             <div class="col-lg-6">
               <span class="resume-title my-3 d-inline-block" :style="{color : uniColor}">Professional Experience</span>
-              <div class="resume-item d-flex py-4" :style="{'--before' : theme.colorsecondary, borderLeft : '5px solid' + uniColor}">
+              <div class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
                 <span :style="{backgroundColor : uniColor}"></span>
                 <div class="informations p-3  w-100" :style="{backgroundColor : theme.background.secondary}">
                     <h4 :style="{color : uniColor}">Senior graphic design specialist</h4>
@@ -66,7 +66,7 @@ export default {
                     </p>
                 </div>
               </div>
-              <div class="resume-item d-flex py-4" :style="{'--before' : theme.colorsecondary, borderLeft : '5px solid' + uniColor}">
+              <div class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
                 <span :style="{backgroundColor : uniColor}"></span>
                 <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
                     <h4 :style="{color : uniColor}">Senior graphic design specialist</h4>
