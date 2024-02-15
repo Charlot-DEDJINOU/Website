@@ -53,7 +53,7 @@ export default {
             :style="{ borderBottom: '5px solid ' + color }"
           ></span>
         </div>
-        <p class="text-justify text-profil">
+        <p class="text-justify text-profil text-responsive">
           Je passionné par la création d'expériences web innovantes et convaincu du pouvoir de la
           technologie pour résoudre des problèmes du monde réel
         </p>
@@ -106,6 +106,9 @@ export default {
 @media screen and (max-width: 768px) {
   .presentation-content {
     width: 100%;
+  }
+  .presentation-content .photo-profil img {
+    width: 200px;
   }
   .presentation-content .photo-profil {
     flex-direction: column;

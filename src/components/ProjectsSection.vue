@@ -27,11 +27,16 @@ export default {
     <SectionTitle title="Projects" />
     <div class="container mt-5">
       <div class="d-flex justify-content-around flex-wrap search w-100">
-        <input type="text" :style="{ backgroundColor: theme.background.secondary }" />
+        <input
+          class="mb-3"
+          type="text"
+          placeholder="Search"
+          :style="{ backgroundColor: theme.background.secondary, color: theme.colorprimary }"
+        />
         <select
           class="form-select form-select-lg mb-3 border-0 shadow-none"
           aria-label="Large select example"
-          :style="{ backgroundColor: theme.background.secondary }"
+          :style="{ backgroundColor: theme.background.secondary, color: theme.colorprimary }"
         >
           <option selected>Language</option>
           <option value="1">One</option>
@@ -54,14 +59,16 @@ export default {
 .projects .search input {
   width: 300px;
   height: 50px;
+  font-size: 18px;
   border: none;
   outline: none;
   border-radius: 10px;
-  padding: 0px 5px;
+  padding: 0px 15px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 .projects .search select {
   width: 300px;
+  font-size: 18px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3) !important;
 }
 </style>

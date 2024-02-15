@@ -27,8 +27,8 @@ export default {
                 <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
                     <h4 :style="{color : uniColor}">
                         Master of Fine Arts &amp; Graphic Design</h4>
-                    <h5 :style="{backgroundColor : theme.background.tertiaire}">2015 - 2016</h5>
-                    <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                    <i :style="{backgroundColor : theme.background.tertiaire}" class="text-responsive">2015 - 2016</i>
+                    <p class="text-responsive"><em>Rochester Institute of Technology, Rochester, NY</em></p>
                 </div>
               </div>
               <div class="resume-item  d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
@@ -36,8 +36,8 @@ export default {
                 <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
                     <h4 :style="{color : uniColor}">
                         Master of Fine Arts &amp; Graphic Design</h4>
-                    <h5 :style="{backgroundColor : theme.background.tertiaire}">2015 - 2016</h5>
-                    <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                    <i :style="{backgroundColor : theme.background.tertiaire}" class="text-responsive">2015 - 2016</i>
+                    <p class="text-responsive"><em>Rochester Institute of Technology, Rochester, NY</em></p>
                 </div>
               </div>
               <div class="resume-item  d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
@@ -45,8 +45,8 @@ export default {
                 <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
                     <h4 :style="{color : uniColor}">
                         Master of Fine Arts &amp; Graphic Design</h4>
-                    <h5 :style="{backgroundColor : theme.background.tertiaire}">2015 - 2016</h5>
-                    <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                    <i :style="{backgroundColor : theme.background.tertiaire}" class="text-responsive">2015 - 2016</i>
+                    <p class="text-responsive"><em>Rochester Institute of Technology, Rochester, NY</em></p>
                 </div>
               </div>
             </div>
@@ -56,10 +56,10 @@ export default {
                 <span :style="{backgroundColor : uniColor}"></span>
                 <div class="informations p-3  w-100" :style="{backgroundColor : theme.background.secondary}">
                     <h4 :style="{color : uniColor}">Senior graphic design specialist</h4>
-                    <h5 :style="{backgroundColor : theme.background.tertiaire}">2019 - Present</h5>
+                    <i :style="{backgroundColor : theme.background.tertiaire}" class="text-responsive">2019 - Present</i>
                     <p><em>Experion, New York, NY </em></p>
                     <p>
-                      <ul>
+                      <ul class="text-responsive">
                         <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
                         <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
                       </ul>
@@ -70,10 +70,10 @@ export default {
                 <span :style="{backgroundColor : uniColor}"></span>
                 <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
                     <h4 :style="{color : uniColor}">Senior graphic design specialist</h4>
-                    <h5 :style="{backgroundColor : theme.background.tertiaire}">2019 - Present</h5>
+                    <i :style="{backgroundColor : theme.background.tertiaire}" class="text-responsive">2019 - Present</i>
                     <p><em>Experion, New York, NY </em></p>
                     <p>
-                    <ul>
+                    <ul class="text-responsive">
                       <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
                       <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
                     </ul>
@@ -113,7 +113,7 @@ export default {
     text-transform: uppercase;
     margin-bottom: 20px;
 }
-.resume .resume-item h5 {
+.resume .resume-item i {
     font-size: 16px;
     padding: 5px 15px;
     display: inline-block;
@@ -141,5 +141,10 @@ export default {
     top: 18px;
     background: var(--before);
     border: 2px solid var(--before);
+}
+@media screen and (max-width: 768px) {
+  .resume .resume-item span {
+    width: 20px;
+  }
 }
 </style>

@@ -32,7 +32,7 @@ export default {
       :style="{ backgroundColor: theme.background.secondary }"
     >
       <div class="profil-cv my-3">
-        <p class="profil text-justify px-3">
+        <p class="profil text-justify px-3 text-responsive">
           <span :style="{ color: uniColor }">Profil</span> : Je suis Charlot DEDJINOU, un
           développeur passionné par la création d'expériences web innovantes et convaincu du pouvoir
           de la technologie pour résoudre des problèmes du monde réel. Avec une solide expérience
@@ -54,14 +54,14 @@ export default {
           </button>
         </div>
       </div>
-      <div class="item my-3">
+      <div class="item my-3 text-responsive">
         <p><span :style="{ color: uniColor }">Experience </span> : 3 ans</p>
         <p><span :style="{ color: uniColor }">Degree</span> : Licence</p>
         <p><span :style="{ color: uniColor }">Website</span> : charlot.vercel.com</p>
         <p><span :style="{ color: uniColor }">City</span> : Abomey-Calavi, Bénin</p>
         <p><span :style="{ color: uniColor }">Email</span> : dedjinoucharlotjoel@gmail.com</p>
       </div>
-      <div class="item my-3">
+      <div class="item my-3 text-responsive">
         <p><span :style="{ color: uniColor }">Phone</span> : +229 59105267</p>
         <p><span :style="{ color: uniColor }">Freelance</span> : Available</p>
         <p><span :style="{ color: uniColor }">Remote</span> : Available</p>

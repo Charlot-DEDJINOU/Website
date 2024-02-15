@@ -29,7 +29,7 @@ export default {
         <SectionTitle title="Web development" service="service" />
       </div>
     </div>
-    <p className="text-justify px-2">
+    <p className="text-justify px-2 text-responsive">
       Mettre en place des procédures pour réduire l'impact environnemental des déchets électroniques
       grâce à une collecte sélective, un recyclage efficace, et la remise à neuf d'équipements.
     </p>

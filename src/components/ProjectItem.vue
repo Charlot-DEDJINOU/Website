@@ -11,18 +11,18 @@ export default {
 }
 </script>
 <template>
-  <div class="projet m-3" :style="{backgroundColor : theme.background.secondary}">
+  <div class="projet m-3" :style="{ backgroundColor: theme.background.secondary }">
     <img src="../assets/backgroundWhite.png" alt="projet" />
     <div class="d-flex flex-column justify-content-around description">
-      <div class="px-3 text-justify">
+      <div class="px-3 text-justify text-responsive">
         Je suis Charlot DEDJINOU, un développeur passionné par la création d'expériences web
         innovantes et convaincu du pouvoir de la technologie.
       </div>
       <div class="w-100 d-flex justify-content-around align-items-center px-2 skills-projet">
-        <span :style="{backgroundColor : theme.background.tertiaire, color : color}">React Js</span>
-        <span :style="{backgroundColor : theme.background.tertiaire, color : color}">Python</span>
-        <span :style="{backgroundColor : theme.background.tertiaire, color : color}">Laravel</span>
-        <span :style="{backgroundColor : theme.background.tertiaire, color : color}">Node Js</span>
+        <span :style="{ backgroundColor: theme.background.tertiaire, color: color }">React Js</span>
+        <span :style="{ backgroundColor: theme.background.tertiaire, color: color }">Python</span>
+        <span :style="{ backgroundColor: theme.background.tertiaire, color: color }">Laravel</span>
+        <span :style="{ backgroundColor: theme.background.tertiaire, color: color }">Node Js</span>
       </div>
       <div class="w-100 d-flex justify-content-around align-items-center view-projet">
         <button :style="{ backgroundColor: color, color: theme.colorsecondary }">
@@ -39,20 +39,19 @@ export default {
 .projet {
   width: 350px;
   height: 390px;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 .projet img {
   width: 100%;
   height: 45%;
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
 }
 .projet .description {
-    height: 53%;
+  height: 53%;
 }
 .text-justify {
   text-align: justify;
-  font-size: 15px;
 }
 .projet .skills-projet span {
   display: inline-block;
