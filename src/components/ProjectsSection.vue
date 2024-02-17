@@ -23,9 +23,9 @@ export default {
 }
 </script>
 <template>
-  <section class="mt-5 projects">
+  <section class="mt-5 projects" id="projets">
     <SectionTitle title="Projects" />
-    <div class="container mt-5">
+    <div class="container mt-4">
       <div class="d-flex justify-content-around flex-wrap search w-100">
         <input
           class="mb-3"
@@ -44,7 +44,7 @@ export default {
           <option value="3">Three</option>
         </select>
       </div>
-      <div class="d-flex flex-wrap justify-content-around mt-5">
+      <div class="d-flex flex-wrap justify-content-around mt-3">
         <ProjectItem :theme="theme" :color="uniColor" />
         <ProjectItem :theme="theme" :color="uniColor" />
         <ProjectItem :theme="theme" :color="uniColor" />
@@ -64,11 +64,9 @@ export default {
   outline: none;
   border-radius: 10px;
   padding: 0px 15px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 .projects .search select {
   width: 300px;
   font-size: 18px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3) !important;
 }
 </style>

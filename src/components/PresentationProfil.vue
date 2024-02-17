@@ -57,7 +57,7 @@ export default {
           Je passionné par la création d'expériences web innovantes et convaincu du pouvoir de la
           technologie pour résoudre des problèmes du monde réel
         </p>
-        <SocialMedia class="align-self-center" size="350px" />
+        <SocialMedia class="align-self-center" size="350px" iconSize="30" />
       </div>
     </div>
     <div class="buttons d-flex flex-wrap justify-content-evenly mt-5 w-100">
@@ -103,12 +103,12 @@ export default {
 .text-justify {
   text-align: justify;
 }
-@media screen and (max-width: 768px) {
-  .presentation-content {
-    width: 100%;
-  }
+@media screen and (min-width: 200px) and (max-width: 500px) {
   .presentation-content .photo-profil img {
     width: 200px;
+  }
+  .presentation-content {
+    width: 100%;
   }
   .presentation-content .photo-profil {
     flex-direction: column;
@@ -123,8 +123,21 @@ export default {
     padding: 2rem;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-}
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 501px) and (max-width: 820px) {
+  .presentation-content {
+    width: 100%;
+  }
+  .presentation-content .photo-profil {
+    flex-direction: column;
+    align-items: center;
+  }
+  .presentation-content .photo-profil .profil {
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .presentation-content .photo-profil .profil .text-profil {
+    padding: 2rem;
+  }
 }
 </style>

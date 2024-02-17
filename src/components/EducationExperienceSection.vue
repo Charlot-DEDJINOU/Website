@@ -21,7 +21,7 @@ export default {
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
-              <span class="resume-title my-3 d-inline-block" :style="{color : uniColor}">Education</span>
+              <span class="resume-title my-3 d-inline-block">Education</span>
               <div class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
                 <span :style="{backgroundColor : uniColor}"></span>
                 <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
@@ -51,7 +51,7 @@ export default {
               </div>
             </div>
             <div class="col-lg-6">
-              <span class="resume-title my-3 d-inline-block" :style="{color : uniColor}">Professional Experience</span>
+              <span class="resume-title my-3 d-inline-block">Professional Experience</span>
               <div class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
                 <span :style="{backgroundColor : uniColor}"></span>
                 <div class="informations p-3  w-100" :style="{backgroundColor : theme.background.secondary}">
@@ -96,7 +96,6 @@ export default {
     margin-top: -20px;
     background-color: rgba(0, 0, 0, 0.31);
     border-radius: 10px;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.31);
 }
 .resume .resume-title {
     font-size: 20px;

@@ -40,7 +40,6 @@ export default {
   width: 350px;
   height: 390px;
   border-radius: 10px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 .projet img {
   width: 100%;

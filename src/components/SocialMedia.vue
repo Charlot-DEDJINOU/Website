@@ -16,7 +16,8 @@ export default {
     IconLinkdln
   },
   props: {
-    size: String
+    size: String,
+    iconSize: String
   },
   setup() {
     const store = useStore()
@@ -39,34 +40,33 @@ export default {
     <span
       class="d-inline-block d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
-      ><IconFacebook
+      ><IconFacebook :size="iconSize"
     /></span>
     <span
       class="d-inline-block d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
-      ><IconEmail
+      ><IconEmail :size="iconSize"
     /></span>
     <span
       class="d-inline-block d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
-      ><IconGithub size="30"
+      ><IconGithub :size="iconSize"
     /></span>
     <span
       class="d-inline-block d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
-      ><IconWhatsapp
+      ><IconWhatsapp :size="iconSize"
     /></span>
     <span
       class="d-inline-block d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
-      ><IconLinkdln
+      ><IconLinkdln :size="iconSize"
     /></span>
   </div>
 </template>
 <style>
 .social-media span {
-  width: 40px;
-  height: 40px;
+  padding: 10px;
   margin: 0px 4px;
   border-radius: 50%;
 }

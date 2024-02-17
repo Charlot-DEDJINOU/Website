@@ -10,9 +10,9 @@ export default {
 }
 </script>
 <template>
-  <section class="mt-5">
+  <section class="mt-3" id="services">
     <SectionTitle title="Services" />
-    <div class="container d-flex flex-wrap justify-content-around mt-5">
+    <div class="container d-flex flex-wrap justify-content-between mt-3">
       <ServiceItem />
       <ServiceItem />
       <ServiceItem />

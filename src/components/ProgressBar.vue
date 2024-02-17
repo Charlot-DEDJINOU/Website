@@ -37,12 +37,12 @@ export default {
   font-style: normal;
 }
 .progress-bar-wrap {
-  border-radius: 5px;
+  border-radius: 2px;
   height: 10px;
 }
 .progress-bar {
   height: 100%;
   transition: 0.9s;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 </style>

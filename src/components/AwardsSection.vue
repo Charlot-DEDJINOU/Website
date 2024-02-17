@@ -23,7 +23,7 @@ export default {
 }
 </script>
 <template>
-  <section class="mt-5 projects">
+  <section class="mt-5 awards" id="distinctions">
     <SectionTitle title="Distinctions" />
     <div class="container d-flex flex-wrap justify-content-around mt-5">
       <AwardItem />

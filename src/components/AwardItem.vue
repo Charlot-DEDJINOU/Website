@@ -42,7 +42,7 @@ export default {
 </template>
 <style scoped>
 .distinction {
-  width: 90%;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;

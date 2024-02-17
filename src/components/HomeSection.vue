@@ -34,7 +34,8 @@ export default {
 </script>
 <template>
   <section
-    class="presentation d-flex flex-column"
+    class="presentation d-flex flex-column py-5"
+    id="home"
     :style="{ backgroundImage: 'url(' + theme.background.image + ')' }"
   >
     <CustomHeader />
@@ -117,6 +118,7 @@ export default {
   .presentation {
     min-height: 100vh;
     height: auto;
+    border: 1px solid red;
     padding-bottom: 30px;
   }
 }

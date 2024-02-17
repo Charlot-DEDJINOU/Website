@@ -21,6 +21,7 @@ export default {
 <template>
   <nav
     class="navbar navbar-expand-lg header w-100 fixed-top"
+    id="navbar-example2"
     :style="{ backgroundColor: theme.background.primary }"
   >
     <div class="container-fluid">
@@ -90,10 +91,18 @@ export default {
     tabindex="-1"
     id="offcanvasScrolling"
     aria-labelledby="offcanvasScrollingLabel"
+    :style="{ backgroundColor: theme.background.drawer, color: theme.colorprimary }"
   >
+    <div class="offcanvas-header">
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
     <div
       class="offcanvas-body"
-      :style="{ backgroundColor: theme.background.drawer, color: theme.colorprimary }"
     >
       <CustomDrawer />
     </div>

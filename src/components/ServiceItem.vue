@@ -39,7 +39,6 @@ export default {
 .objectif {
   width: 300px;
   height: auto;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: black;
   cursor: pointer;

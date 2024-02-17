@@ -1,8 +1,15 @@
+<script>
+export default {
+  props: {
+    size: String
+  }
+}
+</script>
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="25"
-    height="25"
+    :width="size"
+    :height="size"
     fill="currentColor"
     class="bi bi-whatsapp"
     viewBox="0 0 16 16"

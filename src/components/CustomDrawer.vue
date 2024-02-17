@@ -27,7 +27,7 @@ export default {
       <span class="d-inline-block mx-3 fw-medium">Charlot Joël DEDJINOU</span>
     </div>
     <div class="my-4 w-100 d-flex flex-column align-items-center">
-      <SocialMedia />
+      <SocialMedia iconSize="20"/>
       <DrawerOnglets />
     </div>
   </div>
@@ -43,5 +43,8 @@ export default {
   width: 70px;
   height: 70px;
   border-radius: 50%;
+}
+::-webkit-scrollbar {
+  width: 0px;
 }
 </style>
