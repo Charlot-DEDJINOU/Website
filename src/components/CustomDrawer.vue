@@ -27,7 +27,7 @@ export default {
       <span class="d-inline-block mx-3 fw-medium">Charlot Joël DEDJINOU</span>
     </div>
     <div class="my-4 w-100 d-flex flex-column align-items-center">
-      <SocialMedia iconSize="20"/>
+      <SocialMedia iconSize="20" />
       <DrawerOnglets />
     </div>
   </div>

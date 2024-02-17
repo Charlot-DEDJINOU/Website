@@ -49,7 +49,7 @@ export default {
       </span>
       <ThemesColors class="opacity" v-if="show" />
     </div>
-    <PresentationProfil :color="uniColor" :theme="theme" class="mt-5"/>
+    <PresentationProfil :color="uniColor" :theme="theme" class="mt-5" />
     <IconArrowDown class="scroll-about" :style="{ color: uniColor }" />
   </section>
 </template>

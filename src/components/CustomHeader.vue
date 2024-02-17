@@ -101,9 +101,7 @@ export default {
         aria-label="Close"
       ></button>
     </div>
-    <div
-      class="offcanvas-body"
-    >
+    <div class="offcanvas-body">
       <CustomDrawer />
     </div>
   </div>
