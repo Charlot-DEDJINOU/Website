@@ -18,6 +18,6 @@ import ContactSection from '../components/ContactSection.vue'
     tabindex="0"
   >
     <HomeSection />
-   
+    <AboutSection />
   </main>
 </template>
