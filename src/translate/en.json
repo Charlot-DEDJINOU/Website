@@ -10,5 +10,9 @@
   "certifications": "Certifications",
   "contact": "Contact",
   "preferences": "Preferences",
-  "download": "Download"
+  "download": "Download",
+  "profil_1" : "I'm a software engineer",
+  "profil_2" : "I'm a data scientist",
+  "profil_3" : "I'm passionate about AI",
+  "profil_4" : "I'm passionate about IOT"
 }
