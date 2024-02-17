@@ -45,15 +45,15 @@ export default {
     <div class="photo-profil w-100">
       <img src="../assets/charlot.jpg" alt="Charlot" :style="{ border: '10px solid ' + color }" />
       <div class="profil h-100 d-flex flex-column justify-content-around">
-        <h3 :style="{ color: color }">Charlot DEDJINOU</h3>
+        <h3 :style="{ color: color }" class="my-3">Charlot DEDJINOU</h3>
         <div>
           <span class="fs-4 fw-meduim d-inline-block" ref="typewriterRef"></span>
           <span
-            class="span d-inline-block w-75"
+            class="span d-inline-block w-75 mb-3"
             :style="{ borderBottom: '5px solid ' + color }"
           ></span>
         </div>
-        <p class="text-justify text-profil text-responsive">
+        <p class="text-justify text-profil text-responsive mb-4">
           Je passionné par la création d'expériences web innovantes et convaincu du pouvoir de la
           technologie pour résoudre des problèmes du monde réel
         </p>
