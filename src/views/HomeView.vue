@@ -18,11 +18,6 @@ import ContactSection from '../components/ContactSection.vue'
     tabindex="0"
   >
     <HomeSection />
-    <AboutSection />
-    <ServicesSection />
-    <ProjectsSectionVue />
-    <AwardsSection />
-    <CertificationsSection />
-    <ContactSection />
+   
   </main>
 </template>

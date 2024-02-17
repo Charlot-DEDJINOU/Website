@@ -34,7 +34,7 @@ export default {
 </script>
 <template>
   <section
-    class="presentation d-flex flex-column py-5"
+    class="presentation d-flex flex-column justify-content-evenly align-items-center py-5"
     id="home"
     :style="{ backgroundImage: 'url(' + theme.background.image + ')' }"
   >
@@ -49,19 +49,14 @@ export default {
       </span>
       <ThemesColors class="opacity" v-if="show" />
     </div>
-    <div
-      class="w-100 h-100 d-flex flex-column align-items-center justify-content-evenly"
-      :style="{ marginTop: '80px' }"
-    >
-      <PresentationProfil :color="uniColor" :theme="theme" />
-      <IconArrowDown class="scroll-about" :style="{ color: uniColor }" />
-    </div>
+    <PresentationProfil :color="uniColor" :theme="theme" class="mt-5"/>
+    <IconArrowDown class="scroll-about" :style="{ color: uniColor }" />
   </section>
 </template>
 <style scoped>
 .presentation {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   padding-bottom: 15px;
@@ -69,6 +64,7 @@ export default {
 .presentation .home-preference {
   position: fixed;
   top: 30%;
+  left: 3px;
   cursor: pointer;
   height: 150px;
 }
@@ -119,21 +115,21 @@ export default {
     min-height: 100vh;
     height: auto;
     border: 1px solid red;
-    padding-bottom: 30px;
-  }
-}
-@media screen and (min-width: 501px) and (max-width: 768px) {
-  .presentation {
-    height: 100vh;
-    padding-bottom: 30px;
+    padding-bottom: 50px !important;
   }
   .presentation .scroll-about {
     margin-bottom: 0px;
     margin-top: 50px;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-}
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  .presentation {
+    min-height: 100vh;
+    padding-bottom: 30px;
+  }
+  .presentation .scroll-about {
+    margin-bottom: 0px;
+    margin-top: 50px;
+  }
 }
 </style>
