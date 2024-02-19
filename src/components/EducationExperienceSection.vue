@@ -1,12 +1,14 @@
 <script>
 import { useStore } from 'vuex'
 import { computed, ref } from 'vue'
-import EducationData from '../data/EducationData';
+import Educations from '../data/Educations'
+import Experiences from '../data/Experiences'
 
 export default {
   setup() {
 
-        const data = EducationData()
+        const educations = Educations();
+        const experiences = Experiences();
 
         const store = useStore();
         const uniColor = ref(computed(() => store.state.uniColor))
@@ -15,7 +17,8 @@ export default {
         return {
             uniColor,
             theme,
-            data
+            educations,
+            experiences
         }
     }
 }
@@ -24,38 +27,37 @@ export default {
     <div id="resume" class="resume mt-4">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6">
-              <span class="resume-title my-3 d-inline-block">Education</span>
-              <div v-for="(item, index) in data" :key="index" class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
-                <span :style="{backgroundColor : uniColor}"></span>
-                <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
-                    <h4 :style="{color : uniColor}">
-                        {{ item.title }}</h4>
-                    <i :style="{backgroundColor : theme.background.tertiaire}" class="text-responsive">{{ item.years }}</i>
-                    <p class="text-responsive"><em>{{ item.place }}</em></p>
-                </div>
+              <div class="col-lg-6">
+                  <span class="resume-title my-3 d-inline-block">Education</span>
+                  <div v-for="(item, index) in educations" :key="index" class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
+                    <span :style="{backgroundColor : uniColor}"></span>
+                    <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
+                        <h4 :style="{color : uniColor}">
+                            {{ item.title }}</h4>
+                        <i :style="{backgroundColor : theme.background.tertiaire}" class="text-responsive">{{ item.years }}</i>
+                        <p class="text-responsive"><em>{{ item.place }}</em></p>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-6">
+                  <span class="resume-title my-3 d-inline-block">Experience Professionnel</span>
+                  <div v-for="(item, index) in experiences" :key="index" class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
+                    <span :style="{backgroundColor : uniColor}"></span>
+                    <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
+                        <h4 :style="{color : uniColor}">{{ item.title }}</h4>
+                        <i :style="{backgroundColor : theme.background.tertiaire}" class="text-responsive">{{ item.years }}</i>
+                        <p class="px-2"><em>{{ item.place }}</em></p>
+                        <p>
+                        <ul class="text-responsive">
+                          <li v-for="(skill, index) in item.skills" :key="index">{{ skill }}</li>
+                        </ul>
+                        </p>
+                    </div>
+                  </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <span class="resume-title my-3 d-inline-block">Experience Professionnel</span>
-              <div class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
-                <span :style="{backgroundColor : uniColor}"></span>
-                <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
-                    <h4 :style="{color : uniColor}">Senior graphic design specialist</h4>
-                    <i :style="{backgroundColor : theme.background.tertiaire}" class="text-responsive">2019 - Present</i>
-                    <p><em>Experion, New York, NY </em></p>
-                    <p>
-                    <ul class="text-responsive">
-                      <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                      <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                    </ul>
-                    </p>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
         </div>
+    </div>
 </template>
 <style scoped>
 .resume .resume-item span {
