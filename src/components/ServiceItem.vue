@@ -9,6 +9,10 @@ export default {
     IconEye,
     SectionTitle
   },
+  props: {
+    title: String,
+    content: String
+  },
   setup() {
     const store = useStore()
     const uniColor = ref(computed(() => store.state.uniColor))
@@ -26,18 +30,17 @@ export default {
     <div className="objectif-title d-flex align-items-center justify-content-around my-3">
       <IconEye className="icon mx-3 d-inline-block" :style="{ color: uniColor }" />
       <div className="objectif-name">
-        <SectionTitle title="Web development" service="service" />
+        <SectionTitle :title="title" service="service" />
       </div>
     </div>
     <p className="text-justify px-2 text-responsive">
-      Mettre en place des procédures pour réduire l'impact environnemental des déchets électroniques
-      grâce à une collecte sélective, un recyclage efficace, et la remise à neuf d'équipements.
+      {{ content }}
     </p>
   </div>
 </template>
 <style scoped>
 .objectif {
-  width: 300px;
+  width: 330px;
   height: auto;
   border-radius: 10px;
   background-color: black;
