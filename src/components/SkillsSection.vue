@@ -2,19 +2,23 @@
 import ProgressBar from './ProgressBar.vue'
 import { useStore } from 'vuex'
 import { computed, ref } from 'vue'
+import Skills from '../data/Skills'
 
 export default {
   components: {
     ProgressBar
   },
   setup() {
+    const skills = Skills()
+
     const store = useStore()
     const uniColor = ref(computed(() => store.state.uniColor))
     const theme = ref(computed(() => store.state.theme))
 
     return {
       uniColor,
-      theme
+      theme,
+      skills
     }
   }
 }
@@ -27,52 +31,20 @@ export default {
     <div class="row skills-content">
       <div class="col-lg-6">
         <ProgressBar
-          skill="HTML"
-          percent="90%"
-          :color="uniColor"
-          :background="theme.background.secondary"
-        />
-        <ProgressBar
-          skill="JavaScript"
-          percent="95%"
-          :color="uniColor"
-          :background="theme.background.secondary"
-        />
-        <ProgressBar
-          skill="Java"
-          percent="97%"
-          :color="uniColor"
-          :background="theme.background.secondary"
-        />
-        <ProgressBar
-          skill="PHP"
-          percent="70%"
+          v-for="(item, index) in skills[0]"
+          :key="0 + index"
+          :skill="item.title"
+          :percent="item.percent"
           :color="uniColor"
           :background="theme.background.secondary"
         />
       </div>
       <div class="col-lg-6">
         <ProgressBar
-          skill="Python"
-          percent="80%"
-          :color="uniColor"
-          :background="theme.background.secondary"
-        />
-        <ProgressBar
-          skill="Momo"
-          percent="85%"
-          :color="uniColor"
-          :background="theme.background.secondary"
-        />
-        <ProgressBar
-          skill="OpenSearch"
-          percent="78%"
-          :color="uniColor"
-          :background="theme.background.secondary"
-        />
-        <ProgressBar
-          skill="Fluentd"
-          percent="45%"
+          v-for="(item, index) in skills[1]"
+          :key="1 + index"
+          :skill="item.title"
+          :percent="item.percent"
           :color="uniColor"
           :background="theme.background.secondary"
         />

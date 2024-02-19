@@ -141,7 +141,7 @@ export default function Projects() {
       github: 'https://github.com/Charlot-DEDJINOU/Shared-Preference-Flutter'
     },
     {
-      image: '../assets/stock_master.png',
+      image: '../assets/realtime_notification.avif',
       description:
         "Développé avec React JS pour le frontend, Express JS pour le backend, et les websockets pour la communication en temps réel, ce projet permet la mise en place de notifications en temps réel. Explorez la puissance des websockets pour fournir une expérience utilisateur dynamique et réactive, tout en utilisant des technologies modernes pour la création d'applications web interactives.",
       skills: ['React JS', 'Express JS', 'WebSocket', 'JS'],
