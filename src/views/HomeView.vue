@@ -2,7 +2,7 @@
 import HomeSection from '../components/HomeSection.vue'
 import AboutSection from '../components/AboutSection.vue'
 import ServicesSection from '../components/ServicesSection.vue'
-import ProjectsSectionVue from '../components/ProjectsSection.vue'
+import ProjectsSection from '../components/ProjectsSection.vue'
 import AwardsSection from '../components/AwardsSection.vue'
 import CertificationsSection from '../components/CertificationsSection.vue'
 import ContactSection from '../components/ContactSection.vue'
@@ -19,5 +19,7 @@ import ContactSection from '../components/ContactSection.vue'
   >
     <HomeSection />
     <AboutSection />
+    <ServicesSection />
+    <ProjectsSection />
   </main>
 </template>
