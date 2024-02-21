@@ -107,22 +107,20 @@ export default function Projects() {
       github: 'https://github.com/Charlot-DEDJINOU/EntretrienIA'
     },
     {
-        image: '../assets/aventure_baobab.png',
-        description:
-          "Dans le cadre du projet AVENTURE DU SAVOIR SUR BAOBAB , j'ai créé une fonctionnalité permettant de générer un lien J'y serai personnalisé. Ce lien offre à chaque personne la possibilité d'ajouter sa photo, son nom, une citation, de télécharger le visuel généré, et de le partager sur les réseaux sociaux",
-        skills: ['Vue JS', "J'y serai", 'Visuel', 'baobab'],
-        site: 'https://challenge-aventure-du-savoir-sur-baobab-uac.vercel.app',
-        github:
-          'https://github.com/Charlot-DEDJINOU/Challenge-Aventure-du-savoir-sur-Baobab-UAC'
+      image: '../assets/aventure_baobab.png',
+      description:
+        "Dans le cadre du projet AVENTURE DU SAVOIR SUR BAOBAB , j'ai créé une fonctionnalité permettant de générer un lien J'y serai personnalisé. Ce lien offre à chaque personne la possibilité d'ajouter sa photo, son nom, une citation, de télécharger le visuel généré, et de le partager sur les réseaux sociaux",
+      skills: ['Vue JS', "J'y serai", 'Visuel', 'baobab'],
+      site: 'https://challenge-aventure-du-savoir-sur-baobab-uac.vercel.app',
+      github: 'https://github.com/Charlot-DEDJINOU/Challenge-Aventure-du-savoir-sur-Baobab-UAC'
     },
     {
-        image: '../assets/excellente_night.png',
-        description:
-          "Dans le cadre de la deuxième édition de la Nuit de l'Excellence organisé par la Fondation Mastercard à l'UAC , j'ai créé une fonctionnalité permettant de générer un lien J'y serai personnalisé. Ce lien offre à chaque personne la possibilité d'ajouter sa photo, de télécharger le visuel généré, et de le partager sur les réseaux sociaux",
-        skills: ['Vue JS', "J'y serai", 'Visuel', 'UAC'],
-        site: 'https://excellence-night.vercel.app',
-        github:
-          'https://github.com/Charlot-DEDJINOU/ExcellenceNight'
+      image: '../assets/excellente_night.png',
+      description:
+        "Dans le cadre de la deuxième édition de la Nuit de l'Excellence organisé par la Fondation Mastercard à l'UAC , j'ai créé une fonctionnalité permettant de générer un lien J'y serai personnalisé. Ce lien offre à chaque personne la possibilité d'ajouter sa photo, de télécharger le visuel généré, et de le partager sur les réseaux sociaux",
+      skills: ['Vue JS', "J'y serai", 'Visuel', 'UAC'],
+      site: 'https://excellence-night.vercel.app',
+      github: 'https://github.com/Charlot-DEDJINOU/ExcellenceNight'
     },
     {
       image: '../assets/hdb.png',
