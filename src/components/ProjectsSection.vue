@@ -3,6 +3,7 @@ import SectionTitle from './SectionTitle.vue'
 import { ref, computed } from 'vue'
 import { useStore } from 'vuex'
 import ProjectItem from './ProjectItem.vue'
+import Projects from '../data/Projects';
 
 export default {
   components: {
@@ -15,9 +16,12 @@ export default {
     const uniColor = ref(computed(() => store.state.uniColor))
     const theme = ref(computed(() => store.state.theme))
 
+    const projects = Projects();
+
     return {
       uniColor,
-      theme
+      theme,
+      projects
     }
   }
 }
@@ -45,12 +49,7 @@ export default {
         </select>
       </div>
       <div class="d-flex flex-wrap justify-content-around mt-3">
-        <ProjectItem :theme="theme" :color="uniColor" />
-        <ProjectItem :theme="theme" :color="uniColor" />
-        <ProjectItem :theme="theme" :color="uniColor" />
-        <ProjectItem :theme="theme" :color="uniColor" />
-        <ProjectItem :theme="theme" :color="uniColor" />
-        <ProjectItem :theme="theme" :color="uniColor" />
+        <ProjectItem :theme="theme" :color="uniColor" v-for="(item, index) in projects" :key="index" :projet="item"/>
       </div>
     </div>
   </section>
