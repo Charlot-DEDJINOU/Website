@@ -5,45 +5,43 @@ import IconWorld from './icons/IconWorld.vue'
 export default {
   props: {
     color: String,
-    theme: Object
+    theme: Object,
+    projet : Object
   },
   components: { IconGithub, IconWorld }
 }
 </script>
 <template>
-  <div class="projet m-3" :style="{ backgroundColor: theme.background.secondary }">
-    <img src="../assets/backgroundWhite.png" alt="projet" />
-    <div class="d-flex flex-column justify-content-around description">
-      <div class="px-3 text-justify text-responsive">
-        Je suis Charlot DEDJINOU, un développeur passionné par la création d'expériences web
-        innovantes et convaincu du pouvoir de la technologie.
-      </div>
-      <div class="w-100 d-flex justify-content-around align-items-center px-2 skills-projet">
-        <span :style="{ backgroundColor: theme.background.tertiaire, color: color }">React Js</span>
-        <span :style="{ backgroundColor: theme.background.tertiaire, color: color }">Python</span>
-        <span :style="{ backgroundColor: theme.background.tertiaire, color: color }">Laravel</span>
-        <span :style="{ backgroundColor: theme.background.tertiaire, color: color }">Node Js</span>
-      </div>
-      <div class="w-100 d-flex justify-content-around align-items-center view-projet">
-        <button :style="{ backgroundColor: color, color: theme.colorsecondary }">
-          <IconGithub size="20" /> View
-        </button>
-        <button :style="{ backgroundColor: color, color: theme.colorsecondary }">
-          <IconWorld size="20" /> View
-        </button>
-      </div>
+  <div class="projet m-3 d-flex flex-column justify-content-between" :style="{ backgroundColor: theme.background.secondary }">
+    <img :src="projet.image" :alt="projet.image" class="mb-3"/>
+    <div class="px-3 text-justify text-responsive mb-3">
+      {{ projet.description }}
+    </div>
+    <div class="w-100 d-flex justify-content-around align-items-center px-2 skills-projet mb-3">
+      <span :style="{ backgroundColor: theme.background.tertiaire, color: color }" v-for="(item, index) in projet.skills" :key="index">{{ item }}</span>
+    </div>
+    <div class="w-100 d-flex justify-content-around align-items-center view-projet mb-3">
+      <button :style="{ backgroundColor: color, color: theme.colorsecondary }">
+        <IconGithub size="20" /> View
+      </button>
+      <button :style="{ backgroundColor: color, color: theme.colorsecondary }">
+        <IconWorld size="20" /> View
+      </button>
     </div>
   </div>
 </template>
 <style scoped>
 .projet {
   width: 350px;
-  height: 390px;
+  min-height: 390px;
+  height: auto;
   border-radius: 10px;
 }
 .projet img {
+  object-fit: cover;
+  object-position: center;
   width: 100%;
-  height: 45%;
+  height: auto;
   border-radius: 10px 10px 0px 0px;
 }
 .projet .description {
