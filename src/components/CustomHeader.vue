@@ -11,9 +11,11 @@ export default {
     const store = useStore()
 
     const theme = ref(computed(() => store.state.theme))
+    const uniColor = ref(computed(() => store.state.uniColor))
 
     return {
-      theme
+      theme,
+      uniColor
     }
   }
 }
@@ -45,37 +47,37 @@ export default {
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav nav nav-pills">
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#home" :style="{ color: theme.colorprimary }">{{
+            <a class="nav-link" href="#home" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
               $t('home')
             }}</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#about" :style="{ color: theme.colorprimary }">{{
+            <a class="nav-link" href="#about" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
               $t('about')
             }}</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#services" :style="{ color: theme.colorprimary }">{{
+            <a class="nav-link" href="#services" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
               $t('services')
             }}</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#projets" :style="{ color: theme.colorprimary }">{{
+            <a class="nav-link" href="#projets" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
               $t('projects')
             }}</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#distinctions" :style="{ color: theme.colorprimary }">{{
+            <a class="nav-link" href="#distinctions" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
               $t('awards')
             }}</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#certifications" :style="{ color: theme.colorprimary }">{{
+            <a class="nav-link" href="#certifications" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
               $t('certifications')
             }}</a>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#contact" :style="{ color: theme.colorprimary }">{{
+            <a class="nav-link" href="#contact" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
               $t('contact')
             }}</a>
           </li>
@@ -93,14 +95,6 @@ export default {
     aria-labelledby="offcanvasScrollingLabel"
     :style="{ backgroundColor: theme.background.drawer, color: theme.colorprimary }"
   >
-    <div class="offcanvas-header">
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="offcanvas"
-        aria-label="Close"
-      ></button>
-    </div>
     <div class="offcanvas-body">
       <CustomDrawer />
     </div>
