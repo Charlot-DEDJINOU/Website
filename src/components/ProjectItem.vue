@@ -14,6 +14,7 @@ export default {
 <template>
   <div class="projet m-3 d-flex flex-column justify-content-between" :style="{ backgroundColor: theme.background.secondary }">
     <img :src="projet.image" :alt="projet.image" class="mb-3"/>
+    <h5 class="text-center mb-3" :style="{ color: color }">{{ projet.title }}</h5>
     <div class="px-3 text-justify text-responsive mb-3">
       {{ projet.description }}
     </div>
@@ -36,12 +37,13 @@ export default {
   min-height: 390px;
   height: auto;
   border-radius: 10px;
+  box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
 }
 .projet img {
   object-fit: cover;
   object-position: center;
   width: 100%;
-  height: auto;
+  height: 260px;
   border-radius: 10px 10px 0px 0px;
 }
 .projet .description {
