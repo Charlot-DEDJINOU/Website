@@ -34,7 +34,7 @@
   }
 }
 .active {
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid var(--active);
   background: none !important;
-  color: green !important;
+  color: var(--active) !important;
 }
