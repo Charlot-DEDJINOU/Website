@@ -25,6 +25,12 @@ export default {
     <div class="drawer-header d-flex align-items-center">
       <img src="../assets/charlot.jpg" alt="charlot" :style="{ border: '3px solid' + uniColor }" />
       <span class="d-inline-block mx-3 fw-medium">Charlot Joël DEDJINOU</span>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
     </div>
     <div class="my-4 w-100 d-flex flex-column align-items-center">
       <SocialMedia iconSize="20" />
