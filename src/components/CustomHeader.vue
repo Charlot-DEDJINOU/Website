@@ -47,39 +47,60 @@ export default {
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav nav nav-pills">
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#home" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
-              $t('home')
-            }}</a>
+            <a
+              class="nav-link"
+              href="#home"
+              :style="{ color: theme.colorprimary, '--active': uniColor }"
+              >{{ $t('home') }}</a
+            >
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#about" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
-              $t('about')
-            }}</a>
+            <a
+              class="nav-link"
+              href="#about"
+              :style="{ color: theme.colorprimary, '--active': uniColor }"
+              >{{ $t('about') }}</a
+            >
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#services" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
-              $t('services')
-            }}</a>
+            <a
+              class="nav-link"
+              href="#services"
+              :style="{ color: theme.colorprimary, '--active': uniColor }"
+              >{{ $t('services') }}</a
+            >
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#projets" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
-              $t('projects')
-            }}</a>
+            <a
+              class="nav-link"
+              href="#projets"
+              :style="{ color: theme.colorprimary, '--active': uniColor }"
+              >{{ $t('projects') }}</a
+            >
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#distinctions" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
-              $t('awards')
-            }}</a>
+            <a
+              class="nav-link"
+              href="#distinctions"
+              :style="{ color: theme.colorprimary, '--active': uniColor }"
+              >{{ $t('awards') }}</a
+            >
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#certifications" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
-              $t('certifications')
-            }}</a>
+            <a
+              class="nav-link"
+              href="#certifications"
+              :style="{ color: theme.colorprimary, '--active': uniColor }"
+              >{{ $t('certifications') }}</a
+            >
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link" href="#contact" :style="{ color: theme.colorprimary, '--active' : uniColor }">{{
-              $t('contact')
-            }}</a>
+            <a
+              class="nav-link"
+              href="#contact"
+              :style="{ color: theme.colorprimary, '--active': uniColor }"
+              >{{ $t('contact') }}</a
+            >
           </li>
         </ul>
       </div>
