@@ -1,31 +1,41 @@
 <script>
 import IconGithub from './icons/IconGithub.vue'
 import IconWorld from './icons/IconWorld.vue'
+import Forward from '../layout/Forward';
 
 export default {
   props: {
     color: String,
     theme: Object,
-    projet : Object
+    projet: Object
   },
-  components: { IconGithub, IconWorld }
+  components: { IconGithub, IconWorld},
+  methods : {Forward}
 }
 </script>
 <template>
-  <div class="projet m-3 d-flex flex-column justify-content-between" :style="{ backgroundColor: theme.background.secondary }">
-    <img :src="projet.image" :alt="projet.image" class="mb-3"/>
+  <div
+    class="projet m-3 d-flex flex-column justify-content-between"
+    :style="{ backgroundColor: theme.background.secondary }"
+  >
+    <img :src="projet.image" :alt="projet.image" class="mb-3" />
     <h5 class="text-center mb-3" :style="{ color: color }">{{ projet.title }}</h5>
     <div class="px-3 text-justify text-responsive mb-3">
       {{ projet.description }}
     </div>
     <div class="w-100 d-flex justify-content-around align-items-center px-2 skills-projet mb-3">
-      <span :style="{ backgroundColor: theme.background.tertiaire, color: color }" v-for="(item, index) in projet.skills" :key="index">{{ item }}</span>
+      <span
+        :style="{ backgroundColor: theme.background.tertiaire, color: color }"
+        v-for="(item, index) in projet.skills"
+        :key="index"
+        >{{ item }}</span
+      >
     </div>
     <div class="w-100 d-flex justify-content-around align-items-center view-projet mb-3">
-      <button :style="{ backgroundColor: color, color: theme.colorsecondary }">
+      <button :style="{ backgroundColor: color, color: theme.colorsecondary }" @click="Forward(projet.github)">
         <IconGithub size="20" /> View
       </button>
-      <button :style="{ backgroundColor: color, color: theme.colorsecondary }">
+      <button :style="{ backgroundColor: color, color: theme.colorsecondary }" @click="Forward(projet.site)">
         <IconWorld size="20" /> View
       </button>
     </div>
@@ -37,7 +47,7 @@ export default {
   min-height: 390px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
 }
 .projet img {
   object-fit: cover;
