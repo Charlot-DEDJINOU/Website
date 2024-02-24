@@ -5,11 +5,11 @@ import Educations from '../data/Educations'
 import Experiences from '../data/Experiences'
 
 export default {
+    methods : {
+        Educations,
+        Experiences
+    },
   setup() {
-
-        const educations = Educations();
-        const experiences = Experiences();
-
         const store = useStore();
         const uniColor = ref(computed(() => store.state.uniColor))
         const theme = ref(computed(() => store.state.theme))
@@ -17,8 +17,6 @@ export default {
         return {
             uniColor,
             theme,
-            educations,
-            experiences
         }
     }
 }
@@ -29,7 +27,7 @@ export default {
           <div class="row">
               <div class="col-lg-6">
                   <span class="resume-title my-3 d-inline-block">Education</span>
-                  <div v-for="(item, index) in educations" :key="index" class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
+                  <div v-for="(item, index) in Educations()" :key="index" class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
                     <span :style="{backgroundColor : uniColor}"></span>
                     <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
                         <h4 :style="{color : uniColor}">
@@ -41,7 +39,7 @@ export default {
               </div>
               <div class="col-lg-6">
                   <span class="resume-title my-3 d-inline-block">Experience Professionnel</span>
-                  <div v-for="(item, index) in experiences" :key="index" class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
+                  <div v-for="(item, index) in Experiences()" :key="index" class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
                     <span :style="{backgroundColor : uniColor}"></span>
                     <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
                         <h4 :style="{color : uniColor}">{{ item.title }}</h4>
