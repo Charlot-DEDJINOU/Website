@@ -3,6 +3,9 @@ import { ref, computed } from 'vue'
 import { useStore } from 'vuex'
 
 export default {
+  props: {
+    award: Object
+  },
   setup() {
     const store = useStore()
 
@@ -18,24 +21,25 @@ export default {
 </script>
 <template>
   <div class="distinction mb-4" :style="{ backgroundColor: theme.background.secondary }">
-    <img src="../assets/backgroundBack.png" alt="image" />
+    <img :src="award.image" alt="image" />
     <div class="informations px-3 py-2">
       <div class="mt-3 text-responsive" :style="{ color: uniColor }">
-        Machine Artificial Intelligence Contest (MAIC)
+        {{ award.title }}
       </div>
-      <div class="mt-3 text-responsive">Machine Intelligence For You (MIFY)</div>
+      <div class="mt-3 text-responsive">{{ award.organization }}</div>
       <div class="date-range mt-3 text-responsive">
-        <i :style="{ backgroundColor: theme.background.tertiaire }">Novembre - Decembre 2022</i>
-        <span class="fw-medium" :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
-          >Premier Prix</span
+        <i :style="{ backgroundColor: theme.background.tertiaire }">{{ award.date }}</i>
+        <span
+          class="fw-medium"
+          :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
+          >{{ award.range }}</span
         >
       </div>
       <div class="text-justify my-3 text-responsive">
-        Je suis Charlot DEDJINOU, un développeur passionné par la création d'expériences web
-        innovantes et convaincu du pouvoir de la technologie.Je suis Charlot DEDJINOU, un
-        développeur passionné par la création d'expériences web innovantes et convaincu du pouvoir
-        de la technologie.Je suis Charlot DEDJINOU, un développeur passionné par la création
-        d'expériences web innovantes.
+        <span :style="{ color: uniColor }">Thème : </span> {{ award.theme }}
+      </div>
+      <div class="text-justify my-3 text-responsive">
+        <span :style="{ color: uniColor }">Solution : </span> {{ award.description }}
       </div>
     </div>
   </div>
@@ -47,6 +51,7 @@ export default {
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
 }
 .distinction .informations {
   width: 64%;
