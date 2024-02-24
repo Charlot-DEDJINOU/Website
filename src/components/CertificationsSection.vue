@@ -3,6 +3,7 @@ import SectionTitle from './SectionTitle.vue'
 import { ref, computed } from 'vue'
 import { useStore } from 'vuex'
 import { Splide, SplideSlide } from '@splidejs/vue-splide'
+import Certifications from '../data/Certifications.js'
 
 export default {
   components: {
@@ -20,33 +21,45 @@ export default {
       type: 'loop',
       focus: 'center',
       drag: 'free',
-      speed: 1000,
-      rewindSpeed: 1000,
-      perPage: 3.5,
+      speed: 2000,
+      rewindSpeed: 2000,
+      perPage: 3,
       breakpoints: {
-        1440: { perPage: 3.5 },
-        1340: { perPage: 3 },
-        1240: { perPage: 2.75 },
-        1140: { perPage: 2.5 },
-        940: { perPage: 2.25 },
-        840: { perPage: 2 },
-        740: { perPage: 1.75 },
-        640: { perPage: 1.5 },
-        540: { perPage: 1.25 },
+        1440: { perPage: 3 },
+        1340: { perPage: 2.5 },
+        1240: { perPage: 2.25 },
+        1140: { perPage: 2 },
+        940: { perPage: 1.75 },
+        840: { perPage: 1.5 },
+        740: { perPage: 1 },
+        640: { perPage: 1 },
+        540: { perPage: 1 },
         440: { perPage: 1 }
       },
       perMove: 1,
       rewind: true,
       autoplay: true,
-      interval: 1000,
+      interval: 3000,
       arrows: true,
-      pagination: true
+      pagination: false
+    }
+
+    const certifications = ref(Certifications())
+    const text = ref('')
+
+    const search = () => {
+      certifications.value = Certifications().filter((item) =>
+        item.name.toLowerCase().includes(text.value.toLowerCase())
+      )
     }
 
     return {
       uniColor,
       theme,
-      options
+      options,
+      certifications,
+      text,
+      search
     }
   }
 }
@@ -55,33 +68,21 @@ export default {
   <section class="mt-5 certifications" id="certifications">
     <SectionTitle title="Certifications" />
     <div class="container mt-5">
-      <div class="d-flex justify-content-around flex-wrap search w-100">
+      <div class="d-flex justify-content-around  align-items-center flex-wrap search w-100 mb-2">
         <input
-          class="mb-2 w-75"
+          v-model="text"
+          @input="search"
+          class="w-75"
           type="text"
           placeholder="Search"
           :style="{ backgroundColor: theme.background.secondary, color: theme.colorprimary }"
         />
+        <span class="d-inline-block">{{ certifications.length }}</span>
       </div>
       <div class="d-flex flex-wrap justify-content-around">
         <Splide :options="options" aria-label="My Favorite Images" class="w-100">
-          <SplideSlide>
-            <img src="../assets/backgroundBack.png" alt="Sample 1" width="300px" />
-          </SplideSlide>
-          <SplideSlide>
-            <img src="../assets/backgroundWhite.png" alt="Sample 2" width="300px" />
-          </SplideSlide>
-          <SplideSlide>
-            <img src="../assets/backgroundBack.png" alt="Sample 1" width="300px" />
-          </SplideSlide>
-          <SplideSlide>
-            <img src="../assets/backgroundWhite.png" alt="Sample 2" width="300px" />
-          </SplideSlide>
-          <SplideSlide>
-            <img src="../assets/backgroundBack.png" alt="Sample 1" width="300px" />
-          </SplideSlide>
-          <SplideSlide>
-            <img src="../assets/backgroundWhite.png" alt="Sample 2" width="300px" />
+          <SplideSlide v-for="(item, index) in certifications" :key="index">
+            <img :src="item.image" :alt="item.name" width="360px"/>
           </SplideSlide>
         </Splide>
       </div>
