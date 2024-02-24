@@ -8,12 +8,8 @@ export default {
     SectionTitle,
     ServiceItem
   },
-  setup() {
-    const services = Services()
-
-    return {
-      services
-    }
+  methods: {
+    Services
   }
 }
 </script>
@@ -22,7 +18,7 @@ export default {
     <SectionTitle title="Services" />
     <div class="container d-flex flex-wrap justify-content-between mt-3">
       <ServiceItem
-        v-for="(item, index) in services"
+        v-for="(item, index) in Services()"
         :key="index"
         :title="item.title"
         :content="item.description"
