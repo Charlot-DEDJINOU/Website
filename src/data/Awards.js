@@ -13,7 +13,8 @@ export default function Awards() {
         'Solutions numériques qui feront la différence pour votre université ou votre environnement',
       date: 'Decembre 2023',
       range: 'Participant',
-      description: "Plateforme web de simulation d'entretiens en ligne avec des questions générées par ChatGPT."
+      description:
+        "Plateforme web de simulation d'entretiens en ligne avec des questions générées par ChatGPT."
     },
     {
       image: maic,
@@ -23,7 +24,8 @@ export default function Awards() {
         'Solution Numérique pour la gestion des Déchets des Equipements Electriques et Electroniques (DEEE)',
       date: 'Novembre - Decembre 2022',
       range: 'Premier Prix',
-      description: "IA utilisant uniquement la programmation fonctionnelle pour les fonctions de base."
+      description:
+        'IA utilisant uniquement la programmation fonctionnelle pour les fonctions de base.'
     },
     {
       image: ewaste,
@@ -33,7 +35,8 @@ export default function Awards() {
         'Solution Numérique pour la gestion des Déchets des Equipements Electriques et Electroniques (DEEE)',
       date: 'Janvier - Mars 2023',
       range: 'Deuxième Prix',
-      description: "Plateforme web de sensibilisation, collecte, vente et réparation d'équipements reconditionnés."
+      description:
+        "Plateforme web de sensibilisation, collecte, vente et réparation d'équipements reconditionnés."
     },
     {
       image: yats,
