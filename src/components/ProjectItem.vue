@@ -1,7 +1,7 @@
 <script>
 import IconGithub from './icons/IconGithub.vue'
 import IconWorld from './icons/IconWorld.vue'
-import Forward from '../layout/Forward';
+import Forward from '../layout/Forward'
 
 export default {
   props: {
@@ -9,8 +9,8 @@ export default {
     theme: Object,
     projet: Object
   },
-  components: { IconGithub, IconWorld},
-  methods : {Forward}
+  components: { IconGithub, IconWorld },
+  methods: { Forward }
 }
 </script>
 <template>
@@ -32,10 +32,16 @@ export default {
       >
     </div>
     <div class="w-100 d-flex justify-content-around align-items-center view-projet mb-3">
-      <button :style="{ backgroundColor: color, color: theme.colorsecondary }" @click="Forward(projet.github)">
+      <button
+        :style="{ backgroundColor: color, color: theme.colorsecondary }"
+        @click="Forward(projet.github)"
+      >
         <IconGithub size="20" /> View
       </button>
-      <button :style="{ backgroundColor: color, color: theme.colorsecondary }" @click="Forward(projet.site)">
+      <button
+        :style="{ backgroundColor: color, color: theme.colorsecondary }"
+        @click="Forward(projet.site)"
+      >
         <IconWorld size="20" /> View
       </button>
     </div>

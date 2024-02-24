@@ -21,5 +21,6 @@ import ContactSection from '../components/ContactSection.vue'
     <AboutSection />
     <ServicesSection />
     <ProjectsSection />
+    <AwardsSection />
   </main>
 </template>
