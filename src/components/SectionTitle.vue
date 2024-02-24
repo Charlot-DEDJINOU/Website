@@ -1,6 +1,6 @@
 <script>
-import { useStore } from 'vuex';
-import { computed, ref } from 'vue';
+import { useStore } from 'vuex'
+import { computed, ref } from 'vue'
 
 export default {
   props: {
@@ -21,7 +21,7 @@ export default {
   <div class="section-title d-flex flex-column align-items-center">
     <b v-if="service === 'service'" class="d-inline-block fs-5">{{ title }}</b>
     <h2 v-else>{{ title }}</h2>
-    <span class="d-inline-block" :style="{ backgroundColor : uniColor }"></span>
+    <span class="d-inline-block" :style="{ backgroundColor: uniColor }"></span>
   </div>
 </template>
 
