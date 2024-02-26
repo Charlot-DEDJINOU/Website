@@ -2,47 +2,20 @@
 import SectionTitle from './SectionTitle.vue'
 import { ref, computed } from 'vue'
 import { useStore } from 'vuex'
-import { Splide, SplideSlide } from '@splidejs/vue-splide'
+import { Carousel3d, Slide } from 'vue3-carousel-3d'
 import Certifications from '../data/Certifications.js'
 
 export default {
   components: {
     SectionTitle,
-    Splide,
-    SplideSlide
+    Slide,
+    Carousel3d
   },
   setup() {
     const store = useStore()
 
     const uniColor = ref(computed(() => store.state.uniColor))
     const theme = ref(computed(() => store.state.theme))
-
-    const options = {
-      type: 'loop',
-      focus: 'center',
-      drag: 'free',
-      speed: 2000,
-      rewindSpeed: 2000,
-      perPage: 3,
-      breakpoints: {
-        1440: { perPage: 3 },
-        1340: { perPage: 2.5 },
-        1240: { perPage: 2.25 },
-        1140: { perPage: 2 },
-        940: { perPage: 1.75 },
-        840: { perPage: 1.5 },
-        740: { perPage: 1 },
-        640: { perPage: 1 },
-        540: { perPage: 1 },
-        440: { perPage: 1 }
-      },
-      perMove: 1,
-      rewind: true,
-      autoplay: true,
-      interval: 3000,
-      arrows: true,
-      pagination: false
-    }
 
     const certifications = ref(Certifications())
     const text = ref('')
@@ -56,7 +29,6 @@ export default {
     return {
       uniColor,
       theme,
-      options,
       certifications,
       text,
       search
@@ -68,7 +40,7 @@ export default {
   <section class="mt-5 certifications" id="certifications">
     <SectionTitle title="Certifications" />
     <div class="container mt-5">
-      <div class="d-flex justify-content-around  align-items-center flex-wrap search w-100 mb-2">
+      <div class="d-flex justify-content-around align-items-center flex-wrap search w-100 mb-2">
         <input
           v-model="text"
           @input="search"
@@ -80,11 +52,18 @@ export default {
         <span class="d-inline-block">{{ certifications.length }}</span>
       </div>
       <div class="d-flex flex-wrap justify-content-around">
-        <Splide :options="options" aria-label="My Favorite Images" class="w-100">
-          <SplideSlide v-for="(item, index) in certifications" :key="index">
-            <img :src="item.image" :alt="item.name" width="360px"/>
-          </SplideSlide>
-        </Splide>
+        <carousel-3d
+          class="w-100 carousel"
+          :width="500"
+          :height="355"
+          :autoplay="true"
+          :display="5"
+          :startIndex="0"
+        >
+          <slide v-for="(item, index) in certifications" :key="index" :index="item.id">
+            <img :src="item.image" :alt="item.name" />
+          </slide>
+        </carousel-3d>
       </div>
     </div>
   </section>
@@ -97,5 +76,17 @@ export default {
   outline: none;
   border-radius: 10px;
   padding: 0px 15px;
+}
+.certifications img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+@media screen and (max-width: 500px) {
+  .certifications img {
+    width: 100%;
+    height: auto;
+    object-position: center;
+  }
 }
 </style>
