@@ -78,7 +78,7 @@ export default {
 .distinction .informations .text-justify {
   text-align: justify;
 }
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 1024px) {
   .distinction {
     width: 95%;
     flex-direction: column;
