@@ -11,13 +11,13 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "@splidejs/vue-splide": "^0.6.12",
     "@vueuse/core": "^10.7.2",
     "bootstrap": "^5.3.2",
     "typewriter-effect": "^2.21.0",
     "vue": "^3.4.15",
     "vue-i18n": "^9.9.1",
     "vue-router": "^4.2.5",
+    "vue3-carousel-3d": "^1.0.4",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
