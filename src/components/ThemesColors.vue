@@ -93,21 +93,21 @@ export default {
   background-color: #16c953;
 }
 .color .color2 {
-  background-color: #8B0000;
+  background-color: #8b0000;
 }
 .color .color3 {
   background-color: #800080;
 }
 .color .color4 {
-  background-color:  #808000;
+  background-color: #808000;
 }
 .color .color5 {
-  background-color: #005FB2;
+  background-color: #005fb2;
 }
 .color .color6 {
-  background-color: #FF1493;
+  background-color: #ff1493;
 }
 .color .color7 {
-  background-color: #FF4500;
+  background-color: #ff4500;
 }
 </style>
