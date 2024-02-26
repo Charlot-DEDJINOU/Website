@@ -6,6 +6,7 @@ import IconLinkdln from './icons/IconLinkdln.vue'
 import IconEmail from './icons/IconEmail.vue'
 import { useStore } from 'vuex'
 import { computed, ref } from 'vue'
+import Forward from '../layout/Forward'
 
 export default {
   components: {
@@ -14,6 +15,9 @@ export default {
     IconWhatsapp,
     IconGithub,
     IconLinkdln
+  },
+  methods: {
+    Forward
   },
   props: {
     size: String,
@@ -38,36 +42,44 @@ export default {
     :style="{ width: size == null ? 'auto' : size }"
   >
     <span
+      @click="Forward('https://www.facebook.com/charlot.leuro.35?mibextid=ZbWKwL')"
       class="d-inline-block d-flex align-items-center justify-content-center"
-      :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
+      :style="{ backgroundColor: uniColor, color: 'white' }"
       ><IconFacebook :size="iconSize"
     /></span>
-    <span
+    <a
+      href="mailto:dedjinoucharlotjoel@gmail.com"
       class="d-inline-block d-flex align-items-center justify-content-center"
-      :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
+      :style="{ backgroundColor: uniColor, color: 'white' }"
       ><IconEmail :size="iconSize"
-    /></span>
+    /></a>
     <span
+      @click="Forward('https://github.com/Charlot-DEDJINOU')"
       class="d-inline-block d-flex align-items-center justify-content-center"
-      :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
+      :style="{ backgroundColor: uniColor, color: 'white' }"
       ><IconGithub :size="iconSize"
     /></span>
     <span
+      @click="Forward('https://wa.me/22959105267')"
       class="d-inline-block d-flex align-items-center justify-content-center"
-      :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
+      :style="{ backgroundColor: uniColor, color: 'white' }"
       ><IconWhatsapp :size="iconSize"
     /></span>
     <span
+      @click="Forward('https://www.linkedin.com/in/charlot-dedjinou-b45a0a234')"
       class="d-inline-block d-flex align-items-center justify-content-center"
-      :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
+      :style="{ backgroundColor: uniColor, color: 'white' }"
       ><IconLinkdln :size="iconSize"
     /></span>
   </div>
 </template>
 <style>
-.social-media span {
+.social-media span,
+.social-media a {
   padding: 10px;
   margin: 0px 4px;
   border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
 }
 </style>
