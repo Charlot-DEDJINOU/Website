@@ -54,12 +54,12 @@ export default {
       <option value="fr">{{ $t('fr') }}</option>
     </select>
     <span class="color1 m-2" @click="toggleColor('#16c953')"></span>
-    <span class="color2 m-2" @click="toggleColor('#A52A2A')"></span>
-    <span class="color3 m-2" @click="toggleColor('#9E0064')"></span>
-    <span class="color4 m-2" @click="toggleColor('#CCCC00')"></span>
-    <span class="color5 m-2" @click="toggleColor('#084EFF')"></span>
-    <span class="color6 m-2" @click="toggleColor('#FFC0CB')"></span>
-    <span class="color7 m-2" @click="toggleColor('#905B16')"></span>
+    <span class="color2 m-2" @click="toggleColor('#8B0000')"></span>
+    <span class="color3 m-2" @click="toggleColor('#800080')"></span>
+    <span class="color4 m-2" @click="toggleColor(' #808000')"></span>
+    <span class="color5 m-2" @click="toggleColor('#005FB2')"></span>
+    <span class="color6 m-2" @click="toggleColor('#FF1493')"></span>
+    <span class="color7 m-2" @click="toggleColor('#FF4500')"></span>
     <span @click="toggleTheme()" class="m-2" :style="{ color: theme.colorprimary }">
       <Lune v-if="isDark" />
       <Solar v-else />
@@ -93,21 +93,21 @@ export default {
   background-color: #16c953;
 }
 .color .color2 {
-  background-color: #a52a2a;
+  background-color: #8B0000;
 }
 .color .color3 {
-  background-color: #9e0064;
+  background-color: #800080;
 }
 .color .color4 {
-  background-color: #cccc00;
+  background-color:  #808000;
 }
 .color .color5 {
-  background-color: #084eff;
+  background-color: #005FB2;
 }
 .color .color6 {
-  background-color: #ffc0cb;
+  background-color: #FF1493;
 }
 .color .color7 {
-  background-color: #905b16;
+  background-color: #FF4500;
 }
 </style>
