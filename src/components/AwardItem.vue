@@ -23,23 +23,22 @@ export default {
   <div class="distinction mb-4" :style="{ backgroundColor: theme.background.secondary }">
     <img :src="award.image" alt="image" />
     <div class="informations px-3 py-2">
-      <div class="mt-3 text-responsive" :style="{ color: uniColor }">
+      <div class="mt-3 text-responsive fw-medium text-uppercase" :style="{ color: uniColor }">
         {{ award.title }}
       </div>
       <div class="mt-3 text-responsive">{{ award.organization }}</div>
       <div class="date-range mt-3 text-responsive">
         <i :style="{ backgroundColor: theme.background.tertiaire }">{{ award.date }}</i>
-        <span
-          class="fw-medium"
-          :style="{ backgroundColor: uniColor, color: theme.colorsecondary }"
-          >{{ award.range }}</span
-        >
+        <span class="fw-medium" :style="{ backgroundColor: uniColor, color: 'white' }">{{
+          award.range
+        }}</span>
       </div>
       <div class="text-justify my-3 text-responsive">
-        <span :style="{ color: uniColor }">Thème : </span> {{ award.theme }}
+        <span :style="{ color: uniColor }" class="fw-medium">Thème : </span> {{ award.theme }}
       </div>
       <div class="text-justify my-3 text-responsive">
-        <span :style="{ color: uniColor }">Solution : </span> {{ award.description }}
+        <span :style="{ color: uniColor }" class="fw-medium">Solution : </span>
+        {{ award.description }}
       </div>
     </div>
   </div>
