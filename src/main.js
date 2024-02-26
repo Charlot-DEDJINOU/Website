@@ -9,10 +9,7 @@ import './scss/styles.scss'
 // eslint-disable-next-line no-unused-vars
 import * as bootstrap from 'bootstrap'
 
-import '@splidejs/vue-splide/css/sea-green'
-
-// or only core styles
-import '@splidejs/vue-splide/css/core'
+import 'vue3-carousel-3d/dist/index.css'
 
 import frMessages from './translate/fr.json'
 import enMessages from './translate/en.json'
