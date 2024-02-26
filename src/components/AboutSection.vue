@@ -44,13 +44,13 @@ export default {
           <div class="cv-view d-flex flex-wrap justify-content-evenly mt-4 w-100">
             <button
               class="py-2 px-4 fw-medium border-0 d-flex align-items-center justify-content-center"
-              :style="{ backgroundColor: uniColor, color: theme.colorsecondary, width: '190px' }"
+              :style="{ backgroundColor: uniColor, color: 'white', width: '190px' }"
             >
               <IconDownloadAbout class="mx-2" /> Download CV
             </button>
             <button
               class="py-2 px-4 fw-medium border-0 d-flex align-items-center justify-content-center"
-              :style="{ backgroundColor: uniColor, color: theme.colorsecondary, width: '190px' }"
+              :style="{ backgroundColor: uniColor, color: 'white', width: '190px' }"
             >
               <IconEye class="mx-2" /> View
             </button>
