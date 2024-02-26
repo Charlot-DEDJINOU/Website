@@ -21,7 +21,7 @@ export default function Awards() {
       title: 'MIFY Artificial Intelligence Contest (MAIC) sixième edition',
       organization: 'Machine Intelligence For You  (MIFY)',
       theme:
-        'Solution Numérique pour la gestion des Déchets des Equipements Electriques et Electroniques (DEEE)',
+        'Proposer une Intelligence Artificielle capable de jouer le jeu de Morabaraba',
       date: 'Novembre - Decembre 2022',
       range: 'Premier Prix',
       description:
