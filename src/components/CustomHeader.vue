@@ -27,7 +27,7 @@ export default {
     :style="{ backgroundColor: theme.background.primary }"
   >
     <div class="container-fluid">
-      <a class="navbar-brand mx-5 logo" href="#">Charlot</a>
+      <a class="navbar-brand mx-5 logo" href="#" :style="{ color: theme.colorprimary }">Charlot</a>
       <button
         class="navbar-toggler shadow-none bg-white"
         type="button"
@@ -126,13 +126,12 @@ export default {
   box-shadow: 2px 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .header .logo {
-  font-family: 'Marck Script';
-  font-style: normal;
   font-size: 30px;
-  color: green;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-transform: uppercase;
 }
 .header .nav-item {
   font-size: 15px;
-  font-family: Arial;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 </style>
