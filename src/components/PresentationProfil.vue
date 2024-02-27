@@ -61,18 +61,20 @@ export default {
       </div>
     </div>
     <div class="buttons d-flex flex-wrap justify-content-evenly mt-5 w-100">
-      <button
+      <a
+        href="#about"
         class="py-2 px-4 fw-medium border-0"
-        :style="{ backgroundColor: color, color: theme.colorsecondary }"
+        :style="{ backgroundColor: color, color: 'white' }"
       >
         About me
-      </button>
-      <button
+      </a>
+      <a
+        href="#projets"
         class="py-2 px-4 fw-medium border-0"
-        :style="{ backgroundColor: color, color: theme.colorsecondary }"
+        :style="{ backgroundColor: color, color: 'white' }"
       >
         Mes projets
-      </button>
+      </a>
     </div>
   </div>
 </template>
@@ -97,8 +99,9 @@ export default {
 .presentation-content .photo-profil .profil .span {
   padding-bottom: 10px;
 }
-.presentation-content .buttons button {
+.presentation-content .buttons a {
   border-radius: 10px 0px 10px 0px;
+  text-decoration: none;
 }
 .text-justify {
   text-align: justify;
