@@ -16,7 +16,7 @@ export default {
 <template>
   <section class="mt-3" id="services">
     <SectionTitle title="Services" />
-    <div class="container d-flex flex-wrap justify-content-between mt-3">
+    <div class="container d-flex flex-wrap justify-content-around mt-3">
       <ServiceItem
         v-for="(item, index) in Services()"
         :key="index"

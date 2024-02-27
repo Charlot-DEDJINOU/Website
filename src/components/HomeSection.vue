@@ -4,6 +4,7 @@ import ThemesColors from './ThemesColors.vue'
 import IconSetting from './icons/IconSetting.vue'
 import PresentationProfil from './PresentationProfil.vue'
 import IconArrowDown from './icons/IconArrowDown.vue'
+import IconArrowUp from './icons/IconArrowUp.vue'
 import { ref, computed } from 'vue'
 import { useStore } from 'vuex'
 
@@ -13,7 +14,8 @@ export default {
     ThemesColors,
     IconSetting,
     PresentationProfil,
-    IconArrowDown
+    IconArrowDown,
+    IconArrowUp
   },
   setup() {
     const store = useStore()
@@ -22,6 +24,19 @@ export default {
 
     const show = ref(false)
     const handdleShow = () => (show.value = !show.value)
+
+    const showArrowTop = () => {
+      let backtotop = document.getElementsByClassName('scroll-presentation')[0]
+      if (backtotop) {
+        if (window.scrollY > 100) {
+          backtotop.classList.add('active')
+        } else {
+          backtotop.classList.remove('active')
+        }
+      }
+    }
+
+    window.addEventListener('scroll', showArrowTop)
 
     return {
       show,
@@ -38,6 +53,9 @@ export default {
     id="home"
     :style="{ backgroundImage: 'url(' + theme.background.image + ')' }"
   >
+    <a class="text-decoration-none" href="#home" :style="{ color: uniColor }"
+      ><IconArrowUp class="scroll-presentation d-inline-block"
+    /></a>
     <CustomHeader />
     <div class="home-preference d-flex align-items-center">
       <span
@@ -50,7 +68,9 @@ export default {
       <ThemesColors class="opacity" v-if="show" />
     </div>
     <PresentationProfil :color="uniColor" :theme="theme" class="mt-5" />
-    <IconArrowDown class="scroll-about" :style="{ color: uniColor }" />
+    <a class="text-decoration-none" href="#about"
+      ><IconArrowDown class="scroll-about" :style="{ color: uniColor }"
+    /></a>
   </section>
 </template>
 <style scoped>
@@ -89,6 +109,23 @@ export default {
   margin-bottom: -50px;
   animation: scrollAnimation 1s infinite;
 }
+.presentation .scroll-presentation {
+  position: fixed;
+  cursor: pointer;
+  top: 93%;
+  right: 3px;
+  width: 25px;
+  height: 25px;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+  animation: scrollAnimation 1s infinite;
+}
+.presentation .scroll-presentation.active {
+  visibility: visible;
+  opacity: 1;
+}
 @keyframes scrollAnimation {
   0% {
     transform: translateY(0);
@@ -114,7 +151,6 @@ export default {
   .presentation {
     min-height: 100vh;
     height: auto;
-    border: 1px solid red;
     padding-bottom: 50px !important;
   }
   .presentation .scroll-about {

@@ -1,6 +1,5 @@
 <script>
-import IconGithub from './icons/IconGithub.vue'
-import IconWorld from './icons/IconWorld.vue'
+import IconEye from './icons/IconEye.vue'
 import Forward from '../layout/Forward'
 
 export default {
@@ -9,7 +8,7 @@ export default {
     theme: Object,
     projet: Object
   },
-  components: { IconGithub, IconWorld },
+  components: { IconEye },
   methods: { Forward }
 }
 </script>
@@ -31,19 +30,13 @@ export default {
         >{{ item }}</span
       >
     </div>
-    <div class="w-100 d-flex justify-content-around align-items-center view-projet mb-3">
-      <button
-        :style="{ backgroundColor: color, color: theme.colorsecondary }"
-        @click="Forward(projet.github)"
-      >
-        <IconGithub size="20" /> View
-      </button>
-      <button
-        :style="{ backgroundColor: color, color: theme.colorsecondary }"
-        @click="Forward(projet.site)"
-      >
-        <IconWorld size="20" /> View
-      </button>
+    <div
+      class="w-100 d-flex justify-content-center align-items-center py-2 view-project"
+      :style="{ color: color, borderTop: '1px solid ' + theme.background.tertiaire }"
+      @click="projet.site === '' ? Forward(projet.github) : Forward(projet.site)"
+    >
+      <IconEye class="d-inline-block" />
+      <span class="d-inline-block mx-2">VIEW THIS PROJECT</span>
     </div>
   </div>
 </template>
@@ -65,8 +58,11 @@ export default {
 .projet .description {
   height: 53%;
 }
-.text-justify {
+.projet .text-justify {
   text-align: justify;
+}
+.projet .view-project {
+  cursor: pointer;
 }
 .projet .skills-projet span {
   display: inline-block;
@@ -74,15 +70,5 @@ export default {
   border-radius: 3px;
   font-size: 12px;
   font-style: italic;
-}
-.projet .view-projet button {
-  border: none;
-  outline: none;
-  height: 30px;
-  width: 25%;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 </style>

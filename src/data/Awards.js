@@ -20,8 +20,7 @@ export default function Awards() {
       image: maic,
       title: 'MIFY Artificial Intelligence Contest (MAIC) sixième edition',
       organization: 'Machine Intelligence For You  (MIFY)',
-      theme:
-        'Proposer une Intelligence Artificielle capable de jouer le jeu de Morabaraba',
+      theme: 'Proposer une Intelligence Artificielle capable de jouer le jeu de Morabaraba',
       date: 'Novembre - Decembre 2022',
       range: 'Premier Prix',
       description:

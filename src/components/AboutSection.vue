@@ -6,6 +6,7 @@ import { ref, computed } from 'vue'
 import { useStore } from 'vuex'
 import IconDownloadAbout from './icons/IconDownloadAbout.vue'
 import IconEye from './icons/IconEye.vue'
+import { downloadCV, viewCV } from '../layout/untils'
 
 export default {
   components: {
@@ -14,6 +15,10 @@ export default {
     IconEye,
     EducationExperienceSection,
     SkillsSection
+  },
+  methods: {
+    downloadCV,
+    viewCV
   },
   setup() {
     const store = useStore()
@@ -43,12 +48,14 @@ export default {
           </p>
           <div class="cv-view d-flex flex-wrap justify-content-evenly mt-4 w-100">
             <button
+              @click="downloadCV"
               class="py-2 px-4 fw-medium border-0 d-flex align-items-center justify-content-center"
               :style="{ backgroundColor: uniColor, color: 'white', width: '190px' }"
             >
               <IconDownloadAbout class="mx-2" /> Download CV
             </button>
             <button
+              @click="viewCV"
               class="py-2 px-4 fw-medium border-0 d-flex align-items-center justify-content-center"
               :style="{ backgroundColor: uniColor, color: 'white', width: '190px' }"
             >
