@@ -11,6 +11,7 @@ import IconSetting from './icons/IconSetting.vue'
 import ThemesColors from './ThemesColors.vue'
 import { useStore } from 'vuex'
 import { computed, ref } from 'vue'
+import { downloadCV, toggleMenu } from '../layout/untils'
 
 export default {
   components: {
@@ -25,6 +26,10 @@ export default {
     IconSetting,
     ThemesColors
   },
+  methods: {
+    downloadCV,
+    toggleMenu
+  },
   setup() {
     const store = useStore()
     const uniColor = ref(computed(() => store.state.uniColor))
@@ -38,7 +43,7 @@ export default {
 }
 </script>
 <template>
-  <div class="w-100 mt-5" :style="{ color: uniColor }">
+  <div class="w-100 mt-5">
     <div
       class="drawer-onglet d-flex align-items-center mb-3"
       :style="{ borderBottom: '4px solid ' + uniColor }"
@@ -52,6 +57,7 @@ export default {
       <ThemesColors />
     </div>
     <div
+      @click="toggleMenu('#home')"
       class="drawer-onglet d-flex align-items-center mb-4"
       :style="{ borderBottom: '4px solid ' + uniColor }"
     >
@@ -61,6 +67,7 @@ export default {
       }}</span>
     </div>
     <div
+      @click="toggleMenu('#about')"
       class="drawer-onglet d-flex align-items-center mb-4"
       :style="{ borderBottom: '4px solid ' + uniColor }"
     >
@@ -70,6 +77,7 @@ export default {
       }}</span>
     </div>
     <div
+      @click="toggleMenu('#services')"
       class="drawer-onglet d-flex align-items-center mb-4"
       :style="{ borderBottom: '4px solid ' + uniColor }"
     >
@@ -79,6 +87,7 @@ export default {
       }}</span>
     </div>
     <div
+      @click="toggleMenu('#projets')"
       class="drawer-onglet d-flex align-items-center mb-4"
       :style="{ borderBottom: '4px solid ' + uniColor }"
     >
@@ -88,6 +97,7 @@ export default {
       }}</span>
     </div>
     <div
+      @click="toggleMenu('#distinctions')"
       class="drawer-onglet d-flex align-items-center mb-4"
       :style="{ borderBottom: '4px solid ' + uniColor }"
     >
@@ -97,6 +107,7 @@ export default {
       }}</span>
     </div>
     <div
+      @click="toggleMenu('#certifications')"
       class="drawer-onglet d-flex align-items-center mb-4"
       :style="{ borderBottom: '4px solid ' + uniColor }"
     >
@@ -106,6 +117,7 @@ export default {
       }}</span>
     </div>
     <div
+      @click="toggleMenu('#contact')"
       class="drawer-onglet d-flex align-items-center mb-4"
       :style="{ borderBottom: '4px solid ' + uniColor }"
     >
@@ -115,6 +127,7 @@ export default {
       }}</span>
     </div>
     <div
+      @click="downloadCV"
       class="drawer-onglet d-flex align-items-center mb-4"
       :style="{ borderBottom: '4px solid ' + uniColor }"
     >
