@@ -26,7 +26,7 @@ export default {
 <template>
   <div class="skills container mt-5">
     <div class="section-title">
-      <h2 class="mb-3" :style="{ color: uniColor }">Skills</h2>
+      <h2 class="mb-3">Skills</h2>
     </div>
     <div class="row skills-content">
       <div class="col-lg-6">
