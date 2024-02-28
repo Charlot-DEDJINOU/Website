@@ -16,8 +16,8 @@ import enMessages from './translate/en.json'
 
 const i18n = createI18n({
   legacy: false,
-  locale: 'fr',
-  fallbackLocale: 'en',
+  locale: 'en',
+  fallbackLocale: 'fr',
   messages: {
     fr: frMessages,
     en: enMessages
