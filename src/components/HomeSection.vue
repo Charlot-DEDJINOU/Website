@@ -51,7 +51,7 @@ export default {
   <section
     class="presentation d-flex flex-column justify-content-evenly align-items-center py-5"
     id="home"
-    :style="{ backgroundImage: 'url(' + theme.background.image + ')' }"
+    :style="{ backgroundImage: 'url(' + theme.background.image + ')' , '--color' : theme.background.primary}"
   >
     <a class="text-decoration-none" href="#home" :style="{ color: uniColor }"
       ><IconArrowUp class="scroll-presentation d-inline-block"
@@ -80,7 +80,7 @@ export default {
   background-size: cover;
   background-position: center;
   padding-bottom: 15px;
-  border: 1px solid red;
+  border: 1px solid var(--color);
 }
 .presentation .home-preference {
   position: fixed;
