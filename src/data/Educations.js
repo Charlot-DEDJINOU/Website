@@ -1,19 +1,23 @@
+import { useI18n } from 'vue-i18n'
+
 export default function EducationData() {
+  const { t } = useI18n()
+
   return [
     {
-      title: 'Licence en Genie Logiciel',
+      title: t('bachelor'),
       years: '2021-2024',
-      place: 'Institut de Formation et de Recherche en Informatique (IFRI)'
+      place: t('ifri')
     },
     {
-      title: 'Mastercard Foundation Scholar',
+      title: t('mastercard'),
       years: '2021-2024',
-      place: 'University of Abomey-Calavi'
+      place: t('university_abomey')
     },
     {
-      title: 'Bachelor of Science (BSc)',
+      title: t('bachelor_science'),
       years: '2021',
-      place: 'CEG L’ENTENTE , Cotonou BENIN'
+      place: t('cotonou')
     }
   ]
 }

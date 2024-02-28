@@ -23,217 +23,196 @@ import blog_api from '../assets/blog_api.png'
 export default function Projects() {
   return [
     {
-      title: 'Stock Master',
+      title: 'stock_master',
       image: stock_master,
-      description:
-        'Stock Master est une application mobile de gestion de stocks puissante et intuitive, conçue pour simplifier la gestion des stocks de produits',
+      description: 'stock_master_description',
       skills: ['Flutter', 'FastApi', 'Dart', 'Python', 'API Rest'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/Stock-Master',
-      category: 'All Mobile API'
+      category: 'All tous Mobile API'
     },
     {
-      title: 'Data Science Hub',
+      title: 'data_science_hub',
       image: data_science,
-      description:
-        "Un dépôt regroupant une variété d'exercices pratiques, de projets de formation et de travaux pratiques en data science.",
+      description: 'data_science_hub_description',
       skills: ['Data Science', 'AI', 'Machine Learning', 'Python'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/Data-scientist',
-      category: 'All Data Science'
+      category: 'All tous Data Science'
     },
     {
-      title: 'Artistic E-commerce',
+      title: 'artistic_ecommerce',
       image: e_commerce,
-      description:
-        'Une application web développée en React JS offrant une plateforme pour les artisans afin de vendre leurs créations artistiques en ligne.',
+      description: 'artistic_ecommerce_description',
       skills: ['React JS', 'Java Script', 'useCart', 'React-router'],
       site: 'https://react-ecommerce-lyart-psi.vercel.app',
       github: 'https://github.com/Charlot-DEDJINOU/React_Ecommerce',
-      category: 'All Web'
+      category: 'All tous Web'
     },
     {
-      title: 'Car Rental Management',
+      title: 'car_rental_management',
       image: car_location,
-      description:
-        'Une application de gestion de location de voitures développée avec PHP, Laravel et MySQL pour une recherche, une réservation et une gestion efficaces',
+      description: 'car_rental_management_description',
       skills: ['Laravel', 'PHP', 'Location', 'MySql'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/CarRentalManagement-Laravel',
-      category: 'All Web'
+      category: 'All tous Web'
     },
     {
-      title: 'Birthday Celebration Hub',
+      title: 'birthday_celebration_hub',
       image: hdb,
-      description:
-        "Un site interactif permettant de personnaliser les vœux d'anniversaire avec des visuels, des devinettes pour débloquer des fonctionnalités supplémentaires. Le mot de passe par défaut pour accéder au site est Nerys",
+      description: 'birthday_celebration_hub_description',
       skills: ['Vue JS', 'Express JS', 'NLP', 'Java Script'],
       site: 'https://animated-hbd-nlp-js.vercel.app',
       github: 'https://github.com/Charlot-DEDJINOU/AnimatedHBD_nlpJs',
-      category: 'All Web'
+      category: 'All tous Web'
     },
     {
-      title: 'Maic Morabaraba AI',
+      title: 'maic_morabaraba_ai',
       image: maic,
-      description:
-        "Une participation au concours Maic International 2022 avec le développement d'une intelligence artificielle capable de jouer au jeu de Morabaraba.",
+      description: 'maic_morabaraba_ai_description',
       skills: ['Python', 'IA', 'MAIC', 'MIFY'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/MIFY-Maic2022-Contest',
-      category: 'All Data Science'
+      category: 'All tous Data Science'
     },
     {
-      title: 'Hackathon SENE',
+      title: 'hackathon_sene',
       image: hackaton_sene,
-      description:
-        'Une solution numérique développée lors du concours de la SENE pour simplifier la gestion des Déchets des Équipements Électriques et Électroniques.',
+      description: 'hackathon_sene_description',
       skills: ['React jS', 'Laravel', 'API Rest', 'PHP', 'Java Script'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/Hackathon-SENE',
-      category: 'All Web API'
+      category: 'All tous Web API'
     },
     {
-      title: 'Python Kattis Solutions',
+      title: 'python_kattis_solutions',
       image: python,
-      description:
-        "Un dépôt contenant des solutions pour quelques exercices de Kattis, tous codés en Python, pour résoudre divers problèmes d'algorithmique et de programmation.",
+      description: 'python_kattis_solutions_description',
       skills: ['kattis', 'Python', 'Problem', 'Solution', 'Algorithme'],
       site: 'https://open.kattis.com/users/charlot',
       github: 'https://github.com/Charlot-DEDJINOU/Kattis',
-      category: 'All Programmation'
+      category: 'All tous Programmation Programming'
     },
     {
-      title: 'Websocket Communication',
+      title: 'websocket_communication',
       image: websocket,
-      description:
-        "Une application de communication bidirectionnelle entre un serveur et des clients, permettant l'échange instantané de messages via des websockets et l'enregistrement de messages dans une base de données.",
+      description: 'websocket_communication_description',
       skills: ['Java Script', 'Websocket', 'Serveur', 'Client'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/WebSocket',
-      category: 'All Web Websocket'
+      category: 'All tous Web Websocket'
     },
     {
-      title: 'Zero Plastic Initiative',
+      title: 'zero_plastic_initiative',
       image: zero_plastique,
-      description:
-        "Une fonctionnalité développée pour le projet Zéro Déchet Plastique sur le campus d'Abomey Calavi, permettant de générer un lien personnalisé J'y serai pour partager des engagements et des photos sur les réseaux sociaux.",
+      description: 'zero_plastic_initiative_description',
       skills: ['Vue JS', "J'y serai", 'Visuel', 'Plastique'],
       site: 'https://zero-dechet-plastique-sur-le-campus-abomey-calavi.vercel.app',
       github:
         'https://github.com/Charlot-DEDJINOU/Zero-dechet-plastique-sur-le-Campus-Abomey-Calavi',
-      category: 'All Web'
+      category: 'All tous Web'
     },
     {
-      title: 'Interview AI Platform',
+      title: 'interview_ai_platform',
       image: entretien_ia,
-      description:
-        'Une plateforme permettant de simuler un entretien en ligne avec des questions générées par une API basée sur ChatGPT, offrant une expérience réaliste et des suggestions pour les réponses.',
+      description: 'interview_ai_platform_description',
       skills: ['React JS', 'FastApi', 'Express JS', 'AI'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/EntretrienIA',
-      category: 'All Web Data Science API'
+      category: 'All tous Web Data Science API'
     },
     {
-      title: 'Treasure Hunt Adventure',
+      title: 'treasure_hunt_adventure',
       image: treasure,
-      description:
-        'Une aventure interactive basée sur une application web React, où chaque étape de la quête est une énigme à résoudre pour avancer et découvrir le trésor tant convoité.',
+      description: 'treasure_hunt_adventure_description',
       skills: ['React JS', 'Java Script', 'React-router', 'Charade'],
       site: 'https://tha-sage.vercel.app',
       github: 'https://github.com/Charlot-DEDJINOU/Stock-Master',
-      category: 'All Web'
+      category: 'All tous Web'
     },
     {
-      title: 'TP kNN',
+      title: 'tp_knn',
       image: tp_knn,
-      description:
-        "Un travail pratique permettant d'explorer la sélection du nombre de voisins dans l'algorithme des k plus proches voisins (kNN) pour optimiser la précision des modèles de classification ou de régression.",
+      description: 'tp_knn_description',
       skills: ['Data Science', 'k-nn', 'Python', 'AI'],
       site: '',
       github:
         "https://github.com/Charlot-DEDJINOU/Data-scientist/blob/main/4-Evaluez%20les%20performances%20d'un%20modele%20de%20machine%20learning/TP%20Selectionnez%20le%20nombre%20de%20voisins%20dans%20un%20kNN.ipynb",
-      category: 'All Data Science'
+      category: 'All tous Data Science'
     },
     {
-      title: 'Excellence Night Celebration',
+      title: 'excellence_night_celebration',
       image: excellente_night,
-      description:
-        "Une fonctionnalité développée pour la Nuit de l'Excellence à l'UAC, permettant de générer un lien personnalisé J'y serai pour partager les visuels sur les réseaux sociaux",
+      description: 'excellence_night_celebration_description',
       skills: ['Vue JS', "J'y serai", 'Visuel', 'UAC'],
       site: 'https://excellence-night.vercel.app',
       github: 'https://github.com/Charlot-DEDJINOU/ExcellenceNight',
-      category: 'All Web'
+      category: 'All tous Web'
     },
     {
-      title: 'TP Mushroom Classification',
+      title: 'tp_mushroom_classification',
       image: mushroom,
-      description:
-        'Un travail pratique où une régression logistique et une SVM linéaire sont entraînées pour déterminer la comestibilité des champignons à partir du jeu de données mushrooms de Kaggle',
+      description: 'tp_mushroom_classification_description',
       skills: ['Data Science', 'SVM', 'Linear Regression', 'Machine Learning'],
       site: '',
       github:
         'https://github.com/Charlot-DEDJINOU/Data-scientist/tree/main/5-Entrainez%20un%20modele%20predictif%20lineaire/TP%20-%20Entrainez%20une%20regression%20logistique%20et%20une%20SVM%20lineaire',
-      category: 'All Data Science'
+      category: 'All tous Data Science'
     },
     {
-      title: 'RealTime Chatbot',
+      title: 'realtime_chatbot',
       image: chatbot,
-      description:
-        'Un projet de messagerie instantanée entre deux personnes en utilisant les websockets, Vue.js pour le frontend et Express.js pour le backend, offrant une expérience de messagerie fluide et réactive.',
+      description: 'realtime_chatbot_description',
       skills: ['Vue JS', 'Express JS', 'WebSocket', 'Emoji'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/Chatbot',
-      category: 'All Web WebSocket'
+      category: 'All tous Web WebSocket'
     },
     {
-      title: 'Blog API',
+      title: 'blog_api',
       image: blog_api,
-      description:
-        "Projet de développement d'une API de blog avec Laravel, centrée sur deux modèles : Commentaires et Articles",
+      description: 'blog_api_description',
       skills: ['Laravel', 'API', 'PHP', 'MySql'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/Blog-api-laravel',
-      category: 'All API'
+      category: 'All tous API'
     },
     {
-      title: 'Virtual Smartphone Experience',
+      title: 'virtual_smartphone_experience',
       image: smartphone,
-      description:
-        'Un projet présentant un Smartphone virtuel avec plusieurs applications fonctionnelles pour une expérience utilisateur complète, incluant WhatsApp, des jeux, un lecteur multimédia, un planificateur de tâches, etc.',
+      description: 'virtual_smartphone_experience_description',
       skills: ['PHP', 'MySql', 'Java Script', 'Interface'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/SmartPhone',
-      category: 'All Web'
+      category: 'All tous Web'
     },
     {
-      title: 'YATS Mobile Game Interface',
+      title: 'yats_mobile_game_interface',
       image: yats,
-      description:
-        "Une contribution au développement de l'interface de la page d'accueil d'un jeu mobile mettant en valeur l'art et la culture du Bénin lors de l'événement YATS.",
+      description: 'yats_mobile_game_interface_description',
       skills: ['React', 'React Native', 'Java Script'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/YATS-Hackathon',
-      category: 'All Mobile'
+      category: 'All tous Mobile'
     },
     {
-      title: 'API DEEE Manager',
+      title: 'api_deee_manager',
       image: api_deee,
-      description:
-        "Une API développée en PHP pour la gestion efficace des Déchets d'Équipements Électriques et Électroniques (DEEE), permettant la collecte, le suivi et la gestion transparente de ces déchets.",
+      description: 'api_deee_manager_description',
       skills: ['API', 'PHP', 'MySql'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/API_DEEE_Manager',
-      category: 'All API'
+      category: 'All tous API'
     },
     {
-      title: 'Flutter Shared Preferences Demo',
+      title: 'flutter_shared_preferences_demo',
       image: shared_preference,
-      description:
-        "Une démonstration de l'utilisation de la bibliothèque Shared Preferences dans Flutter pour la gestion des préférences utilisateur dans une application mobile, offrant un stockage simple et efficace des données clés-valeurs sur l'appareil de l'utilisateur.",
+      description: 'flutter_shared_preferences_demo_description',
       skills: ['Flutter', 'Shared preference'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/Shared-Preference-Flutter',
-      category: 'All Mobile'
+      category: 'All tous Mobile'
     }
   ]
 }

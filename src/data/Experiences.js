@@ -1,25 +1,20 @@
+import { useI18n } from 'vue-i18n'
+
 export default function EducationData() {
+  const { t } = useI18n()
+
   return [
     {
-      title: 'Développeur Web  Frontend',
-      years: 'Août 2023 - Otobre 2023 ',
-      place: 'AGCS LIDAL, Abomey-Calavi, Bénin',
-      skills: [
-        'Fusion de trois sites WordPress en une plateforme unifiée.',
-        'Utilisation de React JS (frontend)',
-        'Résolution de problèmes techniques et débogage'
-      ]
+      title: t('developer_frontend'),
+      years: 'Aug 2023 - Oct 2023',
+      place: 'AGCS LIDAL, Abomey-Calavi, Benin',
+      skills: [t('fusion_sites'), t('react_frontend'), t('troubleshooting')]
     },
     {
-      title: 'Developpeur Full-Stack',
-      years: 'Janvier 2023 - Mars 2023',
-      place: 'Hackaton SENE, Direction du numérique, Bénin',
-      skills: [
-        'Modélisation du site en utilisant le language UML',
-        'Réalisation de la maquette avec le logiciel Figma',
-        'Implementation du front-end utilisant React Js',
-        'Développement de l’API du site en utilisant Laravel'
-      ]
+      title: t('developer_fullstack'),
+      years: 'Jan 2023 - Mar 2023',
+      place: 'Hackaton SENE, Digital Directorate, Benin',
+      skills: [t('uml_modeling'), t('figma_mockup'), t('react_frontend_dev'), t('laravel_api')]
     }
   ]
 }

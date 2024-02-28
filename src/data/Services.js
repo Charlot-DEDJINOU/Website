@@ -1,40 +1,38 @@
+import { useI18n } from 'vue-i18n'
+
 export default function Services() {
+  const { t } = useI18n()
+
   return [
     {
       icon: 0,
-      title: 'Développement Web',
-      description:
-        'Créez des sites web dynamiques et interactifs, offrant une expérience utilisateur exceptionnelle et des fonctionnalités personnalisées.'
+      title: t('web_development'),
+      description: t('web_development_description')
     },
     {
       icon: 1,
-      title: 'Applications Mobiles',
-      description:
-        'Concevez des applications mobiles performantes pour iOS et Android, offrant des interfaces utilisateur élégantes et des fonctionnalités innovantes.'
+      title: t('mobile_apps'),
+      description: t('mobile_apps_description')
     },
     {
       icon: 2,
-      title: "Développement d'API",
-      description:
-        "Concevez, développez et déployez des API robustes pour permettre l'intégration et l'interaction entre différentes applications et systèmes."
+      title: t('api_development'),
+      description: t('api_development_description')
     },
     {
       icon: 3,
-      title: 'Analyse de donnée',
-      description:
-        'Analysez des ensembles de données complexes pour extraire des insights significatifs et construire des modèles prédictifs.'
+      title: t('data_analysis'),
+      description: t('data_analysis_description')
     },
     {
       icon: 4,
-      title: "Génération de lien J'y serai",
-      description:
-        "Créez un système pour les organisateurs d'événements afin de générer des liens J'y serai personnalisés pour la promotion de leurs événements."
+      title: t('generate_jy_serai_link'),
+      description: t('generate_jy_serai_link_description')
     },
     {
       icon: 5,
-      title: 'Interfaces Utilisateur',
-      description:
-        'Créez des interfaces intuitives et esthétiques pour les sites web et les applications mobiles ainsi que des visuels pour des évenements.'
+      title: t('user_interfaces'),
+      description: t('user_interfaces_description')
     }
   ]
 }
