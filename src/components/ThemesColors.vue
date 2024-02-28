@@ -2,8 +2,7 @@
 import Lune from './icons/IconLune.vue'
 import Solar from './icons/IconSolar.vue'
 import { useStore } from 'vuex'
-import { computed, ref, onMounted } from 'vue'
-import { useDark, useToggle } from '@vueuse/core'
+import { computed, ref } from 'vue'
 
 export default {
   name: 'ThemesColors',
@@ -14,14 +13,8 @@ export default {
 
   setup() {
     const store = useStore()
-    const isDark = useDark({
-      selector: 'body',
-      attribute: 'theme',
-      valueDark: 'custom-dark',
-      valueLight: 'custom-light'
-    })
-    const toggleDark = useToggle(isDark)
-
+    
+    const isDark = ref(computed(() => store.state.mode))
     const theme = ref(computed(() => store.state.theme))
 
     const toggleColor = (color) => {
@@ -29,11 +22,8 @@ export default {
     }
 
     const toggleTheme = () => {
-      toggleDark()
-      store.dispatch('ToggleTheme', isDark.value)
+      store.dispatch('ToggleTheme')
     }
-
-    onMounted(toggleTheme);
 
     return {
       theme,
