@@ -25,22 +25,34 @@ export default {
     <SectionTitle title="Contact" />
     <div class="contact-info">
       <div class="form-reseau">
-        <div class="texte mb-3">
-          <p class="mt-3">
-            Bienvenue dans ma section de contact ! Si vous souhaitez discuter de projets
-            passionnants, poser des questions ou simplement dire bonjour, n'hésitez pas à m'envoyer
-            un message. Je suis toujours ravi de rencontrer de nouveaux contacts et d'explorer de
-            nouvelles opportunités de collaboration.
-          </p>
+        <!-- Nouveau contenu du code -->
+        <div class="texte mb-3" data-aos="fade-right">
+          <p class="mt-3">{{ $t('contact_section.welcome_message') }}</p>
           <div class="item my-1 text-responsive">
-            <p><span :style="{ color: uniColor }">Phone </span> : +229 59105267</p>
-            <p><span :style="{ color: uniColor }">City</span> : Abomey-Calavi, Bénin</p>
-            <p><span :style="{ color: uniColor }">Email</span> : dedjinoucharlotjoel@gmail.com</p>
+            <p>
+              <span :style="{ color: uniColor }"
+                >{{ $t('contact_section.contact_info.phone') }}
+              </span>
+              : {{ $t('contact_section.phone_number') }}
+            </p>
+            <p>
+              <span :style="{ color: uniColor }">{{
+                $t('contact_section.contact_info.city')
+              }}</span>
+              : {{ $t('contact_section.city') }}
+            </p>
+            <p>
+              <span :style="{ color: uniColor }">{{
+                $t('contact_section.contact_info.email')
+              }}</span>
+              : {{ $t('contact_section.email') }}
+            </p>
           </div>
-          <p>Vous pouvez egalement me contacter en cliquant juste sur un des icones</p>
+          <p>{{ $t('contact_section.contact_alternative') }}</p>
           <SocialMedia class="mt-3" size="300px" iconSize="25" />
         </div>
-        <form class="form" onsubmit="submit(event)">
+
+        <form class="form" data-aos="fade-left">
           <div class="mapouter">
             <div class="gmap_canvas">
               <iframe

@@ -1,6 +1,6 @@
 <script>
 import IconEye from './icons/IconEye.vue'
-import Forward from '../layout/Forward'
+import { Forward } from '../layout/untils.js'
 
 export default {
   props: {
@@ -14,13 +14,16 @@ export default {
 </script>
 <template>
   <div
+    data-aos="fade-down"
+    data-aos-duration="1500"
+    data-aos-easinf="linear"
     class="projet m-3 d-flex flex-column justify-content-between"
     :style="{ backgroundColor: theme.background.secondary }"
   >
     <img :src="projet.image" :alt="projet.image" class="mb-3" />
-    <h5 class="text-center mb-3" :style="{ color: color }">{{ projet.title }}</h5>
+    <h5 class="text-center mb-3" :style="{ color: color }">{{ $t(projet.title) }}</h5>
     <div class="px-3 text-justify text-responsive mb-3">
-      {{ projet.description }}
+      {{ $t(projet.description) }}
     </div>
     <div class="w-100 d-flex justify-content-around align-items-center px-2 skills-projet mb-3">
       <span
@@ -36,7 +39,7 @@ export default {
       @click="projet.site === '' ? Forward(projet.github) : Forward(projet.site)"
     >
       <IconEye class="d-inline-block" />
-      <span class="d-inline-block mx-2">VIEW THIS PROJECT</span>
+      <span class="d-inline-block mx-2">{{ $t('see') }}</span>
     </div>
   </div>
 </template>

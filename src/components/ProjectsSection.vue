@@ -5,21 +5,27 @@ import { useStore } from 'vuex'
 import ProjectItem from './ProjectItem.vue'
 import Projects from '../data/Projects'
 import ProjectsCategories from '../data/ProjectsCategories'
+import { useI18n } from 'vue-i18n'
 
 export default {
   components: {
     SectionTitle,
     ProjectItem
   },
+  methods: {
+    ProjectsCategories
+  },
   setup() {
     const store = useStore()
+
+    const { locale } = useI18n()
 
     const uniColor = ref(computed(() => store.state.uniColor))
     const theme = ref(computed(() => store.state.theme))
 
-    const categories = ProjectsCategories()
     const projects = ref(Projects())
-    const category = ref('All')
+
+    const category = ref('all')
     const textSearch = ref('')
 
     const search = () => {
@@ -43,17 +49,17 @@ export default {
       uniColor,
       theme,
       projects,
-      categories,
       category,
       textSearch,
-      search
+      search,
+      locale
     }
   }
 }
 </script>
 <template>
   <section class="mt-5 projects" id="projets">
-    <SectionTitle title="Projects" />
+    <SectionTitle :title="$t('projects')" />
     <div class="container mt-4">
       <div class="d-flex justify-content-around flex-wrap search w-100">
         <input
@@ -71,7 +77,12 @@ export default {
           aria-label="Large select example"
           :style="{ backgroundColor: theme.background.secondary, color: theme.colorprimary }"
         >
-          <option v-for="(item, index) in categories" :key="index" :value="item">{{ item }}</option>
+          <option value="all" :selected="true">
+            {{ locale === 'en' ? 'All' : 'Tous' }}
+          </option>
+          <option v-for="(item, index) in ProjectsCategories()" :key="index" :value="item">
+            {{ item }}
+          </option>
         </select>
       </div>
       <div class="d-flex flex-wrap justify-content-around mt-3">

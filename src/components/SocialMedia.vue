@@ -6,7 +6,7 @@ import IconLinkdln from './icons/IconLinkdln.vue'
 import IconEmail from './icons/IconEmail.vue'
 import { useStore } from 'vuex'
 import { computed, ref } from 'vue'
-import Forward from '../layout/Forward'
+import { Forward } from '../layout/untils'
 
 export default {
   components: {

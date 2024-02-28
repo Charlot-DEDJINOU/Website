@@ -19,11 +19,18 @@ export default {
 
     const certifications = ref(Certifications())
     const text = ref('')
+    const isAutoplayEnabled = ref(true)
 
     const search = () => {
+      isAutoplayEnabled.value = false
+
       certifications.value = Certifications().filter((item) =>
         item.name.toLowerCase().includes(text.value.toLowerCase())
       )
+
+      setTimeout(() => {
+        isAutoplayEnabled.value = true
+      }, 500)
     }
 
     return {
@@ -31,6 +38,7 @@ export default {
       theme,
       certifications,
       text,
+      isAutoplayEnabled,
       search
     }
   }
@@ -56,7 +64,7 @@ export default {
           class="w-100 carousel"
           :width="500"
           :height="355"
-          :autoplay="true"
+          :autoplay="isAutoplayEnabled"
           :display="5"
           :startIndex="0"
         >

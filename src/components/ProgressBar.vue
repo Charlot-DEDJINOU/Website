@@ -52,7 +52,7 @@ export default {
 <template>
   <div class="progress w-100 mb-3">
     <span class="skill">
-      {{ skill }}<i class="val fw-medium">{{ count }}</i>
+      {{ skill }}<i class="val fw-medium">{{ count }} %</i>
     </span>
     <div class="progress-bar-wrap" :style="{ backgroundColor: background }">
       <div class="progress-bar" :style="{ width: count + '%', backgroundColor: color }"></div>

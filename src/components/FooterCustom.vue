@@ -24,10 +24,7 @@ export default {
   <footer id="footer" :style="{ backgroundColor: theme.background.tertiaire }">
     <div class="container d-flex flex-column">
       <div class="text-center title-responsive mb-3 fw-bold">CHARLOT DEDJINOU</div>
-      <p class="text-center">
-        "Le succès n'est pas la clé du bonheur. Le bonheur est la clé du succès. Si vous aimez ce
-        que vous faites, vous réussirez." - Albert Schweitzer
-      </p>
+      <p class="text-center">{{ $t('quote') }} - Albert Schweitzer</p>
       <SocialMedia class="align-self-center" size="300px" iconSize="25" />
       <div class="copyright my-4">
         &copy; Copyright <strong><span>MyResume</span></strong

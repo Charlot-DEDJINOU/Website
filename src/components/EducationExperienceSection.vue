@@ -26,7 +26,7 @@ export default {
         <div class="container">
           <div class="row">
               <div class="col-lg-6">
-                  <span class="resume-title my-3 d-inline-block">Education</span>
+                  <span class="resume-title my-3 d-inline-block">{{ $t('education') }}</span>
                   <div v-for="(item, index) in Educations()" :key="index" class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
                     <span :style="{backgroundColor : uniColor}"></span>
                     <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">
@@ -38,7 +38,7 @@ export default {
                   </div>
               </div>
               <div class="col-lg-6">
-                  <span class="resume-title my-3 d-inline-block">Experience Professionnel</span>
+                  <span class="resume-title my-3 d-inline-block">{{ $t('professional_experience') }}</span>
                   <div v-for="(item, index) in Experiences()" :key="index" class="resume-item d-flex py-4" :style="{'--before' : uniColor, borderLeft : '5px solid' + uniColor}">
                     <span :style="{backgroundColor : uniColor}"></span>
                     <div class="informations p-3 w-100" :style="{backgroundColor : theme.background.secondary}">

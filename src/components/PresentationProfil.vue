@@ -1,7 +1,8 @@
 <script>
 import SocialMedia from './SocialMedia.vue'
 import Typewriter from 'typewriter-effect/dist/core'
-import { ref, onMounted } from 'vue'
+import { ref, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 export default {
   components: {
@@ -12,9 +13,11 @@ export default {
     theme: Object
   },
   setup() {
+    const { t, locale } = useI18n() // Utiliser la fonction t pour la traduction
+
     const typewriterRef = ref(null)
 
-    onMounted(() => {
+    watch(() => {
       const typewriter = new Typewriter(typewriterRef.value, {
         loop: true,
         delay: 50,
@@ -22,17 +25,20 @@ export default {
       })
 
       typewriter
-        .typeString('Je suis developpeur web')
+        .typeString(t('profil_1'))
         .pauseFor(300)
         .deleteAll()
-        .typeString('Je suis developpeur mobile')
+        .typeString(t('profil_2'))
         .pauseFor(300)
         .deleteAll()
-        .typeString('Je suis Data Scientits')
+        .typeString(t('profil_3'))
+        .pauseFor(300)
+        .deleteAll()
+        .typeString(t('profil_4'))
         .pauseFor(300)
         .deleteAll()
         .start()
-    })
+    }, locale.value)
 
     return {
       typewriterRef
@@ -40,6 +46,7 @@ export default {
   }
 }
 </script>
+
 <template>
   <div class="presentation-content d-flex flex-column align-items-center">
     <div class="photo-profil w-100">
@@ -54,8 +61,7 @@ export default {
           ></span>
         </div>
         <p class="text-justify text-profil text-responsive mb-4">
-          Je passionné par la création d'expériences web innovantes et convaincu du pouvoir de la
-          technologie pour résoudre des problèmes du monde réel
+          {{ $t('short_description') }}
         </p>
         <SocialMedia class="align-self-center" size="350px" iconSize="30" />
       </div>
@@ -66,14 +72,14 @@ export default {
         class="py-2 px-4 fw-medium border-0"
         :style="{ backgroundColor: color, color: 'white' }"
       >
-        About me
+        {{ $t('about') }}
       </a>
       <a
         href="#projets"
         class="py-2 px-4 fw-medium border-0"
         :style="{ backgroundColor: color, color: 'white' }"
       >
-        Mes projets
+        {{ $t('my') }} {{ $t('projects') }}
       </a>
     </div>
   </div>

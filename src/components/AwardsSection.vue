@@ -28,9 +28,16 @@ export default {
 </script>
 <template>
   <section class="mt-5 awards" id="distinctions">
-    <SectionTitle title="Distinctions" />
+    <SectionTitle :title="$t('awards')" />
     <div class="container d-flex flex-wrap justify-content-around mt-5">
-      <AwardItem v-for="(item, index) in Awards()" :key="index" :award="item" />
+      <AwardItem
+        v-for="(item, index) in Awards()"
+        :key="index"
+        :award="item"
+        :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      />
     </div>
   </section>
 </template>

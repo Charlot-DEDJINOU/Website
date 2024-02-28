@@ -26,10 +26,16 @@ export default {
 }
 </script>
 <template>
-  <div className="objectif p-2 m-3" :style="{ backgroundColor: theme.background.secondary }">
-    <div className="objectif-title d-flex align-items-center justify-content-around my-3">
+  <div
+    className="service p-2 m-3"
+    :style="{ backgroundColor: theme.background.secondary }"
+    data-aos="zoom-in"
+    data-aos-duration="1500"
+    data-aos-easinf="linear"
+  >
+    <div className="service-title d-flex align-items-center justify-content-around my-3">
       <IconEye className="icon mx-3 d-inline-block" :style="{ color: uniColor }" />
-      <div className="objectif-name">
+      <div className="service-name align-self-center">
         <SectionTitle :title="title" service="service" />
       </div>
     </div>
@@ -39,14 +45,14 @@ export default {
   </div>
 </template>
 <style scoped>
-.objectif {
+.service {
   width: 330px;
   height: auto;
   border-radius: 10px;
   background-color: black;
   cursor: pointer;
 }
-.objectif .objectif-title .icon {
+.service .service-title .icon {
   width: 40px;
   height: 40px;
 }
