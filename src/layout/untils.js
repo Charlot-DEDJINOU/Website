@@ -21,3 +21,9 @@ export function toggleMenu(url) {
   btn.click()
   link.click()
 }
+
+export function Forward(urlDuSite) {
+  if (urlDuSite !== '') {
+    window.open(urlDuSite, '_blank')
+  }
+}
