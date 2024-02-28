@@ -42,7 +42,7 @@ export default createStore({
   state: {
     theme: start_theme,
     uniColor: '#16C953',
-    mode : isDark.value
+    mode : !isDark.value
   },
   getters: {},
   mutations: {
