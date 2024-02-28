@@ -35,47 +35,81 @@ export default {
 </script>
 <template>
   <section class="mt-4" id="about">
-    <SectionTitle title="About" />
+    <SectionTitle :title="$t('about')" />
     <div class="mt-4 about" :style="{ backgroundColor: theme.background.secondary }">
       <div class="container d-flex justify-content-around py-3 flex-wrap">
-        <div class="profil-cv my-3">
+        <div
+          class="profil-cv my-3"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <p class="profil text-justify px-3 text-responsive">
-            <span :style="{ color: uniColor }">Profil</span> : Je suis Charlot DEDJINOU, un
-            développeur passionné par la création d'expériences web innovantes et convaincu du
-            pouvoir de la technologie pour résoudre des problèmes du monde réel. Avec une solide
-            expérience dans le développement frontend et une curiosité insatiable pour les dernières
-            technologies, je suis constamment à la recherche de nouveaux défis stimulants.
+            <span :style="{ color: uniColor }">Profil</span> : {{ $t('description') }}
           </p>
           <div class="cv-view d-flex flex-wrap justify-content-evenly mt-4 w-100">
             <button
               @click="downloadCV"
               class="py-2 px-4 fw-medium border-0 d-flex align-items-center justify-content-center"
-              :style="{ backgroundColor: uniColor, color: 'white', width: '190px' }"
+              :style="{ backgroundColor: uniColor, color: 'white', width: '195px' }"
             >
-              <IconDownloadAbout class="mx-2" /> Download CV
+              <IconDownloadAbout class="mx-2" /> {{ $t('download') }} CV
             </button>
             <button
               @click="viewCV"
               class="py-2 px-4 fw-medium border-0 d-flex align-items-center justify-content-center"
-              :style="{ backgroundColor: uniColor, color: 'white', width: '190px' }"
+              :style="{ backgroundColor: uniColor, color: 'white', width: '195px' }"
             >
-              <IconEye class="mx-2" /> View
+              <IconEye class="mx-2" /> {{ $t('view') }} CV
             </button>
           </div>
         </div>
-        <div class="item my-3 text-responsive">
-          <p><span :style="{ color: uniColor }">Experience </span> : 3 ans</p>
-          <p><span :style="{ color: uniColor }">Degree</span> : Licence</p>
-          <p><span :style="{ color: uniColor }">Website</span> : charlot.vercel.com</p>
-          <p><span :style="{ color: uniColor }">City</span> : Abomey-Calavi, Bénin</p>
-          <p><span :style="{ color: uniColor }">Email</span> : dedjinoucharlotjoel@gmail.com</p>
+        <div
+          class="item my-3 text-responsive"
+          data-aos="zoom-out-up"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          <p>
+            <span :style="{ color: uniColor }">{{ $t('experience') }} </span> : 3 {{ $t('years') }}
+          </p>
+          <p>
+            <span :style="{ color: uniColor }">{{ $t('degree') }}</span> : {{ $t('licence') }}
+          </p>
+          <p>
+            <span :style="{ color: uniColor }">{{ $t('website') }}</span> :
+            charlot-dedjinou.vercel.com
+          </p>
+          <p>
+            <span :style="{ color: uniColor }">{{ $t('city') }}</span> : Abomey-Calavi,
+            {{ $t('benin') }}
+          </p>
+          <p>
+            <span :style="{ color: uniColor }">{{ $t('email') }}</span> :
+            dedjinoucharlotjoel@gmail.com
+          </p>
         </div>
-        <div class="item my-3 text-responsive">
-          <p><span :style="{ color: uniColor }">Phone</span> : +229 59105267</p>
-          <p><span :style="{ color: uniColor }">Freelance</span> : Available</p>
-          <p><span :style="{ color: uniColor }">Remote</span> : Available</p>
-          <p><span :style="{ color: uniColor }">Linkedln</span> : Charlot DEDJINOU</p>
-          <p><span :style="{ color: uniColor }">Github</span> : Charlot-DEDJINOU</p>
+        <div
+          class="item my-3 text-responsive"
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
+          <p>
+            <span :style="{ color: uniColor }">{{ $t('phone') }}</span> : +229 59105267
+          </p>
+          <p>
+            <span :style="{ color: uniColor }">{{ $t('freelance') }}</span> : {{ $t('available') }}
+          </p>
+          <p>
+            <span :style="{ color: uniColor }">{{ $t('remote') }}</span> : {{ $t('available') }}
+          </p>
+          <p>
+            <span :style="{ color: uniColor }">{{ $t('linkedln') }}</span> : Charlot DEDJINOU
+          </p>
+          <p>
+            <span :style="{ color: uniColor }">{{ $t('github') }}</span> : Charlot-DEDJINOU
+          </p>
         </div>
       </div>
     </div>
