@@ -13,8 +13,8 @@ export default {
 
   setup() {
     const store = useStore()
-    
-    const isDark = ref(computed(() => store.state.mode))
+
+    const isDark = ref(computed(() => store.state.dark))
     const theme = ref(computed(() => store.state.theme))
 
     const toggleColor = (color) => {

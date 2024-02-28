@@ -51,7 +51,10 @@ export default {
   <section
     class="presentation d-flex flex-column justify-content-evenly align-items-center py-5"
     id="home"
-    :style="{ backgroundImage: 'url(' + theme.background.image + ')' , '--color' : theme.background.primary}"
+    :style="{
+      backgroundImage: 'url(' + theme.background.image + ')',
+      '--color': theme.background.primary
+    }"
   >
     <a class="text-decoration-none" href="#home" :style="{ color: uniColor }"
       ><IconArrowUp class="scroll-presentation d-inline-block"

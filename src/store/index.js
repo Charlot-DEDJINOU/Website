@@ -1,16 +1,6 @@
 import { createStore } from 'vuex'
 import backgroundBlack from '../assets/backgroundBack.png'
 import backgroundWhite from '../assets/backgroundWhite.png'
-import { useDark, useToggle } from '@vueuse/core'
-
-const isDark = useDark({
-  selector: 'body',
-  attribute: 'theme',
-  valueDark: 'custom-light',
-  valueLight: 'custom-dark'
-})
-
-const toggleDark = useToggle(isDark)
 
 const dark = {
   background: {
@@ -36,13 +26,11 @@ const light = {
   colorsecondary: 'white'
 }
 
-const start_theme = !isDark.value ? dark : light;
-
 export default createStore({
   state: {
-    theme: start_theme,
+    theme: dark,
     uniColor: '#16C953',
-    mode : !isDark.value
+    dark: true
   },
   getters: {},
   mutations: {
@@ -53,18 +41,25 @@ export default createStore({
       state.theme = theme
     },
     setMode(state, mode) {
-      state.mode = mode
+      state.dark = mode
     }
   },
   actions: {
     ToggleUniColor({ commit }, color) {
       commit('setUniColor', color)
     },
-    ToggleTheme({ commit }) {
-      toggleDark()
-      const theme = !isDark.value ? dark : light
-      commit('setTheme', theme)
-      commit('setMode', !isDark.value)
+    ToggleTheme({ commit, state }) {
+      const body = document.getElementsByTagName('body')[0]
+      if (state.dark === true) {
+        body.classList.remove('custom-dark')
+        body.classList.add('custom-light')
+        commit('setTheme', light)
+      } else {
+        body.classList.remove('custom-light')
+        body.classList.add('custom-dark')
+        commit('setTheme', dark)
+      }
+      commit('setMode', !state.dark)
     }
   },
   modules: {}
