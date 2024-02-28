@@ -2,7 +2,7 @@
 import Lune from './icons/IconLune.vue'
 import Solar from './icons/IconSolar.vue'
 import { useStore } from 'vuex'
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useDark, useToggle } from '@vueuse/core'
 
 export default {
@@ -32,6 +32,8 @@ export default {
       toggleDark()
       store.dispatch('ToggleTheme', isDark.value)
     }
+
+    onMounted(toggleTheme);
 
     return {
       theme,

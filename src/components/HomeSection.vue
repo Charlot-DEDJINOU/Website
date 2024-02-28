@@ -80,6 +80,7 @@ export default {
   background-size: cover;
   background-position: center;
   padding-bottom: 15px;
+  border: 1px solid red;
 }
 .presentation .home-preference {
   position: fixed;
@@ -87,6 +88,7 @@ export default {
   left: 3px;
   cursor: pointer;
   height: 150px;
+  z-index: 50;
 }
 .presentation .home-preference .show-colors {
   border-radius: 3px;

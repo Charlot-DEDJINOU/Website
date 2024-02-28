@@ -34,7 +34,7 @@ export default {
         v-for="(item, index) in Awards()"
         :key="index"
         :award="item"
-        :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
+        :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-down'"
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       />

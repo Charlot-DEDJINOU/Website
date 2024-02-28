@@ -45,14 +45,14 @@ export default {
               <span :style="{ color: uniColor }">{{
                 $t('contact_section.contact_info.email')
               }}</span>
-              : {{ $t('contact_section.email') }}
+              : dedjinoucharlotjoel@gmail.com
             </p>
           </div>
           <p>{{ $t('contact_section.contact_alternative') }}</p>
           <SocialMedia class="mt-3" size="300px" iconSize="25" />
         </div>
 
-        <form class="form" data-aos="fade-left">
+        <form class="form" data-aos="fade-up">
           <div class="mapouter">
             <div class="gmap_canvas">
               <iframe
@@ -86,7 +86,7 @@ export default {
 .mapouter {
   position: relative;
   text-align: right;
-  width: 95%;
+  width: 100%;
   height: 400px;
   margin: 0px auto;
 }
@@ -149,7 +149,7 @@ export default {
   }
 
   .contact .contact-info .form-reseau .form {
-    width: 95%;
+    width: 100%;
     background: none;
   }
 

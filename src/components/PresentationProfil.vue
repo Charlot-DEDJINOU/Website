@@ -1,7 +1,7 @@
 <script>
 import SocialMedia from './SocialMedia.vue'
 import Typewriter from 'typewriter-effect/dist/core'
-import { ref, watch } from 'vue'
+import { ref, watchEffect } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 export default {
@@ -17,7 +17,7 @@ export default {
 
     const typewriterRef = ref(null)
 
-    watch(() => {
+    watchEffect(() => {
       const typewriter = new Typewriter(typewriterRef.value, {
         loop: true,
         delay: 50,
