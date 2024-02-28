@@ -6,8 +6,8 @@ import { useDark, useToggle } from '@vueuse/core'
 const isDark = useDark({
   selector: 'body',
   attribute: 'theme',
-  valueDark: 'custom-dark',
-  valueLight: 'custom-light'
+  valueDark: 'custom-light',
+  valueLight: 'custom-dark'
 })
 
 const toggleDark = useToggle(isDark)
@@ -36,9 +36,11 @@ const light = {
   colorsecondary: 'white'
 }
 
+const start_theme = !isDark.value ? dark : light;
+
 export default createStore({
   state: {
-    theme: dark,
+    theme: start_theme,
     uniColor: '#16C953',
     mode : isDark.value
   },
@@ -49,6 +51,9 @@ export default createStore({
     },
     setTheme(state, theme) {
       state.theme = theme
+    },
+    setMode(state, mode) {
+      state.mode = mode
     }
   },
   actions: {
@@ -57,8 +62,9 @@ export default createStore({
     },
     ToggleTheme({ commit }) {
       toggleDark()
-      const theme = isDark.value ? dark : light
+      const theme = !isDark.value ? dark : light
       commit('setTheme', theme)
+      commit('setMode', !isDark.value)
     }
   },
   modules: {}
