@@ -1,6 +1,16 @@
 import { createStore } from 'vuex'
 import backgroundBlack from '../assets/backgroundBack.png'
 import backgroundWhite from '../assets/backgroundWhite.png'
+import { useDark, useToggle } from '@vueuse/core'
+
+const isDark = useDark({
+  selector: 'body',
+  attribute: 'theme',
+  valueDark: 'custom-dark',
+  valueLight: 'custom-light'
+})
+
+const toggleDark = useToggle(isDark)
 
 const dark = {
   background: {
@@ -29,7 +39,8 @@ const light = {
 export default createStore({
   state: {
     theme: dark,
-    uniColor: '#16C953'
+    uniColor: '#16C953',
+    mode : isDark.value
   },
   getters: {},
   mutations: {
@@ -44,8 +55,9 @@ export default createStore({
     ToggleUniColor({ commit }, color) {
       commit('setUniColor', color)
     },
-    ToggleTheme({ commit }, isDark) {
-      const theme = isDark ? dark : light
+    ToggleTheme({ commit }) {
+      toggleDark()
+      const theme = isDark.value ? dark : light
       commit('setTheme', theme)
     }
   },
