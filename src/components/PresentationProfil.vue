@@ -50,7 +50,7 @@ export default {
 <template>
   <div class="presentation-content d-flex flex-column align-items-center">
     <div class="photo-profil w-100">
-      <img src="../assets/charlot.jpg" alt="Charlot" :style="{ border: '10px solid ' + color }" />
+      <img src="../assets/charlot.jpg" alt="Charlot" :style="{ border: '8px solid ' + color }" />
       <div class="profil h-100 d-flex flex-column justify-content-around">
         <h3 :style="{ color: color }" class="my-3">Charlot DEDJINOU</h3>
         <div>
