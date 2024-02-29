@@ -107,7 +107,7 @@ export default function Projects() {
       title: 'zero_plastic_initiative',
       image: zero_plastique,
       description: 'zero_plastic_initiative_description',
-      skills: ['Vue JS', "J'y serai", 'Visuel', 'Plastique'],
+      skills: ['Vue JS', "'J'y serai'", 'Visuel', 'Plastique'],
       site: 'https://zero-dechet-plastique-sur-le-campus-abomey-calavi.vercel.app',
       github:
         'https://github.com/Charlot-DEDJINOU/Zero-dechet-plastique-sur-le-Campus-Abomey-Calavi',
@@ -145,7 +145,7 @@ export default function Projects() {
       title: 'excellence_night_celebration',
       image: excellente_night,
       description: 'excellence_night_celebration_description',
-      skills: ['Vue JS', "J'y serai", 'Visuel', 'UAC'],
+      skills: ['Vue JS', "'J'y serai'", 'Visuel', 'UAC'],
       site: 'https://excellence-night.vercel.app',
       github: 'https://github.com/Charlot-DEDJINOU/ExcellenceNight',
       category: 'All tous Web'
@@ -154,7 +154,7 @@ export default function Projects() {
       title: 'tp_mushroom_classification',
       image: mushroom,
       description: 'tp_mushroom_classification_description',
-      skills: ['Data Science', 'SVM', 'Linear Regression', 'Machine Learning'],
+      skills: ['Data Science', 'Linear Regression', 'Machine Learning'],
       site: '',
       github:
         'https://github.com/Charlot-DEDJINOU/Data-scientist/tree/main/5-Entrainez%20un%20modele%20predictif%20lineaire/TP%20-%20Entrainez%20une%20regression%20logistique%20et%20une%20SVM%20lineaire',
