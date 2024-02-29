@@ -9,15 +9,6 @@ export default function Awards() {
 
   return [
     {
-      image: auf,
-      title: t('award_auf_title'),
-      organization: t('award_auf_organization'),
-      theme: t('award_auf_theme'),
-      date: t('award_auf_date'),
-      range: t('award_auf_range'),
-      description: t('award_auf_description')
-    },
-    {
       image: maic,
       title: t('award_maic_title'),
       organization: t('award_maic_organization'),
@@ -43,6 +34,15 @@ export default function Awards() {
       date: t('award_yats_date'),
       range: t('award_yats_range'),
       description: t('award_yats_description')
+    },
+    {
+      image: auf,
+      title: t('award_auf_title'),
+      organization: t('award_auf_organization'),
+      theme: t('award_auf_theme'),
+      date: t('award_auf_date'),
+      range: t('award_auf_range'),
+      description: t('award_auf_description')
     }
   ]
 }
