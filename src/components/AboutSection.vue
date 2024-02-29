@@ -127,6 +127,7 @@ export default {
 }
 .about .profil-cv .cv-view button {
   border-radius: 10px 0px 10px 0px;
+  font-size: 14px;
 }
 .text-justify {
   text-align: justify;
