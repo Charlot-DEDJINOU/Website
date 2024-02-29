@@ -24,10 +24,10 @@ export default {
   <nav
     class="navbar navbar-expand-lg header w-100 fixed-top"
     id="navbar-example2"
-    :style="{ backgroundColor: theme.background.primary }"
+    :style="{ backgroundColor: theme.colorsecondary }"
   >
-    <div class="container-fluid">
-      <a class="navbar-brand mx-5 logo" href="#" :style="{ color: theme.colorprimary }">Charlot</a>
+    <div class="container-fluid container">
+      <a class="navbar-brand logo" href="#" :style="{ color: theme.colorprimary }">Charlot</a>
       <button
         class="navbar-toggler shadow-none bg-white"
         type="button"
@@ -44,8 +44,9 @@ export default {
       <div class="collapse navbar-collapse" id="navbarNavDropdown2"></div>
       <div class="collapse navbar-collapse" id="navbarNavDropdown3"></div>
       <div class="collapse navbar-collapse" id="navbarNavDropdown5"></div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown6"></div>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav nav nav-pills">
+        <ul class="navbar-nav nav nav-pills d-flex align-items-center">
           <li class="nav-item mx-2">
             <a
               class="nav-link"
@@ -102,6 +103,16 @@ export default {
               >{{ $t('contact') }}</a
             >
           </li>
+          <li>
+            <select
+              v-model="$i18n.locale"
+              :style="{ backgroundColor: theme.colorprimary, color: theme.colorsecondary }"
+              class="form-select m-2"
+            >
+              <option value="en">{{ $t('en') }}</option>
+              <option value="fr">{{ $t('fr') }}</option>
+            </select>
+          </li>
         </ul>
       </div>
     </div>
@@ -127,11 +138,15 @@ export default {
 }
 .header .logo {
   font-size: 30px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
   text-transform: uppercase;
 }
 .header .nav-item {
   font-size: 15px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.header select {
+  font-size: 14px;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 </style>
