@@ -27,34 +27,29 @@ export default {
 </script>
 <template>
   <div
-    className="service p-2 m-3"
+    class="service p-2 m-3"
     :style="{ backgroundColor: theme.background.secondary }"
     data-aos="zoom-in"
     data-aos-duration="1500"
     data-aos-easinf="linear"
   >
-    <div className="service-title d-flex align-items-center justify-content-around my-3">
-      <IconEye className="icon mx-3 d-inline-block" :style="{ color: uniColor }" />
-      <div className="service-name align-self-center">
+    <div class="service-title d-flex align-items-center justify-content-around my-3">
+      <IconEye class="icon mx-1 d-inline-block mb-1" :style="{ color: uniColor }" />
+      <div class="service-name d-flex align-items-center justify-content-center">
         <SectionTitle :title="title" service="service" />
       </div>
     </div>
-    <p className="text-justify px-2 text-responsive">
+    <p class="text-justify px-2 text-responsive">
       {{ content }}
     </p>
   </div>
 </template>
 <style scoped>
 .service {
-  width: 330px;
+  width: 350px;
   height: auto;
   border-radius: 10px;
   background-color: black;
-  cursor: pointer;
-}
-.service .service-title .icon {
-  width: 40px;
-  height: 40px;
 }
 .text-justify {
   text-align: justify;
