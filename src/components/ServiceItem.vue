@@ -46,7 +46,7 @@ export default {
 </template>
 <style scoped>
 .service {
-  width: 350px;
+  width: 320px;
   height: auto;
   border-radius: 10px;
   background-color: black;
