@@ -49,16 +49,18 @@ export default {
 </script>
 <template>
   <section
-    class="presentation d-flex flex-column justify-content-evenly align-items-center py-5"
+    class="presentation navbar-nav nav nav-pills d-flex flex-column justify-content-evenly align-items-center py-5"
     id="home"
     :style="{
       backgroundImage: 'url(' + theme.background.image + ')',
       '--color': theme.background.primary
     }"
   >
-    <a class="text-decoration-none" href="#home" :style="{ color: uniColor }"
-      ><IconArrowUp class="scroll-presentation d-inline-block"
-    /></a>
+    <div class="nav-item">
+        <a class="text-decoration-none nav-link" href="#home" :style="{ color: uniColor }"
+        ><IconArrowUp class="scroll-presentation d-inline-block"
+      /></a>
+    </div>
     <CustomHeader />
     <div class="home-preference d-flex align-items-center">
       <span
@@ -71,7 +73,7 @@ export default {
       <ThemesColors class="opacity" v-if="show" />
     </div>
     <PresentationProfil :color="uniColor" :theme="theme" class="mt-5" />
-    <a class="text-decoration-none" href="#about"
+    <a class="text-decoration-none nav-link" href="#about"
       ><IconArrowDown class="scroll-about" :style="{ color: uniColor }"
     /></a>
   </section>

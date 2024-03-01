@@ -49,14 +49,14 @@ export default {
           </p>
           <div class="cv-view d-flex flex-wrap justify-content-evenly mt-4 w-100">
             <button
-              @click="downloadCV"
+              @click="downloadCV($i18n.locale)"
               class="py-2 px-4 fw-medium border-0 d-flex align-items-center justify-content-center"
               :style="{ backgroundColor: uniColor, color: 'white', width: '195px' }"
             >
               <IconDownloadAbout class="mx-2" /> {{ $t('download') }} CV
             </button>
             <button
-              @click="viewCV"
+              @click="viewCV($i18n.locale)"
               class="py-2 px-4 fw-medium border-0 d-flex align-items-center justify-content-center"
               :style="{ backgroundColor: uniColor, color: 'white', width: '195px' }"
             >
