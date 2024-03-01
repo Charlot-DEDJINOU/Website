@@ -22,7 +22,7 @@ const checkAllImagesLoaded = () => {
     
     setTimeout(() => {
       show.value = true
-    }, 10000)
+    }, 3000)
   }
 };
 
