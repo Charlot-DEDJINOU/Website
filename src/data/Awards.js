@@ -1,7 +1,7 @@
-import yats from '../assets/award_yats.jpg'
-import ewaste from '../assets/award_ewaste.png'
-import maic from '../assets/award_maic.png'
-import auf from '../assets/award_auf.png'
+import yats from '../assets/award_yats-min.jpg'
+import ewaste from '../assets/award_ewaste-min.png'
+import maic from '../assets/award_maic-min.png'
+import auf from '../assets/award_auf-min.png'
 import { useI18n } from 'vue-i18n'
 
 export default function Awards() {
