@@ -14,9 +14,10 @@ const show = ref(false)
 
 const work = () => {
   if (document.readyState === 'complete') {
+    
     setTimeout(() => {
       show.value = true
-    }, 2000)
+    }, 5000)
   }
 }
 
