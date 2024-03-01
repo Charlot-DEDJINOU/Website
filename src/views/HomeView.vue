@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import LoadingComponent from './LoadingComponent.vue'
 import HomeSection from '../components/HomeSection.vue'
 import AboutSection from '../components/AboutSection.vue'
@@ -12,18 +12,34 @@ import FooterCustom from '../components/FooterCustom.vue'
 
 const show = ref(false)
 
-const work = () => {
-  if (document.readyState === 'complete') {
+const images = document.querySelectorAll('img');
+
+let imagesLoaded = 0;
+
+const checkAllImagesLoaded = () => {
+  if (imagesLoaded === images.length) {
+    console.log('Toutes les images ont été chargées !');
     
     setTimeout(() => {
       show.value = true
-    }, 5000)
+    }, 2000)
   }
-}
+};
 
-onMounted(() => {
-  document.addEventListener('readystatechange', work)
-})
+images.forEach(image => {
+  image.addEventListener('load', () => {
+    imagesLoaded++;
+    checkAllImagesLoaded();
+  });
+});
+
+images.forEach(image => {
+  if (image.complete) {
+    imagesLoaded++;
+  }
+});
+
+checkAllImagesLoaded();
 </script>
 <template>
   <div>
