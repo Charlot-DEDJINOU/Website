@@ -8,7 +8,7 @@ export default {
   components: {
     CustomDrawer
   },
-  methods : {
+  methods: {
     scrollBottom
   },
   setup() {
@@ -31,7 +31,13 @@ export default {
     :style="{ backgroundColor: theme.colorsecondary }"
   >
     <div class="container-fluid container">
-      <div class="navbar-brand logo" :style="{ color: theme.colorprimary }" @click="scrollBottom('home')">Charlot</div>
+      <div
+        class="navbar-brand logo"
+        :style="{ color: theme.colorprimary }"
+        @click="scrollBottom('home')"
+      >
+        Charlot
+      </div>
       <button
         class="navbar-toggler shadow-none bg-white"
         type="button"

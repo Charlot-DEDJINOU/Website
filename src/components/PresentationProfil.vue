@@ -3,10 +3,14 @@ import SocialMedia from './SocialMedia.vue'
 import Typewriter from 'typewriter-effect/dist/core'
 import { ref, watchEffect } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { scrollBottom } from '../layout/untils'
 
 export default {
   components: {
     SocialMedia
+  },
+  methods: {
+    scrollBottom
   },
   props: {
     color: String,
@@ -67,20 +71,20 @@ export default {
       </div>
     </div>
     <div class="buttons d-flex flex-wrap justify-content-evenly mt-5 w-100">
-      <a
-        href="#about"
+      <div
+        @click="scrollBottom('about')"
         class="py-2 px-4 fw-medium border-0"
         :style="{ backgroundColor: color, color: 'white' }"
       >
         {{ $t('about') }}
-      </a>
-      <a
-        href="#projets"
+      </div>
+      <div
+        @click="scrollBottom('projets')"
         class="py-2 px-4 fw-medium border-0"
         :style="{ backgroundColor: color, color: 'white' }"
       >
         {{ $t('my') }} {{ $t('projects') }}
-      </a>
+      </div>
     </div>
   </div>
 </template>
@@ -105,9 +109,10 @@ export default {
 .presentation-content .photo-profil .profil .span {
   padding-bottom: 10px;
 }
-.presentation-content .buttons a {
+.presentation-content .buttons div {
   border-radius: 10px 0px 10px 0px;
   text-decoration: none;
+  cursor: pointer;
 }
 .text-justify {
   text-align: justify;

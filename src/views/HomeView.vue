@@ -1,5 +1,4 @@
-<script setup>
-import { onMounted, ref} from 'vue';
+<script>
 import HomeSection from '../components/HomeSection.vue'
 import AboutSection from '../components/AboutSection.vue'
 import ServicesSection from '../components/ServicesSection.vue'
@@ -9,22 +8,21 @@ import CertificationsSection from '../components/CertificationsSection.vue'
 import ContactSection from '../components/ContactSection.vue'
 import FooterCustom from '../components/FooterCustom.vue'
 
-const show = ref(false)
-
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
-
-const work = async () => {
-  await delay(2000)
-  show.value = true
+export default {
+  components: {
+    HomeSection,
+    AboutSection,
+    ServicesSection,
+    ProjectsSection,
+    AwardsSection,
+    CertificationsSection,
+    ContactSection,
+    FooterCustom,
+  }
 }
-
-onMounted(() => {
-  document.addEventListener('readystatechange', work);
-});
 </script>
 <template>
   <main
-    v-if="show"
     class="scrollspy-example"
     tabindex="0"
     data-bs-spy="scroll"

@@ -60,11 +60,7 @@ export default {
       '--color': theme.background.primary
     }"
   >
-    <div
-      class="text-decoration-none nav-link"
-      @click="scrollBottom('home')"
-      :style="{ color: uniColor }"
-    >
+    <div class="text-decoration-none" @click="scrollBottom('home')" :style="{ color: uniColor }">
       <IconArrowUp class="scroll-presentation d-inline-block" />
     </div>
     <CustomHeader />
