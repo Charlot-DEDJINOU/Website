@@ -7,6 +7,7 @@ import IconArrowDown from './icons/IconArrowDown.vue'
 import IconArrowUp from './icons/IconArrowUp.vue'
 import { ref, computed } from 'vue'
 import { useStore } from 'vuex'
+import { scrollBottom } from '../layout/untils'
 
 export default {
   components: {
@@ -16,6 +17,9 @@ export default {
     PresentationProfil,
     IconArrowDown,
     IconArrowUp
+  },
+  methods: {
+    scrollBottom
   },
   setup() {
     const store = useStore()
@@ -56,10 +60,12 @@ export default {
       '--color': theme.background.primary
     }"
   >
-    <div class="nav-item">
-        <a class="text-decoration-none nav-link" href="#home" :style="{ color: uniColor }"
-        ><IconArrowUp class="scroll-presentation d-inline-block"
-      /></a>
+    <div
+      class="text-decoration-none nav-link"
+      @click="scrollBottom('home')"
+      :style="{ color: uniColor }"
+    >
+      <IconArrowUp class="scroll-presentation d-inline-block" />
     </div>
     <CustomHeader />
     <div class="home-preference d-flex align-items-center">
@@ -73,9 +79,9 @@ export default {
       <ThemesColors class="opacity" v-if="show" />
     </div>
     <PresentationProfil :color="uniColor" :theme="theme" class="mt-5" />
-    <a class="text-decoration-none nav-link" href="#about"
-      ><IconArrowDown class="scroll-about" :style="{ color: uniColor }"
-    /></a>
+    <div class="text-decoration-none" @click="scrollBottom('about')">
+      <IconArrowDown class="scroll-about" :style="{ color: uniColor }" />
+    </div>
   </section>
 </template>
 <style scoped>
@@ -115,6 +121,7 @@ export default {
   height: 60px;
   margin-bottom: -50px;
   animation: scrollAnimation 1s infinite;
+  cursor: pointer;
 }
 .presentation .scroll-presentation {
   position: fixed;

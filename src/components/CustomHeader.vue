@@ -2,10 +2,14 @@
 import CustomDrawer from './CustomDrawer.vue'
 import { useStore } from 'vuex'
 import { computed, ref } from 'vue'
+import { scrollBottom } from '../layout/untils'
 
 export default {
   components: {
     CustomDrawer
+  },
+  methods : {
+    scrollBottom
   },
   setup() {
     const store = useStore()
@@ -27,7 +31,7 @@ export default {
     :style="{ backgroundColor: theme.colorsecondary }"
   >
     <div class="container-fluid container">
-      <a class="navbar-brand logo" href="#" :style="{ color: theme.colorprimary }">Charlot</a>
+      <div class="navbar-brand logo" :style="{ color: theme.colorprimary }" @click="scrollBottom('home')">Charlot</div>
       <button
         class="navbar-toggler shadow-none bg-white"
         type="button"
@@ -139,6 +143,7 @@ export default {
 .header .logo {
   font-size: 30px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .header .nav-item {
   font-size: 15px;
