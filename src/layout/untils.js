@@ -28,3 +28,11 @@ export function Forward(urlDuSite) {
     window.open(urlDuSite, '_blank')
   }
 }
+
+export const scrollBottom = (id) => {
+  const endOfPageElement = document.getElementById(id)
+  endOfPageElement.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  })
+}
