@@ -17,7 +17,7 @@ export default {
     AwardsSection,
     CertificationsSection,
     ContactSection,
-    FooterCustom,
+    FooterCustom
   }
 }
 </script>
