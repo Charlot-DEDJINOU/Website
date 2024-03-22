@@ -19,6 +19,9 @@ import yats from '../assets/yats-min.png'
 import shared_preference from '../assets/shared_preference-min.jpg'
 import chatbot from '../assets/chatbot-min.png'
 import blog_api from '../assets/blog_api-min.png'
+import event_flow from '../assets/event_flow-min.png'
+import algolia from '../assets/algolia-min.jpg'
+import iot from '../assets/iot-min.jpg'
 
 export default function Projects() {
   return [
@@ -30,6 +33,15 @@ export default function Projects() {
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/Stock-Master',
       category: 'All tous Mobile API'
+    },
+    {
+      title: 'iot_hub',
+      image: iot,
+      description: 'iot_description',
+      skills: ['IOT', 'Internet of Things', 'Arduino'],
+      site: '',
+      github: 'https://github.com/Charlot-DEDJINOU/Internet-of-Things-IoT',
+      category: 'All tous Internet of Things Internet des objets'
     },
     {
       title: 'data_science_hub',
@@ -93,6 +105,24 @@ export default function Projects() {
       site: 'https://open.kattis.com/users/charlot',
       github: 'https://github.com/Charlot-DEDJINOU/Kattis',
       category: 'All tous Programmation Programming'
+    },
+    {
+      title: 'event_flow',
+      image: event_flow,
+      description: 'event_flow_description',
+      skills: ['Vue', 'Vuex', 'WebSocket', 'Sqlite'],
+      site: 'https://event-flow-lake.vercel.app',
+      github: 'https://github.com/Charlot-DEDJINOU/EventFlow',
+      category: 'All tous Web WebSocket'
+    },
+    {
+      title: 'algolia',
+      image: algolia,
+      description: 'algolia_description',
+      skills: ['Laravel', 'Algolia', 'Scout', 'PHP'],
+      site: '',
+      github: 'https://github.com/Charlot-DEDJINOU/Algolia-Laravel',
+      category: 'All tous Web'
     },
     {
       title: 'websocket_communication',
