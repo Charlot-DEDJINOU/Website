@@ -26,8 +26,8 @@ export default function Services() {
     },
     {
       icon: 4,
-      title: t('generate_jy_serai_link'),
-      description: t('generate_jy_serai_link_description')
+      title: t('iot_solutions'),
+      description: t('iot_solutions_description')
     },
     {
       icon: 5,
