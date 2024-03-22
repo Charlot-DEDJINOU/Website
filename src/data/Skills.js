@@ -37,7 +37,7 @@ export default function Skills() {
       },
       {
         title: 'Cryptographie, IOT',
-        percent: '50%'
+        percent: '65%'
       },
       {
         title: 'Figma, Illustrator',
