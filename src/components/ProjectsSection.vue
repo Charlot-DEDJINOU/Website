@@ -18,7 +18,7 @@ export default {
   setup() {
     const store = useStore()
 
-    const { locale } = useI18n()
+    const { locale, t } = useI18n()
 
     const uniColor = ref(computed(() => store.state.uniColor))
     const theme = ref(computed(() => store.state.theme))
@@ -37,7 +37,7 @@ export default {
       return (
         projet.category.toLowerCase().includes(category.value.toLowerCase()) &&
         (projet.title.toLowerCase().includes(text) ||
-          projet.description.toLowerCase().includes(text) ||
+          t(projet.description).toLowerCase().includes(text) ||
           projet.site.toLowerCase().includes(text) ||
           projet.github.toLowerCase().includes(text) ||
           projet.category.toLowerCase().includes(text) ||
