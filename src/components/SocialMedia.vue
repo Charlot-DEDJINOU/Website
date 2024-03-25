@@ -42,7 +42,7 @@ export default {
     :style="{ width: size == null ? 'auto' : size }"
   >
     <span
-      @click="Forward('https://www.facebook.com/charlot.leuro.35?mibextid=ZbWKwL')"
+      @click="Forward('https://www.facebook.com/charlot.dedjinou.35?mibextid=ZbWKwL')"
       class="d-inline-block d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: uniColor, color: 'white' }"
       ><IconFacebook :size="iconSize"
