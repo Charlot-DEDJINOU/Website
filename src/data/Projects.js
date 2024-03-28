@@ -110,7 +110,7 @@ export default function Projects() {
       title: 'event_flow',
       image: event_flow,
       description: 'event_flow_description',
-      skills: ['Vue', 'Vuex', 'WebSocket', 'Sqlite'],
+      skills: ['Vue', 'Vuex', 'WebSocket', 'Mongo db'],
       site: 'https://event-flow-lake.vercel.app',
       github: 'https://github.com/Charlot-DEDJINOU/EventFlow',
       category: 'All tous Web WebSocket'
