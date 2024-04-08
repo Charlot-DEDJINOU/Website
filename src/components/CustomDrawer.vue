@@ -23,7 +23,7 @@ export default {
 <template>
   <div class="drawer p-3 d-flex flex-column align-items-center">
     <div class="drawer-header d-flex align-items-center">
-      <img src="../assets/charlot.jpg" alt="charlot" :style="{ border: '3px solid' + uniColor }" />
+      <img src="../assets/charlot.png" alt="charlot" :style="{ border: '3px solid' + uniColor }" />
       <span class="d-inline-block mx-3 fw-medium">Charlot Joël DEDJINOU</span>
       <button
         type="button"
@@ -49,6 +49,7 @@ export default {
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  object-fit: cover;
 }
 ::-webkit-scrollbar {
   width: 0px;
