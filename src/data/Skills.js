@@ -7,10 +7,10 @@ export default function Skills() {
       },
       {
         title: 'Data Science, Machine Learning',
-        percent: '60%'
+        percent: '65%'
       },
       {
-        title: 'Bootstrap, React JS, Vue JS',
+        title: 'Tailwind, Bootstrap, React JS, Vue JS',
         percent: '85%'
       },
       {
@@ -23,12 +23,12 @@ export default function Skills() {
       },
       {
         title: 'WebSocket',
-        percent: '75%'
+        percent: '87%'
       }
     ],
     [
       {
-        title: 'MySql, Oracle, Sql',
+        title: 'MySql, Oracle, Mongo, Sql',
         percent: '75%'
       },
       {
@@ -36,8 +36,8 @@ export default function Skills() {
         percent: '70%'
       },
       {
-        title: 'Cryptographie, IOT',
-        percent: '65%'
+        title: 'Cryptographie, Steganographie, IOT',
+        percent: '70%'
       },
       {
         title: 'Figma, Illustrator',
@@ -49,7 +49,7 @@ export default function Skills() {
       },
       {
         title: 'Git, Github, C, C++',
-        percent: '85%'
+        percent: '90%'
       }
     ]
   ]
