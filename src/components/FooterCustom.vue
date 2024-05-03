@@ -23,16 +23,21 @@ export default {
 <template>
   <footer id="footer" :style="{ backgroundColor: theme.background.tertiaire }">
     <div class="container d-flex flex-column">
-      <div class="text-center title-responsive mb-3 fw-bold">CHARLOT DEDJINOU</div>
+      <b class="text-center title-responsive mb-3 fw-bold">CHARLOT DEDJINOU</b>
       <p class="text-center">{{ $t('quote') }} - Albert Schweitzer</p>
       <SocialMedia class="align-self-center" size="300px" iconSize="25" />
       <div class="copyright my-4">
         &copy; Copyright <strong><span>MyResume</span></strong
         >. All Rights Reserved
       </div>
-      <div class="credits">
+      <div class="credits" :style="{ fontSize : '18px' }">
         Designed by
-        <a href="#" class="text-decoration-none" :style="{ color: uniColor }">Charlot DEDJINOU</a>
+        <a
+          href="https://charlot-dedjinou.vercel.app"
+          class="text-decoration-none fw-bold"
+          :style="{ color: uniColor }"
+          >Charlot DEDJINOU</a
+        >
       </div>
     </div>
   </footer>
