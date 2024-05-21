@@ -2,12 +2,22 @@ import yats from '../assets/award_yats-min.jpg'
 import ewaste from '../assets/award_ewaste-min.png'
 import maic from '../assets/award_maic-min.png'
 import auf from '../assets/award_auf-min.png'
+import hackathon_ia from './../assets/hackathon_ia-min.jpeg'
 import { useI18n } from 'vue-i18n'
 
 export default function Awards() {
   const { t } = useI18n()
 
   return [
+    {
+      image: hackathon_ia,
+      title: t('award_hackathonIA_title'),
+      organization: t('award_hackathonIA_organization'),
+      theme: t('award_hackathonIA_theme'),
+      date: t('award_hackathonIA_date'),
+      range: t('award_hackathonIA_range'),
+      description: t('award_hackathonIA_description')
+    },
     {
       image: maic,
       title: t('award_maic_title'),

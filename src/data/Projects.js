@@ -22,8 +22,12 @@ import blog_api from '../assets/blog_api-min.png'
 import event_flow from '../assets/event_flow-min.png'
 import algolia from '../assets/algolia-min.jpg'
 import iot from '../assets/iot-min.jpg'
+import best_flag from '../assets/best_flag-min.png'
+import payment_link_generator from '../assets/payment_link_generator-min.png'
+import smart_vt from '../assets/smart_vt-min.png'
 
 export default function Projects() {
+  
   return [
     {
       title: 'stock_master',
@@ -86,7 +90,7 @@ export default function Projects() {
       skills: ['Python', 'IA', 'MAIC', 'MIFY'],
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/MIFY-Maic2022-Contest',
-      category: 'All tous Data Science'
+      category: 'All tous Intelligence Artificielle Artificial Intelligence'
     },
     {
       title: 'hackathon_sene',
@@ -105,6 +109,32 @@ export default function Projects() {
       site: 'https://open.kattis.com/users/charlot',
       github: 'https://github.com/Charlot-DEDJINOU/Kattis',
       category: 'All tous Programmation Programming'
+    },
+    {
+      title: 'best_flag',
+      image: best_flag,
+      description: 'best_flag_description',
+      skills: ['React jS', 'Cryptographic', 'Steganographic', 'Express JS'],
+      site: 'https://best-flag.vercel.app',
+      github: 'https://github.com/Charlot-DEDJINOU/Best-Flag',
+      category: 'All tous Web Cyber security Cybersécurité'
+    },
+    {
+      title: 'smart_vt',
+      image: smart_vt,
+      description: 'smart_vt_description',
+      skills: ['React jS', 'Fast Api', 'Express JS', 'IA', 'Whisper'],
+      github: 'https://github.com/Charlot-DEDJINOU/Hackathon-IA-Multimodal-Multilingue',
+      category: 'All tous Web Intelligence Artificielle Artificial Intelligence'
+    },
+    {
+      title: 'interview_ai_platform',
+      image: entretien_ia,
+      description: 'interview_ai_platform_description',
+      skills: ['React JS', 'FastApi', 'Express JS', 'AI'],
+      site: '',
+      github: 'https://github.com/Charlot-DEDJINOU/EntretrienIA',
+      category: 'All tous Web Intelligence Artificielle Artificial Intelligence API'
     },
     {
       title: 'event_flow',
@@ -144,15 +174,6 @@ export default function Projects() {
       category: 'All tous Web'
     },
     {
-      title: 'interview_ai_platform',
-      image: entretien_ia,
-      description: 'interview_ai_platform_description',
-      skills: ['React JS', 'FastApi', 'Express JS', 'AI'],
-      site: '',
-      github: 'https://github.com/Charlot-DEDJINOU/EntretrienIA',
-      category: 'All tous Web Data Science API'
-    },
-    {
       title: 'treasure_hunt_adventure',
       image: treasure,
       description: 'treasure_hunt_adventure_description',
@@ -178,6 +199,15 @@ export default function Projects() {
       skills: ['Vue JS', "'J'y serai'", 'Visuel', 'UAC'],
       site: 'https://excellence-night.vercel.app',
       github: 'https://github.com/Charlot-DEDJINOU/ExcellenceNight',
+      category: 'All tous Web'
+    },
+    {
+      title: 'payement_generate_link',
+      image: payment_link_generator,
+      description: 'payement_generate_link_description',
+      skills: ['Laravel', 'MTN MOMO', 'Payement', 'PHP'],
+      site: '',
+      github: 'https://github.com/Charlot-DEDJINOU/Payment-Link-Generator',
       category: 'All tous Web'
     },
     {
