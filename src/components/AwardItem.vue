@@ -60,7 +60,7 @@ export default {
 }
 .distinction img {
   width: 35%;
-  height: 275px;
+  min-height: 275px;
   object-fit: cover;
   object-position: center;
   border-radius: 10px 0px 0px 10px;

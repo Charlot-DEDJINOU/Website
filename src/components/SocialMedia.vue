@@ -66,7 +66,7 @@ export default {
       ><IconWhatsapp :size="iconSize"
     /></span>
     <span
-      @click="Forward('https://www.linkedin.com/in/charlot-dedjinou-b45a0a234')"
+      @click="Forward('https://www.linkedin.com/in/charlot-dedjinou')"
       class="d-inline-block d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: uniColor, color: 'white' }"
       ><IconLinkdln :size="iconSize"
