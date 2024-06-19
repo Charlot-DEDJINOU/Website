@@ -14,6 +14,10 @@ export default function Skills() {
         percent: '85%'
       },
       {
+        title: 'WebSocket, Redux, Vuex',
+        percent: '85%'
+      },
+      {
         title: 'Laravel, Express JS, Fast API',
         percent: '85%'
       },
@@ -21,10 +25,6 @@ export default function Skills() {
         title: 'Dart, Flutter, React Native',
         percent: '80%'
       },
-      {
-        title: 'WebSocket',
-        percent: '87%'
-      }
     ],
     [
       {

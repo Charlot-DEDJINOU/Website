@@ -13,7 +13,7 @@ export default function EducationData() {
     {
       title: t('developer_fullstack'),
       years: 'Jan 2023 - Mar 2023',
-      place: 'Hackaton SENE, Digital Directorate, Benin',
+      place: 'ECOTIC, Abomey-Calavi, Benin',
       skills: [t('uml_modeling'), t('figma_mockup'), t('react_frontend_dev'), t('laravel_api')]
     }
   ]
