@@ -12,23 +12,50 @@ import car_location from '../assets/car_location-min.png'
 import entretien_ia from '../assets/entretien_ia-min.png'
 import smartphone from '../assets/smartphone-min.png'
 import maic from '../assets/maic-min.png'
-import websocket from '../assets/websocket-min.jpg'
 import excellente_night from '../assets/excellente_night-min.png'
 import hdb from '../assets/hdb-min.png'
 import yats from '../assets/yats-min.png'
-import shared_preference from '../assets/shared_preference-min.jpg'
 import chatbot from '../assets/chatbot-min.png'
-import blog_api from '../assets/blog_api-min.png'
 import event_flow from '../assets/event_flow-min.png'
 import algolia from '../assets/algolia-min.jpg'
 import iot from '../assets/iot-min.jpg'
 import best_flag from '../assets/best_flag-min.png'
 import payment_link_generator from '../assets/payment_link_generator-min.png'
 import smart_vt from '../assets/smart_vt-min.png'
+import smart_parking from '../assets/smart_parking.jpg'
+import reservation_dashboard from '../assets/reservation_dashboard.png'
+import mobile_reservation from '../assets/mobile_reservation.png'
 
 export default function Projects() {
-  
+
   return [
+    {
+      title: 'smart_parking_mobile_app',
+      image: mobile_reservation,
+      description: 'smart_parking_mobile_app_description',
+      skills: ['React Native', 'FastAPI', 'Python', 'WebSocket', 'Tailwind CSS'],
+      site: 'https://drive.google.com/file/d/1m3vdnfLA592bk3Y2Bm75WhHgSs4atO-d/view?usp=sharing',
+      github: '',
+      category: 'All tous Mobile'
+    },
+    {
+      title: 'smart_parking_aiot_system',
+      image: smart_parking,
+      description: 'smart_parking_aiot_system_description',
+      skills: ['ESP32', 'YOLO', 'Python', 'AIoT', 'Computer Vision'],
+      site: 'https://drive.google.com/file/d/1m3vdnfLA592bk3Y2Bm75WhHgSs4atO-d/view?usp=sharing',
+      github: '',
+      category: 'All tous Internet of Things Internet des objets Intelligence Artificielle Artificial Intelligence'
+    },
+    {
+      title: 'smart_parking_dashboard',
+      image: reservation_dashboard,
+      description: 'smart_parking_dashboard_description',
+      skills: ['React.js', 'Tailwind CSS', 'FastAPI', 'WebSocket'],
+      site: 'https://drive.google.com/file/d/1m3vdnfLA592bk3Y2Bm75WhHgSs4atO-d/view?usp=sharing',
+      github: '',
+      category: 'All tous Dashboard Web'
+    },
     {
       title: 'stock_master',
       image: stock_master,
@@ -55,6 +82,32 @@ export default function Projects() {
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/Data-scientist',
       category: 'All tous Data Science'
+    },
+    {
+      title: 'best_flag',
+      image: best_flag,
+      description: 'best_flag_description',
+      skills: ['React jS', 'Cryptographic', 'Steganographic', 'Express JS'],
+      site: 'https://best-flag.vercel.app',
+      github: 'https://github.com/Charlot-DEDJINOU/Best-Flag',
+      category: 'All tous Web Cyber security Cybersécurité'
+    },
+    {
+      title: 'smart_vt',
+      image: smart_vt,
+      description: 'smart_vt_description',
+      skills: ['React jS', 'Fast Api', 'Express JS', 'IA', 'Whisper'],
+      github: 'https://github.com/Charlot-DEDJINOU/Hackathon-IA-Multimodal-Multilingue',
+      category: 'All tous Web Intelligence Artificielle Artificial Intelligence'
+    },
+    {
+      title: 'interview_ai_platform',
+      image: entretien_ia,
+      description: 'interview_ai_platform_description',
+      skills: ['React JS', 'FastApi', 'Express JS', 'AI'],
+      site: '',
+      github: 'https://github.com/Charlot-DEDJINOU/EntretrienIA',
+      category: 'All tous Web Intelligence Artificielle Artificial Intelligence API'
     },
     {
       title: 'artistic_ecommerce',
@@ -111,32 +164,6 @@ export default function Projects() {
       category: 'All tous Programmation Programming'
     },
     {
-      title: 'best_flag',
-      image: best_flag,
-      description: 'best_flag_description',
-      skills: ['React jS', 'Cryptographic', 'Steganographic', 'Express JS'],
-      site: 'https://best-flag.vercel.app',
-      github: 'https://github.com/Charlot-DEDJINOU/Best-Flag',
-      category: 'All tous Web Cyber security Cybersécurité'
-    },
-    {
-      title: 'smart_vt',
-      image: smart_vt,
-      description: 'smart_vt_description',
-      skills: ['React jS', 'Fast Api', 'Express JS', 'IA', 'Whisper'],
-      github: 'https://github.com/Charlot-DEDJINOU/Hackathon-IA-Multimodal-Multilingue',
-      category: 'All tous Web Intelligence Artificielle Artificial Intelligence'
-    },
-    {
-      title: 'interview_ai_platform',
-      image: entretien_ia,
-      description: 'interview_ai_platform_description',
-      skills: ['React JS', 'FastApi', 'Express JS', 'AI'],
-      site: '',
-      github: 'https://github.com/Charlot-DEDJINOU/EntretrienIA',
-      category: 'All tous Web Intelligence Artificielle Artificial Intelligence API'
-    },
-    {
       title: 'event_flow',
       image: event_flow,
       description: 'event_flow_description',
@@ -153,15 +180,6 @@ export default function Projects() {
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/Algolia-Laravel',
       category: 'All tous Web'
-    },
-    {
-      title: 'websocket_communication',
-      image: websocket,
-      description: 'websocket_communication_description',
-      skills: ['Java Script', 'Websocket', 'Serveur', 'Client'],
-      site: '',
-      github: 'https://github.com/Charlot-DEDJINOU/WebSocket',
-      category: 'All tous Web Websocket'
     },
     {
       title: 'zero_plastic_initiative',
@@ -230,15 +248,6 @@ export default function Projects() {
       category: 'All tous Web WebSocket'
     },
     {
-      title: 'blog_api',
-      image: blog_api,
-      description: 'blog_api_description',
-      skills: ['Laravel', 'API', 'PHP', 'MySql'],
-      site: '',
-      github: 'https://github.com/Charlot-DEDJINOU/Blog-api-laravel',
-      category: 'All tous API'
-    },
-    {
       title: 'virtual_smartphone_experience',
       image: smartphone,
       description: 'virtual_smartphone_experience_description',
@@ -265,14 +274,5 @@ export default function Projects() {
       github: 'https://github.com/Charlot-DEDJINOU/API_DEEE_Manager',
       category: 'All tous API'
     },
-    {
-      title: 'flutter_shared_preferences_demo',
-      image: shared_preference,
-      description: 'flutter_shared_preferences_demo_description',
-      skills: ['Flutter', 'Shared preference'],
-      site: '',
-      github: 'https://github.com/Charlot-DEDJINOU/Shared-Preference-Flutter',
-      category: 'All tous Mobile'
-    }
   ]
 }

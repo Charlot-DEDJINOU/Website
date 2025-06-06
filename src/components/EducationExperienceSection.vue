@@ -34,6 +34,11 @@ export default {
                             {{ item.title }}</h4>
                         <i :style="{backgroundColor : theme.background.tertiaire}" class="text-responsive">{{ item.years }}</i>
                         <p class="text-responsive"><em>{{ item.place }}</em></p>
+                        <p>
+                        <ul class="text-responsive">
+                          <li v-for="(skill, index) in item.skills" :key="index">{{ skill }}</li>
+                        </ul>
+                        </p>
                     </div>
                   </div>
               </div>

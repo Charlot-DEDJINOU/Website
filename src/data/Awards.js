@@ -3,12 +3,22 @@ import ewaste from '../assets/award_ewaste-min.png'
 import maic from '../assets/award_maic-min.png'
 import auf from '../assets/award_auf-min.png'
 import hackathon_ia from './../assets/hackathon_ia-min.jpeg'
+import hackathon_smart_cities from '../assets/hackathon_smart_cities.jpg'
 import { useI18n } from 'vue-i18n'
 
 export default function Awards() {
   const { t } = useI18n()
 
   return [
+    {
+      image: hackathon_smart_cities,
+      title: t('award_hackathonSmartCities_title'),
+      organization: t('award_hackathonSmartCities_organization'),
+      theme: t('award_hackathonSmartCities_theme'),
+      date: t('award_hackathonSmartCities_date'),
+      range: t('award_hackathonSmartCities_range'),
+      description: t('award_hackathonSmartCities_description')
+    },
     {
       image: hackathon_ia,
       title: t('award_hackathonIA_title'),

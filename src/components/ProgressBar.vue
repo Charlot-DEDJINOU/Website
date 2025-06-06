@@ -69,7 +69,6 @@ export default {
 .progress .skill {
   padding: 10px 0;
   margin: 0;
-  text-transform: uppercase;
   display: block;
   font-weight: 600;
 }

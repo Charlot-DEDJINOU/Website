@@ -1,54 +1,49 @@
 export default function Skills() {
   return [
+    // === Web, Mobile & Deployment ===
     [
       {
-        title: 'HTML, CSS, JS, PHP,Python',
+        title: 'React, Vue, Bootstrap , Tailwind CSS, Figma',
         percent: '90%'
       },
       {
-        title: 'Data Science, Machine Learning',
-        percent: '65%'
-      },
-      {
-        title: 'Tailwind, Bootstrap, React JS, Vue JS',
+        title: 'WebSocket , Redux , Vuex',
         percent: '85%'
       },
       {
-        title: 'WebSocket, Redux, Vuex',
+        title: 'Express.js , Node.js ,Laravel , FastApi',
         percent: '85%'
       },
       {
-        title: 'Laravel, Express JS, Fast API',
-        percent: '85%'
-      },
-      {
-        title: 'Dart, Flutter, React Native',
+        title: 'Flutter, React Native',
         percent: '80%'
       },
+      {
+        title: 'Git, GitHub, VPS, Nginx, PM2, HTTPS, Linux',
+        percent: '85%'
+      }
     ],
+
+    // === AI, IoT, Security & Tools ===
     [
       {
-        title: 'MySql, Oracle, Mongo, Sql',
+        title: 'Machine Learning, Computer Vision',
+        percent: '70%'
+      },
+      {
+        title: 'IoT (Arduino, ESP32, Sensors, Smart Systems)',
+        percent: '80%'
+      },
+      {
+        title: 'MySQL, MongoDB, Oracle, SQLite',
         percent: '75%'
       },
       {
-        title: 'Java, Spring Boot',
+        title: 'Web Exploitation, Crypto, Stegano, Binary Exploitation, Reverse Engineering',
         percent: '70%'
       },
       {
-        title: 'Cryptographie, Steganographie, IOT',
-        percent: '70%'
-      },
-      {
-        title: 'Figma, Illustrator',
-        percent: '80%'
-      },
-      {
-        title: 'Fluentd, Opensearch, Opensearch Dashboard',
-        percent: '65%'
-      },
-      {
-        title: 'Git, Github, C, C++',
+        title: 'Python, Java, C, C++, JavaScript, PHP',
         percent: '90%'
       }
     ]
