@@ -33,7 +33,7 @@ export default function Projects() {
       title: 'smart_parking_mobile_app',
       image: mobile_reservation,
       description: 'smart_parking_mobile_app_description',
-      skills: ['React Native', 'FastAPI', 'Python', 'WebSocket', 'Tailwind CSS'],
+      skills: ['React Native', 'FastAPI', 'Python', 'WebSocket'],
       site: 'https://drive.google.com/file/d/1m3vdnfLA592bk3Y2Bm75WhHgSs4atO-d/view?usp=sharing',
       github: '',
       category: 'All tous Mobile'
@@ -87,7 +87,7 @@ export default function Projects() {
       title: 'best_flag',
       image: best_flag,
       description: 'best_flag_description',
-      skills: ['React jS', 'Cryptographic', 'Steganographic', 'Express JS'],
+      skills: ['React jS', 'Cryptographic', 'Steganographic'],
       site: 'https://best-flag.vercel.app',
       github: 'https://github.com/Charlot-DEDJINOU/Best-Flag',
       category: 'All tous Web Cyber security Cybersécurité'
