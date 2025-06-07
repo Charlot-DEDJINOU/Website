@@ -3,12 +3,8 @@ export default function Skills() {
     // === Web, Mobile & Deployment ===
     [
       {
-        title: 'React, Vue, Bootstrap , Tailwind CSS, Figma',
+        title: 'React, Vue, Bootstrap , Tailwind CSS, Figma, WebSocket',
         percent: '90%'
-      },
-      {
-        title: 'WebSocket , Redux , Vuex',
-        percent: '85%'
       },
       {
         title: 'Express.js , Node.js ,Laravel , FastApi',
@@ -19,7 +15,7 @@ export default function Skills() {
         percent: '80%'
       },
       {
-        title: 'Git, GitHub, VPS, Nginx, PM2, HTTPS, Linux',
+        title: 'Git, GitHub, Linux, Nginx, PM2',
         percent: '85%'
       }
     ],
@@ -37,10 +33,6 @@ export default function Skills() {
       {
         title: 'MySQL, MongoDB, Oracle, SQLite',
         percent: '75%'
-      },
-      {
-        title: 'Web Exploitation, Crypto, Stegano, Binary Exploitation, Reverse Engineering',
-        percent: '70%'
       },
       {
         title: 'Python, Java, C, C++, JavaScript, PHP',
