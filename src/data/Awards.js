@@ -4,12 +4,22 @@ import maic from '../assets/award_maic-min.png'
 import auf from '../assets/award_auf-min.png'
 import hackathon_ia from './../assets/hackathon_ia-min.jpeg'
 import hackathon_smart_cities from '../assets/hackathon_smart_cities.jpg'
+import oremi_timo_award from '../assets/oremi_timo_award.jpg'
 import { useI18n } from 'vue-i18n'
 
 export default function Awards() {
   const { t } = useI18n()
 
   return [
+    {
+      image: oremi_timo_award,
+      title: t('award_hackathonLevelUp_title'),
+      organization: t('award_hackathonLevelUp_organization'),
+      theme: t('award_hackathonLevelUp_theme'),
+      date: t('award_hackathonLevelUp_date'),
+      range: t('award_hackathonLevelUp_range'),
+      description: t('award_hackathonLevelUp_description')
+    },
     {
       image: hackathon_smart_cities,
       title: t('award_hackathonSmartCities_title'),
