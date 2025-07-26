@@ -16,7 +16,7 @@ export default {
 
     const animateCount = () => {
       if (hasAnimated.value) return // Ne pas répéter l'animation
-      
+
       const targetPercent = parseInt(props.percent, 10)
       const duration = 1000 // Durée de l'animation en ms
       const steps = 50 // Nombre d'étapes pour l'animation
@@ -24,7 +24,7 @@ export default {
       const stepDuration = duration / steps
 
       let currentStep = 0
-      
+
       const interval = setInterval(() => {
         if (currentStep < steps) {
           count.value = Math.min(Math.round(increment * currentStep), targetPercent)
