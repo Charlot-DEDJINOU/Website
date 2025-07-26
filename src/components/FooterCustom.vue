@@ -30,7 +30,7 @@ export default {
         &copy; Copyright <strong><span>MyResume</span></strong
         >. All Rights Reserved
       </div>
-      <div class="credits" :style="{ fontSize : '18px' }">
+      <div class="credits" :style="{ fontSize: '18px' }">
         Designed by
         <a
           href="https://charlot-dedjinou.vercel.app"
