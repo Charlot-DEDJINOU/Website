@@ -23,35 +23,71 @@ export default {
     const uniColor = ref(computed(() => store.state.uniColor))
     const theme = ref(computed(() => store.state.theme))
 
-    const projects = ref(Projects())
+    const allProjects = ref(Projects()) // Tous les projets filtrés
+    const displayedProjects = ref([]) // Projets actuellement affichés
+    const itemsPerPage = ref(6) // Nombre d'éléments à charger à chaque fois
+    const currentPage = ref(0) // Page actuelle
 
     const category = ref('all')
     const textSearch = ref('')
 
     const search = () => {
-      projects.value = Projects().filter((item) => textInProjet(item))
+      // Filtrer tous les projets selon les critères
+      allProjects.value = Projects().filter((item) => textInProjet(item))
+      
+      // Réinitialiser l'affichage
+      currentPage.value = 0
+      loadMore()
     }
+
+    const loadMore = () => {
+      const startIndex = currentPage.value * itemsPerPage.value
+      const endIndex = startIndex + itemsPerPage.value
+      
+      if (currentPage.value === 0) {
+        // Première charge : remplacer tous les projets affichés
+        displayedProjects.value = allProjects.value.slice(0, endIndex)
+      } else {
+        // Charges suivantes : ajouter les nouveaux projets
+        const newProjects = allProjects.value.slice(startIndex, endIndex)
+        displayedProjects.value = [...displayedProjects.value, ...newProjects]
+      }
+      
+      currentPage.value++
+    }
+
+    const hasMore = computed(() => {
+      return displayedProjects.value.length < allProjects.value.length
+    })
 
     const textInProjet = (projet) => {
       const text = textSearch.value.toLowerCase()
-      return (
-        projet.category.toLowerCase().includes(category.value.toLowerCase()) &&
-        (projet.title.toLowerCase().includes(text) ||
-          t(projet.description).toLowerCase().includes(text) ||
-          projet.site.toLowerCase().includes(text) ||
-          projet.github.toLowerCase().includes(text) ||
-          projet.category.toLowerCase().includes(text) ||
-          projet.skills.join(' ').toLowerCase().includes(text))
+      const categoryMatch = category.value === 'all' || 
+        projet.category.toLowerCase().includes(category.value.toLowerCase())
+      
+      return categoryMatch && (
+        projet.title.toLowerCase().includes(text) ||
+        t(projet.description).toLowerCase().includes(text) ||
+        projet.site?.toLowerCase().includes(text) ||
+        projet.github.toLowerCase().includes(text) ||
+        projet.category.toLowerCase().includes(text) ||
+        projet.skills.join(' ').toLowerCase().includes(text)
       )
     }
+
+    // Initialiser l'affichage au montage du composant
+    search()
 
     return {
       uniColor,
       theme,
-      projects,
+      allProjects,
+      displayedProjects,
       category,
       textSearch,
       search,
+      loadMore,
+      hasMore,
       locale
     }
   }
@@ -85,14 +121,38 @@ export default {
           </option>
         </select>
       </div>
+      
       <div class="d-flex flex-wrap justify-content-around mt-3">
         <ProjectItem
           :theme="theme"
           :color="uniColor"
-          v-for="(item, index) in projects"
+          v-for="(item, index) in displayedProjects"
           :key="index"
           :projet="item"
         />
+      </div>
+      
+      <!-- Bouton Voir plus -->
+      <div v-if="hasMore" class="d-flex justify-content-center mt-4">
+        <button
+          @click="loadMore"
+          class="btn-load-more px-4 py-2"
+          :style="{ 
+            backgroundColor: uniColor, 
+            color: theme.background.primary,
+            border: `2px solid ${uniColor}`
+          }"
+        >
+          {{ locale === 'en' ? 'Load More' : 'Voir plus' }}
+        </button>
+      </div>
+      
+      <!-- Indicateur du nombre de projets -->
+      <div class="text-center mt-3">
+        <span :style="{ color: theme.colorprimary }">
+          {{ displayedProjects.length }} / {{ allProjects.length }} 
+          {{ locale === 'en' ? 'projects' : 'projets' }}
+        </span>
       </div>
     </div>
   </section>
@@ -107,8 +167,26 @@ export default {
   border-radius: 10px;
   padding: 0px 15px;
 }
+
 .projects .search select {
   width: 300px;
   font-size: 18px;
+}
+
+.btn-load-more {
+  font-size: 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-load-more:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-load-more:active {
+  transform: translateY(0);
 }
 </style>
