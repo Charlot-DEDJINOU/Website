@@ -30,9 +30,9 @@ export default {
       )
 
       carouselKey.value++
-      
+
       await nextTick()
-      
+
       setTimeout(() => {
         isAutoplayEnabled.value = true
       }, 500)
@@ -75,7 +75,11 @@ export default {
           :display="Math.min(5, certifications.length)"
           :startIndex="0"
         >
-          <slide v-for="(item, index) in certifications" :key="`${carouselKey}-${index}`" :index="index">
+          <slide
+            v-for="(item, index) in certifications"
+            :key="`${carouselKey}-${index}`"
+            :index="index"
+          >
             <img :src="item.image" :alt="item.name" />
           </slide>
         </carousel-3d>
