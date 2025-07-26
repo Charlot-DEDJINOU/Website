@@ -25,12 +25,11 @@ import smart_vt from '../assets/smart_vt-min.png'
 import smart_parking from '../assets/smart_parking.jpg'
 import reservation_dashboard from '../assets/reservation_dashboard.png'
 import mobile_reservation from '../assets/mobile_reservation.png'
-import oremi_timo from "../assets/oremi_timo.png"
+import oremi_timo from '../assets/oremi_timo.png'
 import bio_presence from '../assets/bio_presence.png'
 import onboarding from '../assets/onboarding.png'
 
 export default function Projects() {
-
   return [
     {
       title: 'oremi_timo',
@@ -57,7 +56,8 @@ export default function Projects() {
       skills: ['ESP32', 'YOLO', 'Python', 'AIoT', 'Computer Vision'],
       site: 'https://drive.google.com/file/d/1m3vdnfLA592bk3Y2Bm75WhHgSs4atO-d/view?usp=sharing',
       github: '',
-      category: 'All tous Internet of Things Internet des objets Intelligence Artificielle Artificial Intelligence'
+      category:
+        'All tous Internet of Things Internet des objets Intelligence Artificielle Artificial Intelligence'
     },
     {
       title: 'smart_parking_dashboard',
@@ -303,6 +303,6 @@ export default function Projects() {
       site: '',
       github: 'https://github.com/Charlot-DEDJINOU/API_DEEE_Manager',
       category: 'All tous API'
-    },
+    }
   ]
 }
