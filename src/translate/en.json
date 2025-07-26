@@ -40,7 +40,7 @@
 
   "developer_frontend": "Frontend Web Developer",
   "developer_fullstack": "Full Stack Developer",
-  
+
   "fusion_sites": "Merged three WordPress sites into a single optimized platform",
   "react_frontend": "Frontend development with React.js for improved performance and maintainability.",
 
@@ -53,7 +53,7 @@
 
   "uac_portal_ui": "UI development for UAC's academic portal using React.js",
   "api_integration": "API integration for dynamic data fetching and display",
-  
+
   "bachelor": "Professional Bachelor's Degree in Software Engineering",
   "mastercard": "Mastercard Foundation Scholarship Program",
   "bachelor_science": "High School Diploma - Science (Series C)",
@@ -129,12 +129,12 @@
   "api_deee_manager_description": "An API developed in PHP for efficient management of Waste Electrical and Electronic Equipment (WEEE), allowing the collection, tracking, and transparent management of these wastes.",
   "flutter_shared_preferences_demo": "Flutter Shared Preferences Demo",
   "flutter_shared_preferences_demo_description": "A demonstration of using the Shared Preferences library in Flutter for managing user preferences in a mobile application, offering simple and efficient storage of key-value data on the user's device.",
-  "best_flag" : "Best Flag",
-  "best_flag_description" : "Best Flag is an exciting project that will put your cryptographic and steganographic skills to the test. The aim is to discover a secret message hidden in the “best_flag” file, using different encryption algorithms.",
-  "smart_vt" : "Smart VT",
-  "smart_vt_description" : "Smart VT is an Artificial Intelligence based web application designed to subtitle and dub any video from one language to another (depending on your choice). The project relies on React, Python APIs for video processing, and Node.js for subtitling.",
-  "payement_generate_link" : "Payment Link Generator",
-  "payement_generate_link_description" : "This Laravel project is an MTN MOMO Benin payment link generation application, designed to simplify the online payment process for users and administrators.",
+  "best_flag": "Best Flag",
+  "best_flag_description": "Best Flag is an exciting project that will put your cryptographic and steganographic skills to the test. The aim is to discover a secret message hidden in the “best_flag” file, using different encryption algorithms.",
+  "smart_vt": "Smart VT",
+  "smart_vt_description": "Smart VT is an Artificial Intelligence based web application designed to subtitle and dub any video from one language to another (depending on your choice). The project relies on React, Python APIs for video processing, and Node.js for subtitling.",
+  "payement_generate_link": "Payment Link Generator",
+  "payement_generate_link_description": "This Laravel project is an MTN MOMO Benin payment link generation application, designed to simplify the online payment process for users and administrators.",
 
   "smart_parking_mobile_app": "Smart Parking – Mobile Application",
   "smart_parking_mobile_app_description": "A mobile app allowing users to reserve a parking space, make partial payments, and get a secure access code. Built with React Native and FastAPI for real-time communication via WebSocket.",
@@ -144,7 +144,7 @@
 
   "smart_parking_dashboard": "Smart Parking – Admin Dashboard",
   "smart_parking_dashboard_description": "A web dashboard for administrators to monitor reservations, payments, and real-time parking availability. Developed with React.js and Tailwind CSS, with WebSocket for instant updates.",
-  
+
   "oremi_timo": "Oremi Timo",
   "oremi_timo_description": "OREMI TIMO is an AI insurance platform that automates data entry via OCR, offers a voice chatbot accessible to visually impaired users, and recommends reliable partners based on location.",
 
@@ -193,7 +193,7 @@
   "award_hackathonSmartCities_range": "1st Prize",
   "award_hackathonSmartCities_description": "Development of an intelligent parking management system based on AIoT, featuring online booking, secure access, vehicle detection via computer vision, and real-time supervision.",
 
-    "award_hackathonLevelUp_title": "Hackathon Level Up",
+  "award_hackathonLevelUp_title": "Hackathon Level Up",
   "award_hackathonLevelUp_organization": "AFG Assurances & Future Studio",
   "award_hackathonLevelUp_theme": "Artificial Intelligence for Insurance",
   "award_hackathonLevelUp_date": "June 2025",
@@ -207,7 +207,7 @@
   "programming": "Programming",
   "websocket": "WebSocket",
   "iot": "Internet of Things",
-  "ai" : "Artificial Intelligence",
+  "ai": "Artificial Intelligence",
   "cyber_security": "Cyber Security",
   "contact_section": {
     "welcome_message": "Welcome to my contact section! If you want to discuss exciting projects, ask questions, or just say hello, feel free to send me a message. I'm always excited to meet new contacts and explore new collaboration opportunities.",
