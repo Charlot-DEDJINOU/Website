@@ -1,5 +1,5 @@
 <script>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 export default {
   props: {
@@ -10,47 +10,75 @@ export default {
   },
   setup(props) {
     const count = ref(0)
+    const skillBarRef = ref(null)
+    const hasAnimated = ref(false) // Pour éviter de répéter l'animation
+    let observer = null
 
-    const Count = async () => {
+    const animateCount = () => {
+      if (hasAnimated.value) return // Ne pas répéter l'animation
+      
       const targetPercent = parseInt(props.percent, 10)
+      const duration = 1000 // Durée de l'animation en ms
+      const steps = 50 // Nombre d'étapes pour l'animation
+      const increment = targetPercent / steps
+      const stepDuration = duration / steps
 
-      // Utiliser un délai pour observer l'incrémentation
+      let currentStep = 0
+      
       const interval = setInterval(() => {
-        if (count.value < targetPercent) {
-          count.value += 1
+        if (currentStep < steps) {
+          count.value = Math.min(Math.round(increment * currentStep), targetPercent)
+          currentStep++
         } else {
+          count.value = targetPercent
           clearInterval(interval)
+          hasAnimated.value = true
         }
-      }, 10)
+      }, stepDuration)
     }
 
-    const startAnimation = () => {
-      const screenHeight = document.getElementsByTagName('body')[0].clientHeight
-      const scrollPosition = window.scrollY
+    const setupIntersectionObserver = () => {
+      const options = {
+        root: null, // viewport
+        rootMargin: '0px 0px -20% 0px', // Déclenche quand 80% de l'élément est visible
+        threshold: 0.3 // Se déclenche quand 30% de l'élément est visible
+      }
 
-      const startPercentage = 10
-      const endPercentage = 23
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated.value) {
+            // Petit délai pour un effet plus smooth
+            setTimeout(() => {
+              animateCount()
+            }, 100)
+          }
+        })
+      }, options)
 
-      const startOffset = screenHeight * (startPercentage / 100)
-      const endOffset = screenHeight * (endPercentage / 100)
-
-      if (scrollPosition > startOffset && scrollPosition < endOffset) {
-        Count()
-      } else {
-        count.value = 0
+      if (skillBarRef.value) {
+        observer.observe(skillBarRef.value)
       }
     }
 
-    window.addEventListener('scroll', startAnimation)
+    onMounted(() => {
+      setupIntersectionObserver()
+    })
+
+    onUnmounted(() => {
+      if (observer && skillBarRef.value) {
+        observer.unobserve(skillBarRef.value)
+      }
+    })
 
     return {
-      count
+      count,
+      skillBarRef
     }
   }
 }
 </script>
 <template>
-  <div class="progress w-100 mb-3">
+  <div ref="skillBarRef" class="progress w-100 mb-3">
     <span class="skill">
       {{ skill }}<i class="val fw-medium">{{ count }} %</i>
     </span>
