@@ -25,10 +25,22 @@ import smart_vt from '../assets/smart_vt-min.png'
 import smart_parking from '../assets/smart_parking.jpg'
 import reservation_dashboard from '../assets/reservation_dashboard.png'
 import mobile_reservation from '../assets/mobile_reservation.png'
+import oremi_timo from "../assets/oremi_timo.png"
+import bio_presence from '../assets/bio_presence.png'
+import onboarding from '../assets/onboarding.png'
 
 export default function Projects() {
 
   return [
+    {
+      title: 'oremi_timo',
+      image: oremi_timo,
+      description: 'oremi_timo_description',
+      skills: ['React JS', 'FastAPI', 'IA', 'OCR'],
+      site: '',
+      github: 'https://github.com/Charlot-DEDJINOU/Oremi-Timo',
+      category: 'All tous Web Intelligence Artificielle Artificial Intelligence'
+    },
     {
       title: 'smart_parking_mobile_app',
       image: mobile_reservation,
@@ -55,6 +67,15 @@ export default function Projects() {
       site: 'https://drive.google.com/file/d/1m3vdnfLA592bk3Y2Bm75WhHgSs4atO-d/view?usp=sharing',
       github: '',
       category: 'All tous Dashboard Web'
+    },
+    {
+      title: 'bio_presence',
+      image: bio_presence,
+      description: 'bio_presence_description',
+      skills: ['IoT', 'FastAPI', 'ESP32', 'C++'],
+      site: '',
+      github: 'https://github.com/Charlot-DEDJINOU/BioPresence-System',
+      category: 'All tous Internet of Things Internet des objets'
     },
     {
       title: 'stock_master',
@@ -135,6 +156,15 @@ export default function Projects() {
       site: 'https://animated-hbd-nlp-js.vercel.app',
       github: 'https://github.com/Charlot-DEDJINOU/AnimatedHBD_nlpJs',
       category: 'All tous Web'
+    },
+    {
+      title: 'onboarding',
+      image: onboarding,
+      description: 'onboarding_description',
+      skills: ['React Native', 'JavaScript', 'Tailwind', 'Expo'],
+      site: '',
+      github: 'https://github.com/Charlot-DEDJINOU/Onboarding',
+      category: 'All tous Mobile'
     },
     {
       title: 'maic_morabaraba_ai',
