@@ -1,6 +1,6 @@
 <script>
 import SectionTitle from './SectionTitle.vue'
-import { ref, computed } from 'vue'
+import { ref, computed, nextTick } from 'vue'
 import { useStore } from 'vuex'
 import { Carousel3d, Slide } from 'vue3-carousel-3d'
 import Certifications from '../data/Certifications.js'
@@ -20,14 +20,19 @@ export default {
     const certifications = ref(Certifications())
     const text = ref('')
     const isAutoplayEnabled = ref(true)
+    const carouselKey = ref(0) // Clé pour forcer le re-render du carousel
 
-    const search = () => {
+    const search = async () => {
       isAutoplayEnabled.value = false
 
       certifications.value = Certifications().filter((item) =>
         item.name.toLowerCase().includes(text.value.toLowerCase())
       )
 
+      carouselKey.value++
+      
+      await nextTick()
+      
       setTimeout(() => {
         isAutoplayEnabled.value = true
       }, 500)
@@ -39,6 +44,7 @@ export default {
       certifications,
       text,
       isAutoplayEnabled,
+      carouselKey,
       search
     }
   }
@@ -61,14 +67,15 @@ export default {
       </div>
       <div class="d-flex flex-wrap justify-content-around">
         <carousel-3d
+          :key="carouselKey"
           class="w-100 carousel"
           :width="500"
           :height="355"
           :autoplay="isAutoplayEnabled"
-          :display="5"
+          :display="Math.min(5, certifications.length)"
           :startIndex="0"
         >
-          <slide v-for="(item, index) in certifications" :key="index" :index="item.id">
+          <slide v-for="(item, index) in certifications" :key="`${carouselKey}-${index}`" :index="index">
             <img :src="item.image" :alt="item.name" />
           </slide>
         </carousel-3d>
