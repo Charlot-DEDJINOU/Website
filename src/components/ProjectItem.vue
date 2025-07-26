@@ -55,7 +55,7 @@ export default {
         <span class="zoom-text">🔍 Cliquer pour agrandir</span>
       </div>
     </div>
-    
+
     <h5 class="text-center mb-3" :style="{ color: color }">{{ $t(projet.title) }}</h5>
     <div class="px-3 text-justify text-responsive mb-3">
       {{ $t(projet.description) }}
@@ -80,8 +80,8 @@ export default {
 
   <!-- Modal pour l'image agrandie -->
   <Teleport to="body">
-    <div 
-      v-if="isImageModalOpen" 
+    <div
+      v-if="isImageModalOpen"
       class="image-modal"
       @click="handleModalClick"
       @keydown.esc="closeImageModal"
@@ -89,18 +89,8 @@ export default {
       ref="modal"
     >
       <div class="modal-content">
-        <button 
-          class="close-button" 
-          @click="closeImageModal"
-          :style="{ color: color }"
-        >
-          ✕
-        </button>
-        <img 
-          :src="projet.image" 
-          :alt="projet.image" 
-          class="modal-image"
-        />
+        <button class="close-button" @click="closeImageModal" :style="{ color: color }">✕</button>
+        <img :src="projet.image" :alt="projet.image" class="modal-image" />
         <div class="modal-info" :style="{ color: color }">
           <h6>{{ $t(projet.title) }}</h6>
         </div>
@@ -282,12 +272,12 @@ export default {
   .modal-image {
     max-height: 70vh;
   }
-  
+
   .close-button {
     top: -35px;
     font-size: 20px;
   }
-  
+
   .zoom-text {
     font-size: 12px;
   }
