@@ -29,7 +29,7 @@ export default {
     const loadMore = () => {
       const startIndex = currentPage.value * itemsPerPage.value
       const endIndex = startIndex + itemsPerPage.value
-      
+
       if (currentPage.value === 0) {
         // Première charge : remplacer tous les awards affichés
         displayedAwards.value = allAwards.value.slice(0, endIndex)
@@ -38,7 +38,7 @@ export default {
         const newAwards = allAwards.value.slice(startIndex, endIndex)
         displayedAwards.value = [...displayedAwards.value, ...newAwards]
       }
-      
+
       currentPage.value++
     }
 
@@ -78,14 +78,14 @@ export default {
           data-aos-easing="ease-in-sine"
         />
       </div>
-      
+
       <!-- Bouton Voir plus -->
       <div v-if="hasMore" class="d-flex justify-content-center mt-4">
         <button
           @click="loadMore"
           class="btn-load-more px-4 py-2"
-          :style="{ 
-            backgroundColor: uniColor, 
+          :style="{
+            backgroundColor: uniColor,
             color: theme.background.primary,
             border: `2px solid ${uniColor}`
           }"
@@ -93,11 +93,11 @@ export default {
           {{ locale === 'en' ? 'Show More' : 'Voir plus' }}
         </button>
       </div>
-      
+
       <!-- Indicateur du nombre d'awards -->
       <div class="text-center mt-3">
         <span :style="{ color: theme.colorprimary }">
-          {{ displayedAwards.length }} / {{ allAwards.length }} 
+          {{ displayedAwards.length }} / {{ allAwards.length }}
           {{ locale === 'en' ? 'awards' : 'distinctions' }}
         </span>
       </div>
