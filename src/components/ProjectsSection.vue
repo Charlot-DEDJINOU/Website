@@ -34,7 +34,7 @@ export default {
     const search = () => {
       // Filtrer tous les projets selon les critères
       allProjects.value = Projects().filter((item) => textInProjet(item))
-      
+
       // Réinitialiser l'affichage
       currentPage.value = 0
       loadMore()
@@ -43,7 +43,7 @@ export default {
     const loadMore = () => {
       const startIndex = currentPage.value * itemsPerPage.value
       const endIndex = startIndex + itemsPerPage.value
-      
+
       if (currentPage.value === 0) {
         // Première charge : remplacer tous les projets affichés
         displayedProjects.value = allProjects.value.slice(0, endIndex)
@@ -52,7 +52,7 @@ export default {
         const newProjects = allProjects.value.slice(startIndex, endIndex)
         displayedProjects.value = [...displayedProjects.value, ...newProjects]
       }
-      
+
       currentPage.value++
     }
 
@@ -62,16 +62,18 @@ export default {
 
     const textInProjet = (projet) => {
       const text = textSearch.value.toLowerCase()
-      const categoryMatch = category.value === 'all' || 
+      const categoryMatch =
+        category.value === 'all' ||
         projet.category.toLowerCase().includes(category.value.toLowerCase())
-      
-      return categoryMatch && (
-        projet.title.toLowerCase().includes(text) ||
-        t(projet.description).toLowerCase().includes(text) ||
-        projet.site?.toLowerCase().includes(text) ||
-        projet.github.toLowerCase().includes(text) ||
-        projet.category.toLowerCase().includes(text) ||
-        projet.skills.join(' ').toLowerCase().includes(text)
+
+      return (
+        categoryMatch &&
+        (projet.title.toLowerCase().includes(text) ||
+          t(projet.description).toLowerCase().includes(text) ||
+          projet.site?.toLowerCase().includes(text) ||
+          projet.github.toLowerCase().includes(text) ||
+          projet.category.toLowerCase().includes(text) ||
+          projet.skills.join(' ').toLowerCase().includes(text))
       )
     }
 
@@ -121,7 +123,7 @@ export default {
           </option>
         </select>
       </div>
-      
+
       <div class="d-flex flex-wrap justify-content-around mt-3">
         <ProjectItem
           :theme="theme"
@@ -131,14 +133,14 @@ export default {
           :projet="item"
         />
       </div>
-      
+
       <!-- Bouton Voir plus -->
       <div v-if="hasMore" class="d-flex justify-content-center mt-4">
         <button
           @click="loadMore"
           class="btn-load-more px-4 py-2"
-          :style="{ 
-            backgroundColor: uniColor, 
+          :style="{
+            backgroundColor: uniColor,
             color: theme.background.primary,
             border: `2px solid ${uniColor}`
           }"
@@ -146,11 +148,11 @@ export default {
           {{ locale === 'en' ? 'Load More' : 'Voir plus' }}
         </button>
       </div>
-      
+
       <!-- Indicateur du nombre de projets -->
       <div class="text-center mt-3">
         <span :style="{ color: theme.colorprimary }">
-          {{ displayedProjects.length }} / {{ allProjects.length }} 
+          {{ displayedProjects.length }} / {{ allProjects.length }}
           {{ locale === 'en' ? 'projects' : 'projets' }}
         </span>
       </div>
