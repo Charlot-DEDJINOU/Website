@@ -144,6 +144,15 @@
 
   "smart_parking_dashboard": "Smart Parking – Admin Dashboard",
   "smart_parking_dashboard_description": "A web dashboard for administrators to monitor reservations, payments, and real-time parking availability. Developed with React.js and Tailwind CSS, with WebSocket for instant updates.",
+  
+  "oremi_timo": "Oremi Timo",
+  "oremi_timo_description": "OREMI TIMO is an AI insurance platform that automates data entry via OCR, offers a voice chatbot accessible to visually impaired users, and recommends reliable partners based on location.",
+
+  "bio_presence": "Bio Presence System",
+  "bio_presence_description": "Bio Presence System is a solution combining a FastAPI backend and ESP32 embedded programs to manage employee attendance using double authentication (personal code + fingerprint).",
+
+  "onboarding": "Onboarding App",
+  "onboarding_description": "An animated and interactive onboarding path for the mobile application, developed in React Native with Expo, Tailwind CSS (NativeWind) and a modular component architecture.",
 
   "see": "VIEW THIS PROJECT",
   "award_hackathonIA_title": "AI HACKATHON",
@@ -183,6 +192,13 @@
   "award_hackathonSmartCities_date": "April 2025",
   "award_hackathonSmartCities_range": "1st Prize",
   "award_hackathonSmartCities_description": "Development of an intelligent parking management system based on AIoT, featuring online booking, secure access, vehicle detection via computer vision, and real-time supervision.",
+
+    "award_hackathonLevelUp_title": "Hackathon Level Up",
+  "award_hackathonLevelUp_organization": "AFG Assurances & Future Studio",
+  "award_hackathonLevelUp_theme": "Artificial Intelligence for Insurance",
+  "award_hackathonLevelUp_date": "June 2025",
+  "award_hackathonLevelUp_range": "1st Prize",
+  "award_hackathonLevelUp_description": "Developed an intelligent insurance solution that automates data entry via OCR, assists users with a voice chatbot accessible to visually impaired individuals, and recommends reliable partners based on their location.",
 
   "all": "All",
   "data_science": "Data Science",
