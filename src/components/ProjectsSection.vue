@@ -23,7 +23,7 @@ export default {
     const uniColor = ref(computed(() => store.state.uniColor))
     const theme = ref(computed(() => store.state.theme))
 
-    const allProjects = ref(Projects()) // Tous les projets filtrés
+    const allProjects = ref(Projects().filter((item) => item.isVisible !== false)) // Tous les projets filtrés
     const displayedProjects = ref([]) // Projets actuellement affichés
     const itemsPerPage = ref(6) // Nombre d'éléments à charger à chaque fois
     const currentPage = ref(0) // Page actuelle
@@ -33,7 +33,7 @@ export default {
 
     const search = () => {
       // Filtrer tous les projets selon les critères
-      allProjects.value = Projects().filter((item) => textInProjet(item))
+      allProjects.value = Projects().filter((item) => item.isVisible !== false && textInProjet(item))
 
       // Réinitialiser l'affichage
       currentPage.value = 0

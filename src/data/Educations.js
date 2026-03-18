@@ -6,21 +6,24 @@ export default function EducationData() {
   return [
     {
       title: t('bachelor'),
-      years: 'Oct 2021 - Mar 2025',
-      place: t('ifri'),
-      skills: [t('mention_tb_1614'), t('software_engineering')]
-    },
-    {
-      title: t('mastercard'),
       years: 'Oct 2021 - Oct 2024',
-      place: t('university_abomey'),
-      skills: [t('mastercard_scholar'), t('cohort_leader')]
+      place: t('ifri'),
+      skills: [
+        t('mention_tb_1615'),
+        t('rank_2nd_promotion'),
+        t('mastercard_scholar'),
+        t('thesis_smart_parking')
+      ]
     },
     {
       title: t('bachelor_science'),
       years: '2014 - 2021',
       place: t('cotonou'),
-      skills: [t('mention_tb_1681'), t('class_leader')]
+      skills: [
+        t('mention_tb_1681'),
+        t('rank_1st_promotion'),
+        t('top_01_percent')
+      ]
     }
   ]
 }

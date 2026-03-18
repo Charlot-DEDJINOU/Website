@@ -1,5 +1,7 @@
 <script>
 import IconEye from './icons/IconEye.vue'
+import IconGithub from './icons/IconGithub.vue'
+import IconWorld from './icons/IconWorld.vue'
 import { Forward } from '../layout/untils.js'
 
 export default {
@@ -8,7 +10,7 @@ export default {
     theme: Object,
     projet: Object
   },
-  components: { IconEye },
+  components: { IconEye, IconGithub, IconWorld },
   data() {
     return {
       isImageModalOpen: false
@@ -60,7 +62,7 @@ export default {
     <div class="px-3 text-justify text-responsive mb-3">
       {{ $t(projet.description) }}
     </div>
-    <div class="w-100 d-flex justify-content-around align-items-center px-2 skills-projet mb-3">
+    <div class="w-100 px-2 skills-projet mb-3" :style="{ '--scroll-color': color }">
       <span
         :style="{ backgroundColor: theme.background.tertiaire, color: color }"
         v-for="(item, index) in projet.skills"
@@ -70,11 +72,30 @@ export default {
     </div>
     <div
       class="w-100 d-flex justify-content-center align-items-center py-2 view-project"
-      :style="{ color: color, borderTop: '1px solid ' + theme.background.tertiaire }"
-      @click="projet.site === '' ? Forward(projet.github) : Forward(projet.site)"
+      :style="{ borderTop: '1px solid ' + theme.background.tertiaire }"
     >
-      <IconEye class="d-inline-block" />
-      <span class="d-inline-block mx-2">{{ $t('see') }}</span>
+      <div
+        v-if="projet.site"
+        class="d-flex align-items-center view-link px-3"
+        :style="{ color: color }"
+        @click="Forward(projet.site)"
+      >
+        <IconWorld />
+        <span class="mx-1">Site</span>
+      </div>
+      <span
+        v-if="projet.site && projet.github"
+        :style="{ color: theme.background.tertiaire }"
+      >|</span>
+      <div
+        v-if="projet.github"
+        class="d-flex align-items-center view-link px-3"
+        :style="{ color: color }"
+        @click="Forward(projet.github)"
+      >
+        <IconGithub size="16" />
+        <span class="mx-1">GitHub</span>
+      </div>
     </div>
   </div>
 
@@ -169,12 +190,56 @@ export default {
   cursor: pointer;
 }
 
+.projet .view-link {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.projet .view-link:hover {
+  opacity: 0.8;
+}
+
+.projet .skills-projet {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-color) transparent;
+}
+
+.projet .skills-projet::-webkit-scrollbar {
+  height: 5px;
+}
+
+.projet .skills-projet::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.projet .skills-projet::-webkit-scrollbar-thumb {
+  background: var(--scroll-color);
+  border-radius: 5px;
+}
+
+.projet .skills-projet::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.projet .skills-projet::-webkit-scrollbar-button:start,
+.projet .skills-projet::-webkit-scrollbar-button:end {
+  display: none;
+}
+
 .projet .skills-projet span {
   display: inline-block;
   padding: 3px 5px;
   border-radius: 3px;
   font-size: 12px;
   font-style: italic;
+  flex-shrink: 0;
 }
 
 /* Styles pour le modal */

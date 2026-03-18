@@ -1,41 +1,41 @@
 export default function Skills() {
   return [
-    // === Web, Mobile & Deployment ===
+    // === Développement & Outils ===
     [
       {
-        title: 'React, Next, Vue, Bootstrap , Tailwind CSS, WebSocket',
+        title: 'React, Next, Vue, Tailwind CSS, Bootstrap',
         percent: '90%'
       },
       {
-        title: 'Express.js , Node.js ,Laravel , FastApi',
+        title: 'Express, Node.js, Laravel, FastAPI, Django',
         percent: '85%'
       },
       {
-        title: 'Flutter, React Native',
+        title: 'React Native, Flutter, Expo',
         percent: '80%'
       },
       {
-        title: 'Git, GitHub, Linux, Nginx, PM2, Docker',
+        title: 'Git, Docker, Linux, Nginx, PM2, Cybersécurité',
         percent: '85%'
       }
     ],
 
-    // === AI, IoT, Security & Tools ===
+    // === IA, IoT & Langages ===
     [
       {
-        title: 'Machine Learning, Computer Vision',
-        percent: '70%'
-      },
-      {
-        title: 'IoT (Arduino, ESP32, Sensors, Smart Systems)',
+        title: 'Machine Learning, Computer Vision, YOLO',
         percent: '80%'
       },
       {
-        title: 'MySQL, MongoDB, Oracle, SQLite',
-        percent: '75%'
+        title: 'IoT, AIoT (Arduino, ESP32, Sensors)',
+        percent: '80%'
       },
       {
-        title: 'Python, Java, C, C++, JavaScript, TypeScript, PHP',
+        title: 'MySQL, MongoDB, PostgreSQL, SQLite',
+        percent: '80%'
+      },
+      {
+        title: 'Python, TypeScript, JavaScript, PHP, C++, Java',
         percent: '90%'
       }
     ]

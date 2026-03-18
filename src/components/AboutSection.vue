@@ -71,14 +71,14 @@ export default {
           data-aos-easing="ease-in-sine"
         >
           <p>
-            <span :style="{ color: uniColor }">{{ $t('experience') }} </span> : 3 {{ $t('years') }}
+            <span :style="{ color: uniColor }">{{ $t('experience') }} </span> : 4 {{ $t('years') }}
           </p>
           <p>
             <span :style="{ color: uniColor }">{{ $t('degree') }}</span> : {{ $t('licence') }}
           </p>
           <p>
             <span :style="{ color: uniColor }">{{ $t('website') }}</span> :
-            charlot-dedjinou.vercel.com
+            charlot-dedjinou.vercel.app
           </p>
           <p>
             <span :style="{ color: uniColor }">{{ $t('city') }}</span> : Abomey-Calavi,
