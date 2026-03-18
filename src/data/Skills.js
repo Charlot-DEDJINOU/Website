@@ -3,7 +3,7 @@ export default function Skills() {
     // === Web, Mobile & Deployment ===
     [
       {
-        title: 'React, Vue, Bootstrap , Tailwind CSS, Figma, WebSocket',
+        title: 'React, Next, Vue, Bootstrap , Tailwind CSS, WebSocket',
         percent: '90%'
       },
       {
@@ -15,7 +15,7 @@ export default function Skills() {
         percent: '80%'
       },
       {
-        title: 'Git, GitHub, Linux, Nginx, PM2',
+        title: 'Git, GitHub, Linux, Nginx, PM2, Docker',
         percent: '85%'
       }
     ],
@@ -35,7 +35,7 @@ export default function Skills() {
         percent: '75%'
       },
       {
-        title: 'Python, Java, C, C++, JavaScript, PHP',
+        title: 'Python, Java, C, C++, JavaScript, TypeScript, PHP',
         percent: '90%'
       }
     ]

@@ -38,9 +38,6 @@ export default {
         .typeString(t('profil_3'))
         .pauseFor(300)
         .deleteAll()
-        .typeString(t('profil_4'))
-        .pauseFor(300)
-        .deleteAll()
         .start()
     }, locale.value)
 

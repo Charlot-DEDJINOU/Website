@@ -96,7 +96,7 @@ export default {
           data-aos-easing="ease-in-sine"
         >
           <p>
-            <span :style="{ color: uniColor }">{{ $t('phone') }}</span> : +229 59105267
+            <span :style="{ color: uniColor }">{{ $t('phone') }}</span> : +229 0159105267
           </p>
           <p>
             <span :style="{ color: uniColor }">{{ $t('freelance') }}</span> : {{ $t('available') }}

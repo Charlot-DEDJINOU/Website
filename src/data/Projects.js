@@ -28,9 +28,19 @@ import mobile_reservation from '../assets/mobile_reservation.png'
 import oremi_timo from '../assets/oremi_timo.png'
 import bio_presence from '../assets/bio_presence.png'
 import onboarding from '../assets/onboarding.png'
+import collaborative_notes from '../assets/collaborative-notes.png'
 
 export default function Projects() {
   return [
+    {
+      title: 'collaborative_notes',
+      image: collaborative_notes,
+      description: 'collaborative_notes_description',
+      skills: ['React', 'Express', 'Markdown', 'Docker', 'API'],
+      site: 'https://collaborative-notes-xyz.vercel.app',
+      github: 'https://github.com/Charlot-DEDJINOU/Collaborative-Notes',
+      category: 'All tous Web API'
+    },
     {
       title: 'oremi_timo',
       image: oremi_timo,

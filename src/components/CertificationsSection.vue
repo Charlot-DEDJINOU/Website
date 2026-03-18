@@ -25,8 +25,10 @@ export default {
     const search = async () => {
       isAutoplayEnabled.value = false
 
-      certifications.value = Certifications().filter((item) =>
-        item.name.toLowerCase().includes(text.value.toLowerCase())
+      certifications.value = Certifications().filter(
+        (item) =>
+          item.name.toLowerCase().includes(text.value.toLowerCase()) ||
+          item.tags.toLocaleLowerCase().includes(text.value.toLocaleLowerCase())
       )
 
       carouselKey.value++
