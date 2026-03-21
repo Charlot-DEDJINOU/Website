@@ -30,7 +30,8 @@ export default createStore({
   state: {
     theme: dark,
     uniColor: '#16C953',
-    dark: true
+    dark: true,
+    terminalMode: false
   },
   getters: {},
   mutations: {
@@ -42,6 +43,9 @@ export default createStore({
     },
     setMode(state, mode) {
       state.dark = mode
+    },
+    setTerminalMode(state, mode) {
+      state.terminalMode = mode
     }
   },
   actions: {
@@ -60,6 +64,9 @@ export default createStore({
         commit('setTheme', dark)
       }
       commit('setMode', !state.dark)
+    },
+    ToggleTerminalMode({ commit, state }) {
+      commit('setTerminalMode', !state.terminalMode)
     }
   },
   modules: {}

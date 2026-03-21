@@ -2,6 +2,7 @@
 import CustomHeader from './CustomHeader.vue'
 import ThemesColors from './ThemesColors.vue'
 import IconSetting from './icons/IconSetting.vue'
+import IconTerminal from './icons/IconTerminal.vue'
 import PresentationProfil from './PresentationProfil.vue'
 import IconArrowDown from './icons/IconArrowDown.vue'
 import IconArrowUp from './icons/IconArrowUp.vue'
@@ -14,6 +15,7 @@ export default {
     CustomHeader,
     ThemesColors,
     IconSetting,
+    IconTerminal,
     PresentationProfil,
     IconArrowDown,
     IconArrowUp
@@ -42,11 +44,16 @@ export default {
 
     window.addEventListener('scroll', showArrowTop)
 
+    const openTerminal = () => {
+      store.commit('setTerminalMode', true)
+    }
+
     return {
       show,
       handdleShow,
       uniColor,
-      theme
+      theme,
+      openTerminal
     }
   }
 }
@@ -65,13 +72,23 @@ export default {
     </div>
     <CustomHeader />
     <div class="home-preference d-flex align-items-center">
-      <span
-        class="d-inline-block d-flex justify-content-center align-items-center mx-3 py-1 px-2 show-colors"
-        @click="handdleShow()"
-        :style="{ backgroundColor: uniColor }"
-      >
-        <IconSetting size="15" class="rotate text-white" />
-      </span>
+      <div class="d-flex flex-column align-items-center" style="gap: 8px">
+        <span
+          class="d-inline-block d-flex justify-content-center align-items-center mx-3 py-1 px-2 show-colors"
+          @click="handdleShow()"
+          :style="{ backgroundColor: uniColor }"
+        >
+          <IconSetting size="15" class="rotate text-white" />
+        </span>
+        <span
+          class="d-inline-block d-flex justify-content-center align-items-center mx-3 py-1 px-2 show-colors"
+          @click="openTerminal()"
+          :style="{ backgroundColor: uniColor }"
+          title="Terminal Mode"
+        >
+          <IconTerminal size="15" class="text-white" />
+        </span>
+      </div>
       <ThemesColors class="opacity" v-if="show" />
     </div>
     <PresentationProfil :color="uniColor" :theme="theme" class="mt-5" />

@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+.terminal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 16px 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &.terminal-dark {
+    background-color: #0d1117;
+    color: #c9d1d9;
+  }
+
+  &.terminal-light {
+    background-color: #f6f8fa;
+    color: #24292f;
+  }
+}
+
+.terminal-output {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 8px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  user-select: text;
+  -webkit-user-select: text;
+  cursor: text;
+
+  // custom scrollbar
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .terminal-dark &::-webkit-scrollbar-track {
+    background: #161b22;
+  }
+
+  .terminal-dark &::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 3px;
+  }
+
+  .terminal-light &::-webkit-scrollbar-track {
+    background: #e8eaed;
+  }
+
+  .terminal-light &::-webkit-scrollbar-thumb {
+    background: #c0c4c9;
+    border-radius: 3px;
+  }
+}
+
+.terminal-line {
+  white-space: pre-wrap;
+  min-height: 1.7em;
+
+  &.line-normal {
+    color: inherit;
+  }
+
+  &.line-accent {
+    font-weight: 700;
+    // color set inline via uniColor
+  }
+
+  &.line-error {
+    color: #f85149;
+  }
+
+  &.line-success {
+    color: #3fb950;
+  }
+
+  &.line-muted {
+    opacity: 0.5;
+  }
+
+  &.line-ascii {
+    white-space: pre;
+    font-weight: 700;
+    // color set inline via uniColor
+  }
+
+  &.line-command {
+    opacity: 0.7;
+  }
+}
+
+// ls output with mixed dir/file coloring
+.terminal-ls-line {
+  white-space: pre;
+
+  .ls-dir {
+    font-weight: 700;
+    // color set inline
+  }
+
+  .ls-file {
+    color: inherit;
+  }
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+  flex-shrink: 0;
+
+  .terminal-prompt {
+    white-space: nowrap;
+    margin-right: 8px;
+    font-weight: 700;
+    user-select: none;
+  }
+
+  input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 0;
+    caret-color: currentColor;
+
+    &::placeholder {
+      opacity: 0.3;
+    }
+  }
+}
+
+// ── responsive ───────────────────────────────────────────────────────
+@media screen and (max-width: 768px) {
+  .terminal-container {
+    font-size: 12px;
+    padding: 12px 10px;
+  }
+
+  .terminal-input-line input {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .terminal-container {
+    font-size: 11px;
+    padding: 8px 6px;
+  }
+
+  .terminal-input-line input {
+    font-size: 11px;
+  }
+}
