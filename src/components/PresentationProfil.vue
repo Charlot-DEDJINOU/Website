@@ -51,9 +51,17 @@ export default {
 <template>
   <div class="presentation-content d-flex flex-column align-items-center">
     <div class="photo-profil w-100">
-      <img src="../assets/charlot.png" alt="Charlot" :style="{ border: '8px solid ' + color }" />
+      <img
+        src="../assets/charlot.png"
+        alt="Portrait of Charlot DEDJINOU"
+        width="270"
+        height="360"
+        decoding="async"
+        fetchpriority="high"
+        :style="{ border: '8px solid ' + color }"
+      />
       <div class="profil h-100 d-flex flex-column justify-content-around">
-        <h3 :style="{ color: color }" class="my-3">Charlot DEDJINOU</h3>
+        <h1 :style="{ color: color }" class="my-3">Charlot DEDJINOU</h1>
         <div>
           <span class="fs-4 fw-meduim d-inline-block" ref="typewriterRef"></span>
           <span
@@ -99,12 +107,19 @@ export default {
   width: 400px;
   align-items: start;
 }
+.presentation-content .photo-profil .profil h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
 .presentation-content .photo-profil {
   display: flex;
   justify-content: space-between;
 }
 .presentation-content .photo-profil .profil .span {
   padding-bottom: 10px;
+}
+.brand-statement {
+  max-width: 32rem;
 }
 .presentation-content .buttons div {
   border-radius: 10px 0px 10px 0px;

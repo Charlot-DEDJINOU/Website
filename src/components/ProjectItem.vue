@@ -52,9 +52,15 @@ export default {
   >
     <!-- Image cliquable pour ouvrir le modal -->
     <div class="image-container" @click="openImageModal">
-      <img :src="projet.image" :alt="projet.image" class="mb-3 project-image" />
+      <img
+        :src="projet.image"
+        :alt="`${$t(projet.title)} project preview`"
+        class="mb-3 project-image"
+        loading="lazy"
+        decoding="async"
+      />
       <div class="image-overlay">
-        <span class="zoom-text">🔍 Cliquer pour agrandir</span>
+        <span class="zoom-text">Click to enlarge</span>
       </div>
     </div>
 
@@ -110,8 +116,8 @@ export default {
       ref="modal"
     >
       <div class="modal-content">
-        <button class="close-button" @click="closeImageModal" :style="{ color: color }">✕</button>
-        <img :src="projet.image" :alt="projet.image" class="modal-image" />
+        <button class="close-button" @click="closeImageModal" :style="{ color: color }">x</button>
+        <img :src="projet.image" :alt="`${$t(projet.title)} project preview`" class="modal-image" />
         <div class="modal-info" :style="{ color: color }">
           <h6>{{ $t(projet.title) }}</h6>
         </div>

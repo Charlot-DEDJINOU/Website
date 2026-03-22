@@ -6,8 +6,6 @@ import IconLinkdln from './icons/IconLinkdln.vue'
 import IconEmail from './icons/IconEmail.vue'
 import { useStore } from 'vuex'
 import { computed, ref } from 'vue'
-import { Forward } from '../layout/untils'
-
 export default {
   components: {
     IconFacebook,
@@ -15,9 +13,6 @@ export default {
     IconWhatsapp,
     IconGithub,
     IconLinkdln
-  },
-  methods: {
-    Forward
   },
   props: {
     size: String,
@@ -41,36 +36,49 @@ export default {
     class="social-media d-flex justify-content-around"
     :style="{ width: size == null ? 'auto' : size }"
   >
-    <span
-      @click="Forward('https://www.facebook.com/charlot.dedjinou.35?mibextid=ZbWKwL')"
+    <a
+      href="https://www.facebook.com/charlot.dedjinou.35?mibextid=ZbWKwL"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook profile"
       class="d-inline-block d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: uniColor, color: 'white' }"
       ><IconFacebook :size="iconSize"
-    /></span>
+    /></a>
     <a
       href="mailto:dedjinoucharlotjoel@gmail.com"
+      aria-label="Send an email to Charlot DEDJINOU"
       class="d-inline-block d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: uniColor, color: 'white' }"
       ><IconEmail :size="iconSize"
     /></a>
-    <span
-      @click="Forward('https://github.com/Charlot-DEDJINOU')"
+    <a
+      href="https://github.com/Charlot-DEDJINOU"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub profile"
       class="d-inline-block d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: uniColor, color: 'white' }"
       ><IconGithub :size="iconSize"
-    /></span>
-    <span
-      @click="Forward('https://wa.me/22959105267')"
+    /></a>
+    <a
+      href="https://wa.me/2290159105267"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="WhatsApp contact"
       class="d-inline-block d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: uniColor, color: 'white' }"
       ><IconWhatsapp :size="iconSize"
-    /></span>
-    <span
-      @click="Forward('https://www.linkedin.com/in/charlot-dedjinou')"
+    /></a>
+    <a
+      href="https://www.linkedin.com/in/charlot-dedjinou"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn profile"
       class="d-inline-block d-flex align-items-center justify-content-center"
       :style="{ backgroundColor: uniColor, color: 'white' }"
       ><IconLinkdln :size="iconSize"
-    /></span>
+    /></a>
   </div>
 </template>
 <style>

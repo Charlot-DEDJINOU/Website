@@ -33,7 +33,7 @@ export default {
       <div class="credits" :style="{ fontSize: '18px' }">
         Designed by
         <a
-          href="https://charlot-dedjinou.vercel.app"
+          href="https://charlotdedjinou.com"
           class="text-decoration-none fw-bold"
           :style="{ color: uniColor }"
           >Charlot DEDJINOU</a

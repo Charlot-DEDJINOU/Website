@@ -78,7 +78,7 @@ export default {
           </p>
           <p>
             <span :style="{ color: uniColor }">{{ $t('website') }}</span> :
-            charlot-dedjinou.vercel.app
+            charlotdedjinou.com
           </p>
           <p>
             <span :style="{ color: uniColor }">{{ $t('city') }}</span> : Abomey-Calavi,

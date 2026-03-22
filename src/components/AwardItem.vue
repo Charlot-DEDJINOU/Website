@@ -21,7 +21,7 @@ export default {
 </script>
 <template>
   <div class="distinction mb-4" :style="{ backgroundColor: theme.background.secondary }">
-    <img :src="award.image" alt="image" />
+    <img :src="award.image" :alt="award.title" loading="lazy" decoding="async" />
     <div class="informations px-3 py-2">
       <div class="mt-3 text-responsive fw-medium text-uppercase" :style="{ color: uniColor }">
         {{ award.title }}
