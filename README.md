@@ -2,7 +2,7 @@
 
 This is my personal portfolio website, built with Vue 3 and Vite to showcase my background, skills, projects, certifications, awards, and contact information in a bilingual single-page experience.
 
-Live site: https://charlot-dedjinou.vercel.app
+Live site: https://charlotdedjinou.com
 
 ## About the project
 
