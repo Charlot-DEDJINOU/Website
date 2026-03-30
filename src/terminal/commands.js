@@ -41,7 +41,7 @@ const COLOR_MAP = {
 const LINK_ALIASES = {
   github: 'https://github.com/Charlot-DEDJINOU',
   linkedin: 'https://www.linkedin.com/in/charlot-dedjinou',
-  portfolio: 'https://charlot-dedjinou.vercel.app',
+  portfolio: 'https://charlotdedjinou.com',
   cv: null // handled specially per locale
 }
 

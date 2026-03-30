@@ -383,7 +383,7 @@ export function formatWelcome(t) {
     bMid(),
     bEmpty(),
     bText('Name:       Charlot DEDJINOU'),
-    bText('Portfolio:  https://charlot-dedjinou.vercel.app'),
+    bText('Portfolio:  https://charlotdedjinou.com'),
     bText('GitHub:     https://github.com/Charlot-DEDJINOU'),
     bText('Email:      dedjinoucharlotjoel@gmail.com'),
     bText('Location:   Abomey-Calavi, Benin'),

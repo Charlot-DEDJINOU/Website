@@ -176,7 +176,7 @@ export function buildFilesystem(t) {
     email: t('contact_section.email'),
     phone: t('contact_section.phone_number'),
     freelance: t('available'),
-    website: 'https://charlot-dedjinou.vercel.app'
+    website: 'https://charlotdedjinou.com'
   }))
 
   // --- contact.txt ---
